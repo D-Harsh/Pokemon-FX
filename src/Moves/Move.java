@@ -21,7 +21,6 @@ public class Move {
 	public void makeMove(Pokemon pokemon){
 	}
 }
-public static class fireBall extends Move{
-	fireBall
+public class fireBall extends Move{
 }
 
