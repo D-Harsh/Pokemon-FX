@@ -43,23 +43,21 @@ public class Practice extends Application {
                 "-fx-max-width: 50px; " +
                 "-fx-max-height: 50px;"
                 );
-//		pok2.setText("Charmeleon");
-//		pok3.setText("Charizard");
 		Media media = new Media(
 				"file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
 		MediaPlayer player = new MediaPlayer(media);
 		player.play();
 		Image img1 = new Image(
-				"file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/1.gif");
+				"Images/1.gif");
 		Image img2 = new Image(
-				"file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/2.gif");
+				"Images/2.gif");
 		Image img3 = new Image(
-				"file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/3.gif");
+				"Images/3.gif");
 		Image img4 = new Image(
-				"file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/pokeball.png");
+				"Images/pokeball.png");
 		Image[] list = { img1, img2, img3 };
 		ImageView field = new ImageView(), bg = new ImageView(), pokeball = new ImageView(img4), pokeball1 = new ImageView(img4), pokeball2 = new ImageView(img4);
-		bg.setImage(new Image("file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/bg.png"));
+		bg.setImage(new Image("Images/bg.png"));
 		bg.setFitHeight(600);
 		bg.setFitWidth(1000);
 		bg.setPreserveRatio(true);
@@ -81,8 +79,8 @@ public class Practice extends Application {
 		});
 		Pane root = new Pane();
 		setCoordinates(pok1, 0, 0);
-		setCoordinates(pok2, 150, 0);
-		setCoordinates(pok3, 300, 0);
+		setCoordinates(pok2, 0, 50);
+		setCoordinates(pok3, 0, 100);
 		setCoordinates(field, 100, 0);
 		root.getChildren().addAll(bg,pok1, pok2, pok3, field);
 		primaryStage.setScene(new Scene(root, 1000,600 ));
