@@ -1,4 +1,3 @@
-//hi
 package GUI;
 
 import javafx.application.Application;
@@ -43,10 +42,10 @@ public class Practice extends Application {
                 "-fx-max-width: 50px; " +
                 "-fx-max-height: 50px;"
                 );
-		Media media = new Media(
-				"file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
-		MediaPlayer player = new MediaPlayer(media);
-		player.play();
+		//Media media = new Media(
+		//		"file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
+		//MediaPlayer player = new MediaPlayer(media);
+		//player.play();
 		Image img1 = new Image(
 				"Images/1.gif");
 		Image img2 = new Image(
