@@ -23,10 +23,10 @@ public class Practice extends Application {
 		primaryStage.setTitle("Pokemon");
 		Button pok1 = pokebutton(), pok2 = pokebutton(), pok3 = pokebutton(), pok4 = pokebutton(), pok5 = pokebutton(),
                 pok6 = pokebutton();
-		 Media media = new Media(
-		 "file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
-		 MediaPlayer player = new MediaPlayer(media);
-		 player.play();
+//		 Media media = new Media(
+//		 "file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
+//		 MediaPlayer player = new MediaPlayer(media);
+//		 player.play();
         ImageView field = new ImageView(), bg = new ImageView(), field2 = new ImageView();
         bg.setImage(new Image("Images/background.jpg"));
         bg.setFitHeight(600);
