@@ -21,6 +21,5 @@ public class Move {
 	public void makeMove(Pokemon pokemon){
 	}
 }
-public class fireBall extends Move{
-}
+
 

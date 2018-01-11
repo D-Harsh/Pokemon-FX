@@ -41,10 +41,10 @@ public class Pokemon {
         move.makeMove(opponent);
     }
 
-    public static class Charizad extends Pokemon {
-        public Charizad() {
-            super("Charizad", "Fire", 120, 270, 1.5, move0, move1, move2, move3, pokemon);
-
-        }
-    }
+//    public static class Charizad extends Pokemon {
+//        public Charizad() {
+//            super("Charizad", "Fire", 120, 270, 1.5, move0, move1, move2, move3, pokemon);
+//
+//        }
+//    }
 }
