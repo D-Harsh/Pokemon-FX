@@ -17,8 +17,9 @@ public class StartScene extends Application {
             "-fx-border-color: #5c85d6;\n-fx-border-radius: 7;";
     final String HOVERED_BUTTON_STYLE = "-fx-background-color: #ffcc00;\n-fx-background-radius:13;\n" +
             "\n-fx-text-fill: white;\n-fx-font: 20px Tahoma;\n-fx-border-width: 6px;\n" +
-            "-fx-border-color: #003cb3;\n-fx-border-radius: 7;";
-
+            "-fx-border-color: #002b80;\n-fx-border-radius: 7;";
+    final String INVISIBLE_BUTTON_STYLE = "-fx-border-color: transparent;\n-fx-border-width: 0;\n" +
+            "-fx-background-radius: 0;\n-fx-background-color: transparent;";
     public static void main(String[] args) {
         launch(args);
     }
@@ -26,6 +27,23 @@ public class StartScene extends Application {
         primaryStage.setTitle("Pokemon");
         primaryStage.setResizable(false);
         Button PvP = button("Player vs Player"), PvC = button("Computer"), PvE = button("Elite Four");
+        Button easterEgg = new Button();
+        easterEgg.setStyle(INVISIBLE_BUTTON_STYLE);
+        easterEgg.setMinSize(75, 75);
+        setCoordinates(easterEgg, 140, 110);
+        ImageView field = new ImageView();
+        field.setFitWidth(150);field.setFitHeight(150);
+        setCoordinates(field,50, 110);
+        easterEgg.setOnMouseEntered(e -> {
+            field.setImage(new Image("Images/pikachu.gif"));
+        });
+        easterEgg.setOnMouseExited(e ->{
+            field.setImage(null);
+        });
+        ImageView mew = new ImageView(new Image("Images/mew.gif")); ImageView mewtwo = new ImageView(new Image("Images/mewtwo.gif"));
+        mew.setFitWidth(48);mew.setFitHeight(61.2);
+//        mewtwo.setFitWidth(120);mewtwo.setFitHeight(105.6);
+        setCoordinates(mew, 90, 370); setCoordinates(mewtwo,650, 370);
 //		 Media media = new Media(
 //		 "file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
 //		 MediaPlayer player = new MediaPlayer(media);
@@ -49,7 +67,7 @@ public class StartScene extends Application {
 //        PvE.setOnAction(e ->{
 //            primaryStage.setScene(TBD);
 //        });
-        pane.getChildren().addAll(background, PvP, PvC, PvE, title);
+        pane.getChildren().addAll(background, PvP, PvC, PvE, title, field, easterEgg, mew, mewtwo);
         startScene = new Scene(pane, 768, 480);
         primaryStage.setScene(startScene);
         primaryStage.show();
