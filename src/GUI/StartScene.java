@@ -6,67 +6,52 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 public class StartScene extends Application {
+    static Pane pane = new Pane();
+    static Scene startScene;
+    final String IDLE_BUTTON_STYLE = "-fx-background-color: #ffcc00;\n-fx-background-radius:13;\n" +
+            "\n-fx-text-fill: white;\n-fx-font: 20px Tahoma;\n-fx-border-width: 6px;\n" +
+            "-fx-border-color: #5c85d6;\n-fx-border-radius: 7;";
+    final String HOVERED_BUTTON_STYLE = "-fx-background-color: #ffcc00;\n-fx-background-radius:13;\n" +
+            "\n-fx-text-fill: white;\n-fx-font: 20px Tahoma;\n-fx-border-width: 6px;\n" +
+            "-fx-border-color: #003cb3;\n-fx-border-radius: 7;";
+
     public static void main(String[] args) {
         launch(args);
     }
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Pokemon");
-        Button pok1 = pokebutton(), pok2 = pokebutton(), pok3 = pokebutton(), pok4 = pokebutton(), pok5 = pokebutton(),
-                pok6 = pokebutton();
+        primaryStage.setResizable(false);
+        Button PvP = button("Player vs Player"), PvC = button("Computer"), PvE = button("Elite Four");
 //		 Media media = new Media(
 //		 "file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
 //		 MediaPlayer player = new MediaPlayer(media);
 //		 player.play();
-        ImageView field = new ImageView(), bg = new ImageView(), field2 = new ImageView();
-        bg.setImage(new Image("Images/background.jpg"));
-        bg.setFitHeight(600);
-        bg.setFitWidth(1000);
-        bg.setPreserveRatio(true);
-        Image img1 = new Image("Images/1.gif");
-        Image img2 = new Image("Images/2.gif");
-        Image img3 = new Image("Images/3.gif");
-        Image img4 = new Image("Images/4.gif");
-        Image img5 = new Image("Images/5.gif");
-        Image img6 = new Image("Images/6.gif");
-        Image[] opplist = { img1, img2, img3 };
-        Image[] ownlist = { img4, img5, img6};
-        field.setFitWidth(250);field.setFitHeight(250);
-        field.setImage(img1);
-        field2.setFitWidth(150);field2.setFitHeight(150);
-        field2.setImage(img4);
-        pok1.setOnAction(e -> {
-            field.setImage(opplist[0]);
-        });
-        pok2.setOnAction(e -> {
-            field.setImage(opplist[1]);
-        });
-        pok3.setOnAction(e -> {
-            field.setImage(opplist[2]);
-        });
-        pok4.setOnAction(e -> {
-            field2.setImage(ownlist[0]);
-        });
-        pok5.setOnAction(e -> {
-            field2.setImage(ownlist[1]);
-        });
-        pok6.setOnAction(e -> {
-            field2.setImage(ownlist[2]);
-        });
-        Pane root = new Pane();
-        setCoordinates(pok1, 900, 20);
-        setCoordinates(pok2, 900, 80);
-        setCoordinates(pok3, 900, 140);
-        setCoordinates(pok4, 10, 420);
-        setCoordinates(pok5, 10, 480);
-        setCoordinates(pok6, 10, 540);
-        setCoordinates(field,650, 100);
-        setCoordinates(field2,200, 300);
-        root.getChildren().addAll(bg, pok1, pok2, pok3,pok4,pok5,pok6, field, field2);
-        primaryStage.setScene(new Scene(root, 965, 600));
+        ImageView background = new ImageView();
+        background.setImage(new Image("Images/background.jpg"));
+        background.setFitHeight(480);
+        background.setFitWidth(768);
+        ImageView title = new ImageView("Images/title.png");
+        setCoordinates(title, 100, 230);
+        setCoordinates(PvP, 300, 80);
+        setCoordinates(PvC, 200, 170);
+        setCoordinates(PvE, 451, 170);
+        setButtonHover(PvP); setButtonHover(PvC); setButtonHover(PvE);
+//      PvP.setOnAction(e ->{
+//            primaryStage.setScene(TBD);
+//        });
+//        PvC.setOnAction(e ->{
+//            primaryStage.setScene(TBD);
+//        });
+//        PvE.setOnAction(e ->{
+//            primaryStage.setScene(TBD);
+//        });
+        pane.getChildren().addAll(background, PvP, PvC, PvE, title);
+        startScene = new Scene(pane, 768, 480);
+        primaryStage.setScene(startScene);
         primaryStage.show();
 
     }
@@ -76,15 +61,14 @@ public class StartScene extends Application {
         ((Node) a).setLayoutY(y);
     }
 
-    public Button button() {
-        Button button = new Button();
-        button.setStyle("-fx-background-color: linear-gradient(#ff5400, #be1d00);\n" + "-fx-background-radius:" +
-                " 30;\n" + "-fx-background-insets: 0;\n" + "-fx-text-fill: white;");
-        Image ball = new Image("Images/pokeball.png");
-        ImageView pokeball = new ImageView(ball);
-        pokeball.setFitHeight(50);
-        pokeball.setFitWidth(50);
-        pok1.setGraphic(pokeball);
-        return pok1;
+    public Button button(String label) {
+        Button button = new Button(label);
+        button.setStyle(IDLE_BUTTON_STYLE);
+        return button;
+    }
+
+    public void setButtonHover(Button button){
+        button.setOnMouseEntered(e -> button.setStyle(HOVERED_BUTTON_STYLE));
+        button.setOnMouseExited(e -> button.setStyle(IDLE_BUTTON_STYLE));
     }
 }

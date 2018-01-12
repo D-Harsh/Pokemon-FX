@@ -29,9 +29,9 @@ public class Practice extends Application {
 //		 player.play();
         ImageView field = new ImageView(), bg = new ImageView(), field2 = new ImageView();
         bg.setImage(new Image("Images/background.jpg"));
-        bg.setFitHeight(600);
-        bg.setFitWidth(1000);
-        bg.setPreserveRatio(true);
+		bg.setFitHeight(600);
+		bg.setFitWidth(1000);
+		bg.setPreserveRatio(true);
 		Image img1 = new Image("Images/1.gif");
 		Image img2 = new Image("Images/2.gif");
 		Image img3 = new Image("Images/3.gif");
