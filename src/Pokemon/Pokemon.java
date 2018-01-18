@@ -1,5 +1,4 @@
 package Pokemon;
-
 import Moves.Move;
 import javafx.scene.image.Image;
 
@@ -9,13 +8,13 @@ import javafx.scene.image.Image;
 
 public class Pokemon {
     String name, type;
-    int hP, speedStat, healthIV, speedIV;
+    int hP, speedStat, healthIV, speedIV,pokedexNum;
     double stengthStat, strengthIV;
     Move move0, move1, move2, move3;
     Image pokemon;
 
     public Pokemon(String name, String type, int hP, int speedStat, double stengthStat,
-                   Move move0, Move move1, Move move2, Move move3, Image pokemon) {
+                   Move move0, Move move1, Move move2, Move move3, Image pokemon,int pokedexNum) {
         this.name = name;
         this.type = type;
         this.hP = hP;
@@ -26,10 +25,17 @@ public class Pokemon {
         this.move2 = move2;
         this.move3 = move3;
         this.pokemon = pokemon;
+        this.pokedexNum = pokedexNum;
         generateIVs();
     }
 
+    public int getPokedexNum() {
+        return pokedexNum;
+    }
 
+    public Image getPokemonImage() {
+        return pokemon;
+    }
 
     public void generateIVs() {
         this.healthIV = (int)(Math.random() * 31);

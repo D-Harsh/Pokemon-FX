@@ -2,12 +2,13 @@ package GUI;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-import java.awt.*;
 
 public class IChooseYou extends Application {
         static Pane pane2 = new Pane();
@@ -21,15 +22,16 @@ public class IChooseYou extends Application {
         primaryStage.setResizable(false);
         TextField pokeChoice = new TextField();
         Button Submit = new Button("Submit");
-
     }
 
     private boolean isValid(TextField input, String message){
         try{
             int pokeNum = Integer.parseInt(input.getText());
-            if (pokeNum < 150){
-                System.out.println("User is: " + age);
-            return true;
+            if (pokeNum < 150) {
+                System.out.println("User is: " + "pokemon here");
+                return true;
+            }
+            return false;
         }catch(NumberFormatException e){
             System.out.println("Error: " + message + " is not a number");
             return false;
