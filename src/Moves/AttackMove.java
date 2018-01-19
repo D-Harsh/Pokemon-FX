@@ -10,8 +10,8 @@ public class AttackMove extends Move{
     }
 
 
-    public int damagemultiplier (Pokemon attacker, Pokemon defender) {
-    	double dmgmult;
+    public double damagemultiplier (Pokemon attacker, Pokemon defender) {
+    	double dmgmult = 1;
     	String attackertype = attacker.getType();
     	String defendertype = defender.getType();
     	if (attackertype.equals("Normal")) {
@@ -52,19 +52,29 @@ public class AttackMove extends Move{
     		}
     	}
     	
-    	if (attackertype.equals("")) {
-    		if (defendertype.equals("Normal") || defendertype.equals("Rock") || defendertype.equals("Ice")) {
+    	if (attackertype.equals("Ground")) {
+    		if (defendertype.equals("Poison") || defendertype.equals("Rock") || defendertype.equals("Fire") || defendertype.equals("Electric") ) {
     			dmgmult = 2;
     		}
-    		if (defendertype.equals("Flying") || defendertype.equals("Poison") || defendertype.equals("Bug") || defendertype.equals("Psychic")) {
+    		if (defendertype.equals("Bug") || defendertype.equals("Grass")) {
     			dmgmult = 0.5;
     		}
-    		if (defendertype.equals("Ghost")) {
+    		if (defendertype.equals("Flying")) {
     			dmgmult = 0;
     		}
     	}
     	
-    return 0;
+    	if (attackertype.equals("Rock")) {
+    		if (defendertype.equals("Flying") || defendertype.equals("Bug") || defendertype.equals("Fire") || defendertype.equals("Ice") ) {
+    			dmgmult = 2;
+    		}
+    		if (defendertype.equals("Fighting") || defendertype.equals("Ground")) {
+    			dmgmult = 0.5;
+    		}
+    	}
+
+    	
+    return dmgmult;
     }
     
     public int calculateDamage(Pokemon pokemon) {
