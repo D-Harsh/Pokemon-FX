@@ -9,16 +9,17 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
+
 public class StartScene extends Application {
     static Pane pane = new Pane();
     static Scene startScene;
-    final String IDLE_BUTTON_STYLE = "-fx-background-color: #ffcc00;\n-fx-background-radius:13;\n" +
+    static final String IDLE_BUTTON_STYLE = "-fx-background-color: #ffcc00;\n-fx-background-radius:13;\n" +
             "\n-fx-text-fill: white;\n-fx-font: 20px Tahoma;\n-fx-border-width: 6px;\n" +
             "-fx-border-color: #5c85d6;\n-fx-border-radius: 7;";
-    final String HOVERED_BUTTON_STYLE = "-fx-background-color: #ffcc00;\n-fx-background-radius:13;\n" +
+    static final String HOVERED_BUTTON_STYLE = "-fx-background-color: #ffcc00;\n-fx-background-radius:13;\n" +
             "\n-fx-text-fill: white;\n-fx-font: 20px Tahoma;\n-fx-border-width: 6px;\n" +
             "-fx-border-color: #002b80;\n-fx-border-radius: 7;";
-    final String INVISIBLE_BUTTON_STYLE = "-fx-border-color: transparent;\n-fx-border-width: 0;\n" +
+    static final String INVISIBLE_BUTTON_STYLE = "-fx-border-color: transparent;\n-fx-border-width: 0;\n" +
             "-fx-background-radius: 0;\n-fx-background-color: transparent;";
     public static void main(String[] args) {
         launch(args);
@@ -27,6 +28,7 @@ public class StartScene extends Application {
         primaryStage.setTitle("Pokemon");
         primaryStage.setResizable(false);
         Button PvP = button("Player vs Player"), PvC = button("Computer"), PvE = button("Elite Four");
+        PvP.setOnAction(e->primaryStage.setScene(SelectPokemon.getChooseScene(primaryStage)));
         Button easterEgg = new Button();
         easterEgg.setStyle(INVISIBLE_BUTTON_STYLE);
         easterEgg.setMinSize(75, 75);
@@ -50,8 +52,8 @@ public class StartScene extends Application {
 //		 player.play();
         ImageView background = new ImageView();
         background.setImage(new Image("Images/background.jpg"));
-        background.setFitHeight(480);
-        background.setFitWidth(768);
+        background.setFitHeight(600); background.setFitWidth(965);
+        background.setPreserveRatio(true);
         ImageView title = new ImageView("Images/title.png");
         setCoordinates(title, 100, 230);
         setCoordinates(PvP, 300, 80);
@@ -68,7 +70,7 @@ public class StartScene extends Application {
 //            primaryStage.setScene(TBD);
 //        });
         pane.getChildren().addAll(background, PvP, PvC, PvE, title, field, easterEgg, mew, mewtwo);
-        startScene = new Scene(pane, 768, 480);
+        startScene = new Scene(pane, 965, 600);
         primaryStage.setScene(startScene);
         primaryStage.show();
 

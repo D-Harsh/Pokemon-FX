@@ -4,13 +4,11 @@ import javafx.scene.image.Image;
 public class Move {
 	String type;
 	int pp;
-	Image move;
 	int accuracy;
 
-	public Move(String type, int pp, int accuracy, Image move) {
+	public Move(String type, int pp, int accuracy) {
 		this.type = type;
 		this.pp = pp;
-		this.move = move;
 		this.accuracy = accuracy;
 	}
 

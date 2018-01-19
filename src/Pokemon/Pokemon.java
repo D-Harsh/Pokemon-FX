@@ -29,6 +29,10 @@ public class Pokemon {
         generateIVs();
     }
 
+    public String getType() {
+        return type;
+    }
+
     public int getPokedexNum() {
         return pokedexNum;
     }
