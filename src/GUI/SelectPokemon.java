@@ -20,14 +20,8 @@ import javafx.stage.Stage;
  * Created by Harsh on 2018-01-17.
  */
 public class SelectPokemon {
-    static Move waste = new AttackMove("Fire", 25, 100, new Image("Images/trainer1.gif"));
-    static Pokemon[] pokedex = {new Pokemon("Charmander", "Fire", 255, 250, 1.3,
-            waste, waste, waste, waste, new Image("Images/1.gif"), 1),
-            new Pokemon("Charmaleon", "Fire", 255, 250, 1.3,
-                    waste, waste, waste, waste, new Image("Images/2.gif"), 2),
-            new Pokemon("Charizard", "Fire", 255, 250, 1.3,
-                    waste, waste, waste, waste, new Image("Images/3.gif"), 3)};
-
+    static Move waste = new AttackMove("Fire", 25, 100, 100);
+    static Pokemon[] pokedex = Pokemon.Pokemans.pokedex;
     static public Scene getChooseScene(Stage primaryStage) {
         ImageView trainer1 = new ImageView(new Image("Images/trainer1.gif"));
         ImageView trainer2 = new ImageView(new Image("Images/trainer2.gif"));

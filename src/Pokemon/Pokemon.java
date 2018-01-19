@@ -11,10 +11,10 @@ public class Pokemon {
     int hP, speedStat, healthIV, speedIV,pokedexNum;
     double stengthStat, strengthIV;
     Move move0, move1, move2, move3;
-    Image pokemon;
+    Image pokemonview, pokemonview2;
 
     public Pokemon(String name, String type, int hP, int speedStat, double stengthStat,
-                   Move move0, Move move1, Move move2, Move move3, Image pokemon,int pokedexNum) {
+                   Move move0, Move move1, Move move2, Move move3, Image pokemonview, Image pokemonview2, int pokedexNum) {
         this.name = name;
         this.type = type;
         this.hP = hP;
@@ -24,8 +24,8 @@ public class Pokemon {
         this.move1 = move1;
         this.move2 = move2;
         this.move3 = move3;
-        this.pokemon = pokemon;
-        this.pokedexNum = pokedexNum;
+        this.pokemonview = pokemonview;
+        this.pokemonview2 = pokemonview2;
         generateIVs();
     }
 
@@ -38,7 +38,11 @@ public class Pokemon {
     }
 
     public Image getPokemonImage() {
-        return pokemon;
+        return pokemonview;
+    }
+
+    public Image getPokemonImage2(){
+        return pokemonview2;
     }
 
     public void generateIVs() {

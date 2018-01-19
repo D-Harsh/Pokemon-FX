@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.scene.shape.Line;
+import Pokemon.Pokemans;
 
 public class Game {
     static final String TRANSPARENT_BUTTON_HOVER = "-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 10000;";
@@ -18,14 +19,8 @@ public class Game {
             "-fx-border-color: rgba(0, 0, 0, 0.3); -fx-border-radius: 5; -fx-background-radius: 5;";
     static final String MOVE_BUTTON_HOVER_STYLE = "-fx-min-width: 150px; -fx-max-height: 80px; -fx-border-width: 3px;" +
             "-fx-border-color: rgba(0, 0, 0, 0.7); -fx-border-radius: 5; -fx-background-radius: 5;";
-    static Move waste = new AttackMove("Fire",25,100,new Image("Images/trainer1.gif"));
-    static Pokemon[] pokedex = {new Pokemon("Charmander","Fire",255,250,1.3,
-            waste,waste,waste,waste,new Image("Images/1.gif"),1),
-            new Pokemon("Charmaleon","Fire",255,250,1.3,
-                    waste,waste,waste,waste,new Image("Images/2.gif"),2),
-            new Pokemon("Charizard","Fire",255,250,1.3,
-                    waste,waste,waste,waste,new Image("Images/3.gif"),3)};
-
+    static Move waste = new AttackMove("Fire",25,100,100);
+    static Pokemon[] pokedex = Pokemans.pokedex;
     static public Scene startGameScene(Stage primaryStage){
         ImageView battleground = new ImageView(), bg = new ImageView(), poke1 = new ImageView(), poke2 = new ImageView(),
                 p1Text = new ImageView(), p2Text = new ImageView();
