@@ -2,6 +2,7 @@ package GUI;
 
 import Moves.AttackMove;
 import Moves.Move;
+import Pokemon.Pokemans;
 import Pokemon.Pokemon;
 
 import javafx.scene.Node;
@@ -21,7 +22,7 @@ import javafx.stage.Stage;
  */
 public class SelectPokemon {
     static Move waste = new AttackMove("Fire", 25, 100, 100);
-    static Pokemon[] pokedex = Pokemon.Pokemans.pokedex;
+    static Pokemon[] pokedex = Pokemans.pokedex;
     static public Scene getChooseScene(Stage primaryStage) {
         ImageView trainer1 = new ImageView(new Image("Images/trainer1.gif"));
         ImageView trainer2 = new ImageView(new Image("Images/trainer2.gif"));
