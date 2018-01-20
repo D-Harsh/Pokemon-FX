@@ -1,3 +1,3 @@
 # Pokemon-FX
 We have no clue what we are doing but we'll try
-asdhwwesdwsddasd
+This is actually not too bad
