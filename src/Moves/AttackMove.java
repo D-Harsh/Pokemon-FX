@@ -15,7 +15,7 @@ public class AttackMove extends Move{
     	double dmgmult = 1;
     	String attackertype = attacker.getType();
     	String defendertype = defender.getType();
-    	if (attackertype.equals("Normal")) {
+    	if (type.equals("Normal")) {
     		if (defendertype.equals("Rock")) {
     			dmgmult = 0.5;
     		}
@@ -23,7 +23,7 @@ public class AttackMove extends Move{
     			dmgmult = 0;
     		}
     	}
-    	if (attackertype.equals("Fighting")) {
+    	if (type.equals("Fighting")) {
     		if (defendertype.equals("Normal") || defendertype.equals("Rock") || defendertype.equals("Ice")) {
     			dmgmult = 2;
     		}

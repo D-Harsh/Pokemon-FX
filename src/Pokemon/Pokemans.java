@@ -5,7 +5,23 @@ import Moves.Move;
 import javafx.scene.image.Image;
 
 public class Pokemans {
-    static Move waste = new AttackMove("Fire",25,100,100);
+    static Move Flamethrower = new AttackMove("Fire", 25, 100, 35);
+    static Move Earthquake = new AttackMove("Ground", 25, 100, 35);
+    static Move Bug_Buzz = new AttackMove("Bug", 25, 90, 30);
+    static Move Outrage = new AttackMove("Dragon", 10, 100, 40);
+    static Move Ice_Beam = new AttackMove("Ice", 15, 100, 30);
+    static Move Close_Combat = new AttackMove("Fighting", 5, 95, 40);
+    static Move Hurricane = new AttackMove("Flying",10, 70, 42);
+    static Move Vine_Whip = new AttackMove("Grass", 8, 85, 42);
+    static Move Shadow_Ball = new AttackMove("Ghost", 20, 100, 35);
+    static Move Thunderbolt = new AttackMove("Electric",20, 100, 37);
+    static Move Hyperbeam = new AttackMove("Normal", 5, 100, 40);
+    static Move Gunk_Shot = new AttackMove("Poison", 15, 90, 40);
+    static Move Psychic = new AttackMove("Psychic", 20, 100 ,37);
+    static Move Stone_Edge = new AttackMove("Rock", 10, 70, 40);
+    static Move Hydropump = new AttackMove("Water", 10, 80, 45);
+    
+    
     public static Pokemon[] pokedex = {
             new Pokemon("Bulbasaur", "Grass", 45, 45, 0.7, waste, waste, waste, waste,
             new Image("Images/Pokemon/1.0.gif"), new Image("Images/Pokemon/1.1.gif"),1),
