@@ -2,23 +2,114 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb0ec2b4-3c5f-4c6f-bea2-f6f9a3717f2f" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/27.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/27.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/28.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/28.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/29.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/29.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/30.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/30.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/31.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/31.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/32.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/32.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/33.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/33.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/34.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/34.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/35.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/35.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/36.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/36.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/37.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/37.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/38.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/38.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/39.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/39.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/40.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/40.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/41.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/41.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/42.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/42.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/43.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/43.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/44.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/44.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/45.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/45.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/46.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/46.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/47.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/47.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/48.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/48.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/49.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/49.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/50.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/50.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/51.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/51.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/52.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/52.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/53.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/53.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/54.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/54.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/55.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/55.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/56.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/56.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/57.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/57.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/58.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/58.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/59.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/59.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/60.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/60.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/61.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/61.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/62.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/62.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/63.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/63.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/64.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/64.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/65.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/65.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/66.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/66.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/67.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/67.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/68.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/68.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/69.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/69.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/70.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/70.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/71.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/71.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/72.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/72.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/73.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/73.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/74.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/74.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/75.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/75.1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/76.0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Images/Pokemon/76.1.gif" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/GUI/Game.class" afterPath="$PROJECT_DIR$/out/production/Pokemon/GUI/Game.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/GUI/SelectPokemon.class" afterPath="$PROJECT_DIR$/out/production/Pokemon/GUI/SelectPokemon.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/1.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/2.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/3.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/4.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/5.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/6.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/Moves/AttackMove.class" afterPath="$PROJECT_DIR$/out/production/Pokemon/Moves/AttackMove.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/Pokemon/Pokemon.class" afterPath="$PROJECT_DIR$/out/production/Pokemon/Pokemon/Pokemon.class" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SelectPokemon.java" afterPath="$PROJECT_DIR$/src/GUI/SelectPokemon.java" />
       <change beforePath="$PROJECT_DIR$/src/Images/Pokemon/1.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/1.0.gif" />
       <change beforePath="$PROJECT_DIR$/src/Images/Pokemon/2.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/2.0.gif" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Pokemon/4.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/4.0.gif" />
       <change beforePath="$PROJECT_DIR$/src/Images/Pokemon/5.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/5.0.gif" />
       <change beforePath="$PROJECT_DIR$/src/Images/Pokemon/6.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/6.0.gif" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Pokemon/7.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/7.0.gif" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Pokemon/8.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/8.0.gif" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Pokemon/9.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/9.0.gif" />
       <change beforePath="$PROJECT_DIR$/src/Pokemon/Pokemans.java" afterPath="$PROJECT_DIR$/src/Pokemon/Pokemans.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -73,7 +164,7 @@
         <entry file="file://$PROJECT_DIR$/src/GUI/SelectPokemon.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="49">
-              <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+              <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -83,7 +174,7 @@
         <entry file="file://$PROJECT_DIR$/src/Moves/Move.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -114,8 +205,8 @@
       <file leaf-file-name="Pokemans.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Pokemon/Pokemans.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3339">
-              <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+            <state relative-caret-position="244">
+              <caret line="189" column="91" lean-forward="true" selection-start-line="189" selection-start-column="91" selection-end-line="189" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,7 +218,7 @@
         <entry file="file://$PROJECT_DIR$/src/Moves/HealMove.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -194,7 +285,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="908" />
     <option name="height" value="726" />
@@ -604,7 +695,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="908" height="726" extended-state="1" />
+    <frame x="-9" y="-9" width="1384" height="736" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -620,7 +711,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20204978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20204978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -944,7 +1035,7 @@
         <state relative-caret-position="138">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="48" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -980,7 +1071,7 @@
     <entry file="file://$PROJECT_DIR$/src/GUI/SelectPokemon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="49">
-          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1009,7 +1100,7 @@
     <entry file="file://$PROJECT_DIR$/src/Moves/Move.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1017,7 +1108,7 @@
     <entry file="file://$PROJECT_DIR$/src/Moves/HealMove.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1032,8 +1123,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pokemon/Pokemans.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3339">
-          <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="189" column="91" lean-forward="true" selection-start-line="189" selection-start-column="91" selection-end-line="189" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

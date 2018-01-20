@@ -187,7 +187,7 @@ public class Pokemans {
             new Image("Images/Pokemon/59.0.gif"), new Image("Images/Pokemon/59.1.gif"), 59),
 
             new Pokemon("Poliwag", "Water", 78, 100, 1, waste, waste, waste, waste,
-            new Image("Images/Pokemon/60.0.gif"), new Image("Images/Pokemon/60.1.gif"), 60),
+            new Image("Images/Pokemon/60.0.gif"), new Image("Images/Pokemon/60.1.gif"), 60)
 
     };
 
