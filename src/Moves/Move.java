@@ -1,4 +1,5 @@
 package Moves;
+import GUI.AlertBox;
 import Pokemon.Pokemon;
 
 public class Move {
@@ -17,6 +18,13 @@ public class Move {
 	}
 
 	public void makeMove(Pokemon opponent){
+	}
+	public boolean ppCheck(){
+		if (pp == 0){
+			AlertBox.display("No More PP","This move cannot be made");
+			return false;
+		}
+		return true;
 	}
 }
 

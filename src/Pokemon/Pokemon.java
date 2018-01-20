@@ -9,20 +9,26 @@ import javafx.scene.image.Image;
 public class Pokemon {
     String name, type;
     int speedStat, healthIV, speedIV,pokedexNum;
-    double strengthStat, strengthIV, hP;
+    double strengthStat, strengthIV, hP, maxhP;
     Move move0, move1, move2, move3;
     Image pokemonview, pokemonview2;
+
+    public double getMaxhP() {
+        return maxhP;
+    }
 
     public Pokemon(String name, String type, double hP, int speedStat, double strengthStat,
                    Move move0, Move move1, Move move2, Move move3, Image pokemonview, Image pokemonview2, int pokedexNum) {
         this.name = name;
         this.type = type;
         this.hP = hP;
+        this.maxhP = hP;
         this.speedStat = speedStat;
         this.strengthStat = strengthStat;
         this.move0 = move0;
         this.move1 = move1;
         this.move2 = move2;
+
         this.move3 = move3;
         this.pokemonview = pokemonview;
         this.pokemonview2 = pokemonview2;
