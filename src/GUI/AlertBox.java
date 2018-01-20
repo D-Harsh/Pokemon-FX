@@ -20,7 +20,7 @@ public class AlertBox {
 
         Label label = new Label();
         label.setText(message);
-        Image error = new Image("Images/1.gif");
+        Image error = new Image("Images/Pokemon/16.1.gif");
         ImageView iv = new ImageView();
         iv.setImage(error);
         Button closeButton = new Button("Close");

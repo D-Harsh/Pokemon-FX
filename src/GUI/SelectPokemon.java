@@ -11,25 +11,26 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-
+import java.awt.MouseInfo;
 
 
 /**
  * Created by Harsh on 2018-01-17.
  */
 public class SelectPokemon {
-//    static Move waste = new AttackMove("Fire", 25, 100, 100);
+    //    static Move waste = new AttackMove("Fire", 25, 100, 100);
     static Pokemon[] pokedex = Pokemans.pokedex;
+
     static public Scene getChooseScene(Stage primaryStage) {
         ImageView trainer1 = new ImageView(new Image("Images/trainer1.gif"));
         ImageView trainer2 = new ImageView(new Image("Images/trainer2.gif"));
         ImageView pokeball = new ImageView(new Image("Images/pokeballanimated.gif"));
         ImageView players = new ImageView(new Image("Images/p1p2.png"));
         ImageView pokefield = new ImageView();
-        scalePokeField(pokefield);
         trainer2.setFitHeight(200);
         trainer2.setFitWidth(200);
         trainer2.setPreserveRatio(true);
@@ -37,7 +38,7 @@ public class SelectPokemon {
         players.setFitHeight(200);
         players.setPreserveRatio(true);
         setCoordinates(players, 295, 20);
-        setCoordinates(pokefield, 380, 200);
+        setCoordinates(pokefield, 450, 350);
         setCoordinates(pokeball, 350, 400);
         setCoordinates(trainer1, 30, 100);
         setCoordinates(trainer2, 700, 100);
@@ -79,15 +80,26 @@ public class SelectPokemon {
             team2[i - 1] = tf;
             buttons2[i - 1] = show;
         }
+        Button random = button("Randomize");
+        setButtonHover(random);
+        setCoordinates(random,240,500);
+        random.setOnAction(e->{
+        for (int x = 0; x < team1.length;x++){
+            team1[x].setText(String.valueOf((int)Math.floor(Math.random() * 150)));
+            team2[x].setText(String.valueOf((int)Math.floor(Math.random() * 150)));
+        }
+        });
+
+
         Button confirm = button("Confirm");
         setButtonHover(confirm);
-        setCoordinates(confirm, 450, 200);
-        confirm.setOnAction(e-> {
-            if (checkConfirm(team1,team2,pokefield)){
+        setCoordinates(confirm, 590, 500);
+        confirm.setOnAction(e -> {
+            if (checkConfirm(team1, team2, pokefield)) {
                 primaryStage.setScene(Game.startGameScene(primaryStage));
             }
         });
-        selectPane.getChildren().add(confirm);
+        selectPane.getChildren().addAll(confirm,random);
         return new Scene(selectPane, 965, 600);
     }
 
@@ -118,7 +130,6 @@ public class SelectPokemon {
             for (Pokemon pok : pokedex) {
                 if (pok.getPokedexNum() == num) {
                     pokefield.setImage(pok.getPokemonImage());
-                    scalePokeField(pokefield);
                 }
             }
             return true;
@@ -143,34 +154,29 @@ public class SelectPokemon {
         return button;
     }
 
-    static public void setButtonHover(Button button){
+    static public void setButtonHover(Button button) {
         button.setOnMouseEntered(e -> button.setStyle(HOVERED_BUTTON_STYLE));
         button.setOnMouseExited(e -> button.setStyle(IDLE_BUTTON_STYLE));
     }
 
-    static public boolean checkConfirm(TextField[] team1, TextField[] team2, ImageView pokefield ){
-        for (TextField a:team1){
-            if (checkPokedexNum(a,pokefield))
+    static public boolean checkConfirm(TextField[] team1, TextField[] team2, ImageView pokefield) {
+        for (TextField a : team1) {
+            if (checkPokedexNum(a, pokefield))
                 continue;
-            else{
-                AlertBox.display("Error","Error with pokemon on Team 1");
+            else {
+                AlertBox.display("Error", "Error with pokemon on Team 1");
                 return false;
             }
         }
-        for (TextField a:team2){
-            if (checkPokedexNum(a,pokefield))
+        for (TextField a : team2) {
+            if (checkPokedexNum(a, pokefield))
                 continue;
-            else{
-                AlertBox.display("Error","Error with pokemon on Team 2");
+            else {
+                AlertBox.display("Error", "Error with pokemon on Team 2");
                 return false;
             }
         }
         return true;
     }
-    static public void scalePokeField(ImageView pokefield){
-//        pokefield.setFitHeight(100);
-//        pokefield.setFitWidth(100);
-//        pokefield.setPreserveRatio(true);
-//        System.out.println(pokefield.fitWidthProperty());
-    }
+
 }
