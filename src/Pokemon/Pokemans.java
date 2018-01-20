@@ -1,7 +1,10 @@
 package Pokemon;
 
 import Moves.AttackMove;
+import Moves.ConditionMove;
+import Moves.HealMove;
 import Moves.Move;
+import Moves.StatusMove;
 import javafx.scene.image.Image;
 
 public class Pokemans {
@@ -20,6 +23,14 @@ public class Pokemans {
     static Move Psychic = new AttackMove("Psychic", 20, 100 ,37);
     static Move Stone_Edge = new AttackMove("Rock", 10, 70, 40);
     static Move Hydropump = new AttackMove("Water", 10, 80, 45);
+    static Move Recover = new HealMove("Fire", 16, 100, 25);
+    static Move Synthesis = new HealMove("Fire", 8, 100, 25);
+    static Move Roost = new HealMove("Flying", 16, 100, 25);
+    static Move Thunderwave = new StatusMove("Electric",32 ,90,1);
+    static Move WillOWisp = new StatusMove("Fire",32, 85,2);
+    static Move SwordsDance = new ConditionMove("Normal", 25, 100, 2);
+    static Move DragonDance = new ConditionMove("Dragon",25,100, 3);
+    static Move Agility = new ConditionMove("Psychic",25, 100, 1);
     
     
     public static Pokemon[] pokedex = {
