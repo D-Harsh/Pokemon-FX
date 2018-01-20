@@ -26,6 +26,7 @@ public class Pokemon {
         this.move3 = move3;
         this.pokemonview = pokemonview;
         this.pokemonview2 = pokemonview2;
+        this.pokedexNum = pokedexNum;
         generateIVs();
     }
 

@@ -21,7 +21,7 @@ import javafx.stage.Stage;
  * Created by Harsh on 2018-01-17.
  */
 public class SelectPokemon {
-    static Move waste = new AttackMove("Fire", 25, 100, 100);
+//    static Move waste = new AttackMove("Fire", 25, 100, 100);
     static Pokemon[] pokedex = Pokemans.pokedex;
     static public Scene getChooseScene(Stage primaryStage) {
         ImageView trainer1 = new ImageView(new Image("Images/trainer1.gif"));
@@ -29,9 +29,7 @@ public class SelectPokemon {
         ImageView pokeball = new ImageView(new Image("Images/pokeballanimated.gif"));
         ImageView players = new ImageView(new Image("Images/p1p2.png"));
         ImageView pokefield = new ImageView();
-        pokefield.setFitHeight(225);
-        pokefield.setFitWidth(225);
-        pokefield.setPreserveRatio(true);
+        scalePokeField(pokefield);
         trainer2.setFitHeight(200);
         trainer2.setFitWidth(200);
         trainer2.setPreserveRatio(true);
@@ -120,6 +118,7 @@ public class SelectPokemon {
             for (Pokemon pok : pokedex) {
                 if (pok.getPokedexNum() == num) {
                     pokefield.setImage(pok.getPokemonImage());
+                    scalePokeField(pokefield);
                 }
             }
             return true;
@@ -167,5 +166,11 @@ public class SelectPokemon {
             }
         }
         return true;
+    }
+    static public void scalePokeField(ImageView pokefield){
+//        pokefield.setFitHeight(100);
+//        pokefield.setFitWidth(100);
+//        pokefield.setPreserveRatio(true);
+//        System.out.println(pokefield.fitWidthProperty());
     }
 }
