@@ -10,10 +10,7 @@ public class ConditionMove extends Move{
         this.statraise = statraise;
     }
 
-    @Override
-    public int calculateDamage(Pokemon pokemon) {
-        return 0;
-    }
+
 
     @Override
     public void makeMove(Pokemon userpokemon) {

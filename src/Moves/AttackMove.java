@@ -151,9 +151,9 @@ public class AttackMove extends Move{
     
     
 
-    @Override
-    public void makeMove(Pokemon opponent) {
+    public void makeMove(Pokemon opponent, Pokemon attacker) {
     	double hP = opponent.gethP();
+    	calculateDamage(attacker, opponent);
     	hP = hP - damage;
     	opponent.sethP(hP);
     }
