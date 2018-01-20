@@ -43,7 +43,7 @@ public class SelectPokemon {
         setCoordinates(pokeball, 350, 400);
         setCoordinates(trainer1, 30, 100);
         setCoordinates(trainer2, 700, 100);
-        ImageView background = new ImageView(new Image("Images/background.jpg"));
+        ImageView background = new ImageView(new Image("Images/pikbg.gif"));
         background.setFitHeight(600);
         background.setFitWidth(965);
         Pane selectPane = new Pane();
