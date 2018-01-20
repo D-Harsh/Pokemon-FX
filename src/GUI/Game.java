@@ -3,6 +3,7 @@ package GUI;
 import Moves.AttackMove;
 import Moves.Move;
 import Pokemon.Pokemon;
+import javafx.scene.ImageCursor;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -21,7 +22,7 @@ public class Game {
             "-fx-border-color: rgba(0, 0, 0, 0.7); -fx-border-radius: 5; -fx-background-radius: 5;";
     static Move waste = new AttackMove("Fire",25,100,100);
     static Pokemon[] pokedex = Pokemans.pokedex;
-    static public Scene startGameScene(Stage primaryStage){
+    static public Scene startGameScene(Stage primaryStage,Pokemon[] team1, Pokemon[] team2){
         ImageView battleground = new ImageView(), bg = new ImageView(), poke1 = new ImageView(), poke2 = new ImageView(),
                 p1Text = new ImageView(), p2Text = new ImageView();
         Image[] backgrounds = {new Image("Images/bb1.png"), new Image("Images/bb2.png"),new Image("Images/bb3.jpg"),
@@ -37,6 +38,7 @@ public class Game {
         ImageView[] player1Pokeballs = {new ImageView(), new ImageView(), new ImageView(), new ImageView(), new ImageView(), new ImageView()};
         ImageView[] player2Pokeballs = {new ImageView(), new ImageView(), new ImageView(), new ImageView(), new ImageView(), new ImageView()};
         Pane root = new Pane();
+        root.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2,2));
         Scene battle = new Scene(root, 965, 600);
         // SCENE BACKGROUND SETUP:
         bg.setImage(new Image("Images/battlescene.jpg"));

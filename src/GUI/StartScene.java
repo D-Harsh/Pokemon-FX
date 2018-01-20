@@ -1,6 +1,7 @@
 package GUI;
 
 import javafx.application.Application;
+import javafx.scene.ImageCursor;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -70,6 +71,7 @@ public class StartScene extends Application {
 //            primaryStage.setScene(TBD);
 //        });
         pane.getChildren().addAll(background, PvP, PvC, PvE, title, field, easterEgg, mew, mewtwo);
+        pane.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2,2));
         startScene = new Scene(pane, 965, 600);
         primaryStage.setScene(startScene);
         primaryStage.show();

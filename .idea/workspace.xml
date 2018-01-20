@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb0ec2b4-3c5f-4c6f-bea2-f6f9a3717f2f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Pokemon/GUI/IChooseYou.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GUI/IChooseYou.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/GUI/AlertBox.class" afterPath="$PROJECT_DIR$/out/production/Pokemon/GUI/AlertBox.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/GUI/SelectPokemon.class" afterPath="$PROJECT_DIR$/out/production/Pokemon/GUI/SelectPokemon.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/1.0.gif" afterPath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/1.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/2.0.gif" afterPath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/2.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/5.0.gif" afterPath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/5.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/6.0.gif" afterPath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/6.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/7.0.gif" afterPath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/7.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/8.0.gif" afterPath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/8.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/9.0.gif" afterPath="$PROJECT_DIR$/out/production/Pokemon/Images/Pokemon/9.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon/Pokemon/Pokemans.class" afterPath="$PROJECT_DIR$/out/production/Pokemon/Pokemon/Pokemans.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Images/Pokemon/1.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/1.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Images/Pokemon/2.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/2.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Images/Pokemon/5.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/5.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Images/Pokemon/6.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/6.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Images/Pokemon/7.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/7.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Images/Pokemon/8.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/8.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Images/Pokemon/9.0.gif" afterPath="$PROJECT_DIR$/src/Images/Pokemon/9.0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/AlertBox.java" afterPath="$PROJECT_DIR$/src/GUI/AlertBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Game.java" afterPath="$PROJECT_DIR$/src/GUI/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/SelectPokemon.java" afterPath="$PROJECT_DIR$/src/GUI/SelectPokemon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pokemon/Pokemans.java" afterPath="$PROJECT_DIR$/src/Pokemon/Pokemans.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StartScene.java" afterPath="$PROJECT_DIR$/src/GUI/StartScene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,10 +37,30 @@
         <entry file="file://$PROJECT_DIR$/src/GUI/SelectPokemon.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <caret line="106" column="42" lean-forward="false" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="24" column="90" lean-forward="false" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartScene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/StartScene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="73" column="77" lean-forward="false" selection-start-line="73" selection-start-column="77" selection-end-line="73" selection-end-column="77" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,6 +81,8 @@
       <find>prima</find>
       <find>pokedex</find>
       <find>confirm</find>
+      <find>ran</find>
+      <find>pane</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,12 +108,12 @@
         <option value="$PROJECT_DIR$/src/Moves/HealMove.java" />
         <option value="$PROJECT_DIR$/src/GUI/Practice.java" />
         <option value="$PROJECT_DIR$/src/GUI/IChooseYou.java" />
-        <option value="$PROJECT_DIR$/src/GUI/StartScene.java" />
         <option value="$PROJECT_DIR$/src/Moves/AttackMove.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Game.java" />
         <option value="$PROJECT_DIR$/src/Pokemon/Pokemon.java" />
         <option value="$PROJECT_DIR$/src/Pokemon/Pokemans.java" />
         <option value="$PROJECT_DIR$/src/GUI/AlertBox.java" />
+        <option value="$PROJECT_DIR$/src/GUI/StartScene.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Game.java" />
         <option value="$PROJECT_DIR$/src/GUI/SelectPokemon.java" />
       </list>
     </option>
@@ -137,8 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -197,35 +197,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pokemon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pokemon-FX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pokemon-FX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="GUI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -585,7 +565,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -596,7 +576,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31849316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31849316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -851,16 +831,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Practice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -875,14 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/StartScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="18" column="86" lean-forward="false" selection-start-line="18" selection-start-column="86" selection-end-line="18" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -936,10 +898,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/IChooseYou.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/StartScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="73" column="77" lean-forward="false" selection-start-line="73" selection-start-column="77" selection-end-line="73" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="24" column="90" lean-forward="false" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/SelectPokemon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <caret line="106" column="42" lean-forward="false" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -5,6 +5,7 @@ import Moves.Move;
 import Pokemon.Pokemans;
 import Pokemon.Pokemon;
 
+import javafx.scene.ImageCursor;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -85,21 +86,21 @@ public class SelectPokemon {
         setCoordinates(random,240,500);
         random.setOnAction(e->{
         for (int x = 0; x < team1.length;x++){
-            team1[x].setText(String.valueOf((int)Math.floor(Math.random() * 150)));
-            team2[x].setText(String.valueOf((int)Math.floor(Math.random() * 150)));
+            team1[x].setText(String.valueOf((int)Math.floor(Math.random() * 150)+1));
+            team2[x].setText(String.valueOf((int)Math.floor(Math.random() * 150)+1));
         }
         });
-
-
         Button confirm = button("Confirm");
         setButtonHover(confirm);
         setCoordinates(confirm, 590, 500);
         confirm.setOnAction(e -> {
             if (checkConfirm(team1, team2, pokefield)) {
-                primaryStage.setScene(Game.startGameScene(primaryStage));
+                primaryStage.setScene(Game.startGameScene(primaryStage, getPokemonTeam(team1),getPokemonTeam(team2)));
             }
         });
         selectPane.getChildren().addAll(confirm,random);
+
+        selectPane.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2,2));
         return new Scene(selectPane, 965, 600);
     }
 
@@ -177,6 +178,19 @@ public class SelectPokemon {
             }
         }
         return true;
+    }
+    static public Pokemon[] getPokemonTeam(TextField[] pokedexNums){
+        Pokemon[] team = new Pokemon[6];
+        for (TextField pokemon : pokedexNums) {
+            int index = 0;
+            for(Pokemon p: pokedex){
+                if (p.getPokedexNum() == Integer.parseInt(pokemon.getText())){
+                    team[index] = p;
+                    index++;
+                }
+            }
+        }
+        return team;
     }
 
 }
