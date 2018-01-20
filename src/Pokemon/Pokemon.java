@@ -8,18 +8,18 @@ import javafx.scene.image.Image;
 
 public class Pokemon {
     String name, type;
-    int hP, speedStat, healthIV, speedIV,pokedexNum;
-    double stengthStat, strengthIV;
+    int speedStat, healthIV, speedIV,pokedexNum;
+    double strengthStat, strengthIV, hP;
     Move move0, move1, move2, move3;
     Image pokemonview, pokemonview2;
 
-    public Pokemon(String name, String type, int hP, int speedStat, double stengthStat,
+    public Pokemon(String name, String type, double hP, int speedStat, double strengthStat,
                    Move move0, Move move1, Move move2, Move move3, Image pokemonview, Image pokemonview2, int pokedexNum) {
         this.name = name;
         this.type = type;
         this.hP = hP;
         this.speedStat = speedStat;
-        this.stengthStat = stengthStat;
+        this.strengthStat = strengthStat;
         this.move0 = move0;
         this.move1 = move1;
         this.move2 = move2;
@@ -52,7 +52,31 @@ public class Pokemon {
         this.strengthIV = (Math.random() * 0.5);
     }
 
-    public void useMove(Pokemon opponent, Move move) {
+    public double gethP() {
+		return hP;
+	}
+
+	public void sethP(double hP) {
+		this.hP = hP;
+	}
+
+	public int getSpeedStat() {
+		return speedStat;
+	}
+
+	public void setSpeedStat(int speedStat) {
+		this.speedStat = speedStat;
+	}
+
+	public double getStrengthStat() {
+		return strengthStat;
+	}
+
+	public void setStrengthStat(double stengthStat) {
+		this.strengthStat = stengthStat;
+	}
+
+	public void useMove(Pokemon opponent, Move move) {
         move.makeMove(opponent);
     }
 

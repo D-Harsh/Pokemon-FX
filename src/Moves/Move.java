@@ -1,6 +1,6 @@
 package Moves;
 import Pokemon.Pokemon;
-import javafx.scene.image.Image;
+
 public class Move {
 	String type;
 	int pp;
@@ -13,10 +13,10 @@ public class Move {
 	}
 
 	public int calculateDamage(Pokemon pokemon){
-	return 0;
+		return 0;
 	}
 
-	public void makeMove(Pokemon pokemon){
+	public void makeMove(Pokemon opponent){
 	}
 }
 

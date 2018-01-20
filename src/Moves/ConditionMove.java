@@ -1,10 +1,13 @@
 package Moves;
 import Pokemon.Pokemon;
-import javafx.scene.image.Image;
+
 
 public class ConditionMove extends Move{
-    public ConditionMove(String type, int pp,int acc) {
-        super(type, pp,acc);
+	// if statraise = 1 speed will be doubled and if statraise = 2 strength will be doubled
+	int statraise;
+    public ConditionMove(String type, int pp,int acc, int statraise) {
+        super(type, pp, acc);
+        this.statraise = statraise;
     }
 
     @Override
@@ -13,7 +16,14 @@ public class ConditionMove extends Move{
     }
 
     @Override
-    public void makeMove(Pokemon pokemon) {
-
+    public void makeMove(Pokemon userpokemon) {
+    	if (statraise == 1) {
+    		int SS = userpokemon.getSpeedStat();
+    		userpokemon.setSpeedStat(SS*2);
+    	}
+    	if (statraise == 2) {
+    		double StrS = userpokemon.getStrengthStat();
+    		userpokemon.setStrengthStat(StrS*2);
+    	}
     }
 }
