@@ -25,23 +25,29 @@ public class Pokemans {
     static Move Stone_Edge = new AttackMove("Rock", 10, 70, 40);
     static Move Hydropump = new AttackMove("Water", 10, 80, 45);
     static Move Recover = new HealMove("Fire", 16, 100, 25);
-    static Move Synthesis = new HealMove("Fire", 8, 100, 25);
-    static Move Roost = new HealMove("Flying", 16, 100, 25);
-    static Move Thunderwave = new StatusMove("Electric",32 ,90,1);
+    static Move Synthesis = new HealMove("Fire", 8, 100, 15);
+    static Move Roost = new HealMove("Flying", 16, 100, 20);
+    static Move Thunderwave = new StatusMove("Electric", 32 , 90, 1);
     static Move WillOWisp = new StatusMove("Fire",32, 85,2);
     static Move SwordsDance = new ConditionMove("Normal", 25, 100, 2);
     static Move DragonDance = new ConditionMove("Dragon",25,100, 3);
     static Move Agility = new ConditionMove("Psychic",25, 100, 1);
+    static Move Leaf_Blade = new AttackMove("Grass", 16, 90, 32);
+    static Move Tackle = new AttackMove("Normal", 32, 100, 10);
     
     
     public static Pokemon[] pokedex = {
-            new Pokemon("Bulbasaur", "Grass", 45, 45, 0.7, waste, waste, waste, waste,
+            new Pokemon("Bulbasaur", "Grass", 45, 45, 0.7, Tackle, Gunk_Shot, Synthesis, Leaf_Blade,
             new Image("Images/Pokemon/1.0.gif"), new Image("Images/Pokemon/1.1.gif"),1),
 
             new Pokemon("Ivysaur", "Grass", 60, 60, 0.85, waste, waste, waste, waste,
             new Image("Images/Pokemon/2.0.gif"), new Image("Images/Pokemon/2.1.gif"),2),
 
+<<<<<<< HEAD
             new Pokemon("Venusaur", "Grass", 80, 80, 1.25, waste, waste, waste, waste,
+=======
+            new Pokemon("Venusaur", "Grass", 80, 80, 1.2, Vine_Whip, waste, waste, waste,
+>>>>>>> 7569fc9d5b1da2a4540df33cafc46dd193a2ae60
             new Image("Images/Pokemon/3.0.gif"), new Image("Images/Pokemon/3.1.gif"),3),
 
             new Pokemon("Charmander", "Fire", 39, 65, 0.7, waste, waste, waste, waste,
