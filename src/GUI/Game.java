@@ -4,6 +4,7 @@ import Pokemon.Pokemon;
 import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -13,11 +14,6 @@ import java.util.Arrays;
 import static GUI.Tools.*;
 
 public class Game {
-    static final String TRANSPARENT_BUTTON_HOVER = "-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 10000;";
-    static final String MOVE_BUTTON_STYLE = "-fx-min-width: 150px; -fx-max-height: 80px; -fx-border-width: 3px; " +
-            "-fx-border-color: rgba(0, 0, 0, 0.3); -fx-border-radius: 5; -fx-background-radius: 5;";
-    static final String MOVE_BUTTON_HOVER_STYLE = "-fx-min-width: 150px; -fx-max-height: 80px; -fx-border-width: 3px;" +
-            "-fx-border-color: rgba(0, 0, 0, 0.7); -fx-border-radius: 5; -fx-background-radius: 5;";
 
     static public Scene startGameScene(Stage primaryStage, Pokemon[] player1, Pokemon[] player2) {
         final ImageView battleground = new ImageView(), bg = new ImageView(), poke1 = new ImageView(), poke2 = new ImageView(),
@@ -60,9 +56,9 @@ public class Game {
 
         // PLACING THE TWO TRAINERS THAT REPRESENT EACH PLAYER
         ImageView trainer1 = new ImageView(new Image("Images/trainer1.gif"));
-        setCoordinates(trainer1, 50, 180);
+        setCoordinates(trainer1, 50, 200);
         ImageView trainer2 = new ImageView(new Image("Images/trainer2.gif"));
-        setCoordinates(trainer2, 820, 60);
+        setCoordinates(trainer2, 820, 40);
         trainer1.setPreserveRatio(true); // Prevents the trainer image from being distorted
         trainer1.setFitHeight(100);
         trainer1.setFitWidth(100); // Sets size of trainer1
@@ -77,8 +73,8 @@ public class Game {
         p2Text.setPreserveRatio(true);
         p1Text.setFitWidth(170);
         p2Text.setFitWidth(170);
-        setCoordinates(p1Text, 10, 260);
-        setCoordinates(p2Text, 770, 140);
+        setCoordinates(p1Text, 10, 275);
+        setCoordinates(p2Text, 770, 120);
 
         // PLACING THE IMAGEVIEWS WHERE THE POKEMON GO ON THE BATTLEFIELD
         poke1.setFitHeight(100);
@@ -97,7 +93,13 @@ public class Game {
         root.getChildren().addAll(battleground, poke1, poke2, trainer1, trainer2, p1Text, p2Text, p1team, p2team);
 
 
-        final Button p1m1 = moveButton(getCurrentPok(poke1, player1).getMove0()), p1m2 = moveButton(currPoke1.getMove1()), p1m3 = moveButton(currPoke1.getMove2()),
+        //Making Stat Boxes for Both Current Pokemon
+        final TextArea stat1 = makeStatBox(30, 10 ), stat2  = makeStatBox(800,175);
+        stat1.setText(currPoke1.toString()); stat2.setText(currPoke2.toString());
+        root.getChildren().addAll(stat1,stat2);
+
+
+        final Button p1m1 = moveButton(currPoke1.getMove0()), p1m2 = moveButton(currPoke1.getMove1()), p1m3 = moveButton(currPoke1.getMove2()),
                 p1m4 = moveButton(currPoke1.getMove3()), p2m1 = moveButton(currPoke2.getMove0()), p2m2 = moveButton(currPoke2.getMove1()),
                 p2m3 = moveButton(currPoke2.getMove2()), p2m4 = moveButton(currPoke2.getMove3());
         // POKEMON SWITCH BUTTONS AT THE BOTTOM
@@ -111,7 +113,7 @@ public class Game {
                 p1m2.setText(getCurrentPok(poke1, player1).getMove1());
                 p1m3.setText(getCurrentPok(poke1, player1).getMove2());
                 p1m4.setText(getCurrentPok(poke1, player1).getMove3());
-
+                stat1.setText(getCurrentPok(poke1, player1).toString());
             });
             root.getChildren().add(pokeButton);
         }
@@ -125,6 +127,7 @@ public class Game {
                 p2m2.setText(getCurrentPok(poke2, player2).getMove1());
                 p2m3.setText(getCurrentPok(poke2, player2).getMove2());
                 p2m4.setText(getCurrentPok(poke2, player2).getMove3());
+                stat2.setText(getCurrentPok(poke2, player2).toString());
             });
             root.getChildren().add(pokeButton);
         }
@@ -156,6 +159,8 @@ public class Game {
             root.getChildren().addAll(player2Pokeballs[i]);
         }
         musicPlease();
+
+
         return battle;
     }
 
@@ -194,6 +199,18 @@ public class Game {
         battleground.setStyle("-fx-border-color: #4d4d4d; -fx-background-radius: 5; -fx-border-width: 6px;; -fx-border-radius: 5;" +
                 "-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);");
         battleground.setImage(backgrounds[arrayNum]);
+    }
+
+    static public TextArea makeStatBox(int x, int y){
+        TextArea stat = new TextArea();
+        stat.setOpacity(0.95);
+        stat.setWrapText(true);
+        stat.setDisable(true);
+        stat.setPrefColumnCount(10);
+        stat.setPrefRowCount(10);
+        stat.setStyle("-fx-background-color: rgba(0,0,0,0.7);");
+        setCoordinates(stat,x,y);
+        return stat;
     }
 
     static Pokemon getCurrentPok(ImageView pokImage, Pokemon[] team) {

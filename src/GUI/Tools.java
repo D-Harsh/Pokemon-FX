@@ -22,6 +22,11 @@ public class Tools {
             "-fx-border-color: #002b80;\n-fx-border-radius: 7;";
     public static final String INVISIBLE_BUTTON_STYLE = "-fx-border-color: transparent;\n-fx-border-width: 0;\n" +
             "-fx-background-radius: 0;\n-fx-background-color: transparent;";
+    public static final String TRANSPARENT_BUTTON_HOVER = "-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 10000;";
+    public static final String MOVE_BUTTON_STYLE = "-fx-min-width: 150px; -fx-max-height: 80px; -fx-border-width: 3px; " +
+            "-fx-border-color: rgba(0, 0, 0, 0.3); -fx-border-radius: 5; -fx-background-radius: 5;";
+    public static final String MOVE_BUTTON_HOVER_STYLE = "-fx-min-width: 150px; -fx-max-height: 80px; -fx-border-width: 3px;" +
+            "-fx-border-color: rgba(0, 0, 0, 0.7); -fx-border-radius: 5; -fx-background-radius: 5;";
 
     //Positioning Method for any GUI element
     public static void setCoordinates(Object a, int x, int y) {

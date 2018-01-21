@@ -19,12 +19,14 @@ public class SelectPokemon {
     static Pokemon[] pokedex = Pokemans.pokedex;
 
     static public Scene getChooseScene(Stage primaryStage) {
+
         //sets up the background elements and pokemon field for this scene
         ImageView trainer1 = new ImageView(new Image("Images/trainer1.gif"));
         ImageView trainer2 = new ImageView(new Image("Images/trainer2.gif"));
         ImageView pokeball = new ImageView(new Image("Images/pokeballanimated.gif"));
         ImageView players = new ImageView(new Image("Images/p1p2.png"));
         ImageView pokefield = new ImageView();
+
         //organizes the images in the scene and places them
         trainer2.setFitHeight(200);
         trainer2.setFitWidth(200);
@@ -37,12 +39,14 @@ public class SelectPokemon {
         setCoordinates(pokeball, 350, 400);
         setCoordinates(trainer1, 30, 100);
         setCoordinates(trainer2, 700, 100);
+
         //Background and Pane Set Up
         ImageView background = new ImageView(new Image("Images/pikbg.gif"));
         background.setFitHeight(600);
         background.setFitWidth(965);
         Pane selectPane = new Pane();
         selectPane.getChildren().addAll(background, trainer1, trainer2, players, pokeball, pokefield);
+
         //Text Field List for team 1 is created and a stats field is also created and positioned
         TextField[] team1 = new TextField[6];
         Button[] buttons1 = new Button[6];
@@ -54,6 +58,7 @@ public class SelectPokemon {
         stat.setPrefRowCount(10);
         stat.setStyle("-fx-background-color: rgba(0,0,0,0.7);");
         setCoordinates(stat, 425, 160);
+
         //Text fields for team 1 and buttons for team 1 are created and assigned functions
         for (int i = 1; i <= 6; i++) {
             TextField tf = new TextField("Enter Pokedex Num");
@@ -84,10 +89,12 @@ public class SelectPokemon {
             team2[i - 1] = tf;
             buttons2[i - 1] = show;
         }
+
         //The randomize button is created for teh random battle option
         Button random = button("Randomize");
         setButtonHover(random);
         setCoordinates(random, 240, 500);
+
         //When clicked the random button sets values for each pokemon
         random.setOnAction(e -> {
             for (int x = 0; x < team1.length; x++) {
@@ -95,6 +102,7 @@ public class SelectPokemon {
                 team2[x].setText(String.valueOf((int) Math.floor(Math.random() * 150) + 1));
             }
         });
+
         //Confirm Button to start game play
         Button confirm = button("Confirm");
         setButtonHover(confirm);
@@ -104,8 +112,10 @@ public class SelectPokemon {
                 primaryStage.setScene(Game.startGameScene(primaryStage, getPokemonTeam(team1), getPokemonTeam(team2)));
             }
         });
+
         //Music
         musicPlease();
+
         //Final setup of GUI elements and the Scene is returned
         selectPane.getChildren().addAll(confirm, random, stat);
         selectPane.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2, 2));
