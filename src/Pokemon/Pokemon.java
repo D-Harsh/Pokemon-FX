@@ -13,6 +13,22 @@ public class Pokemon {
     Move move0, move1, move2, move3;
     Image pokemonview, pokemonview2;
 
+    public String getMove0() {
+        return move0.getName();
+    }
+
+    public String getMove1() {
+        return move1.getName();
+    }
+
+    public String getMove2() {
+        return move2.getName();
+    }
+
+    public String getMove3() {
+        return move3.getName();
+    }
+
     public double getMaxhP() {
         return maxhP;
     }
@@ -42,6 +58,19 @@ public class Pokemon {
 
     public int getPokedexNum() {
         return pokedexNum;
+    }
+
+    @Override
+    public String toString() {
+        return "\nName='" + name + '\'' +
+                ", \nType='" + type + '\'' +
+                ", \nSpeedStat=" + speedStat +
+                ", \nHealthIV=" + healthIV +
+                ", \nSpeedIV=" + speedIV +
+                ", \nPokedexNum=" + pokedexNum +
+                ", \nStrengthStat=" + strengthStat +
+//                ", \nStrengthIV=" + strengthIV +
+                ", \nhP=" + hP;
     }
 
     public Image getPokemonImage() {

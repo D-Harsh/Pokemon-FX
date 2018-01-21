@@ -4,8 +4,8 @@ import Pokemon.Pokemon;
 
 public class AttackMove extends Move{
 	double damage;
-    public AttackMove(String type, int pp, int accuracy, int damage){
-    	super(type, pp, accuracy);
+    public AttackMove(String type, String name, int pp, int accuracy, int damage){
+    	super(type,name, pp, accuracy);
     	this.damage = damage;
     }
 

@@ -3,11 +3,16 @@ import GUI.AlertBox;
 import Pokemon.Pokemon;
 
 public class Move {
-	String type;
+	String type, name;
 	int pp;
 	int accuracy;
 
-	public Move(String type, int pp, int accuracy) {
+	public String getName() {
+		return name;
+	}
+
+	public Move(String type, String name, int pp, int accuracy) {
+		this.name = name;
 		this.type = type;
 		this.pp = pp;
 		this.accuracy = accuracy;

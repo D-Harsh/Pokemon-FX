@@ -14,29 +14,29 @@ import javafx.stage.Stage;
 import javafx.scene.shape.Line;
 import Pokemon.Pokemans;
 
+import java.util.Arrays;
+
 public class Game {
     static final String TRANSPARENT_BUTTON_HOVER = "-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 10000;";
     static final String MOVE_BUTTON_STYLE = "-fx-min-width: 150px; -fx-max-height: 80px; -fx-border-width: 3px; " +
             "-fx-border-color: rgba(0, 0, 0, 0.3); -fx-border-radius: 5; -fx-background-radius: 5;";
     static final String MOVE_BUTTON_HOVER_STYLE = "-fx-min-width: 150px; -fx-max-height: 80px; -fx-border-width: 3px;" +
             "-fx-border-color: rgba(0, 0, 0, 0.7); -fx-border-radius: 5; -fx-background-radius: 5;";
-    static Move waste = new AttackMove("Fire",25,100,100);
-    static Pokemon[] pokedex = Pokemans.pokedex;
-    static public Scene startGameScene(Stage primaryStage,Pokemon[] team1, Pokemon[] team2){
-        ImageView battleground = new ImageView(), bg = new ImageView(), poke1 = new ImageView(), poke2 = new ImageView(),
+    static public Scene startGameScene(Stage primaryStage,Pokemon[] player1, Pokemon[] player2){
+        final ImageView battleground = new ImageView(), bg = new ImageView(), poke1 = new ImageView(), poke2 = new ImageView(),
                 p1Text = new ImageView(), p2Text = new ImageView();
         Image[] backgrounds = {new Image("Images/bb1.png"), new Image("Images/bb2.png"),new Image("Images/bb3.jpg"),
                 new Image("Images/bb4.png"), new Image("Images/bb5.png"), new Image("Images/bb6.png"),
                 new Image("Images/bb7.jpg"), new Image("Images/bb8.png"), new Image("Images/bb9.png")};
 
-        Pokemon[] player1 = {pokedex[0], pokedex[0], pokedex[1], pokedex[1], pokedex[2], pokedex[2]};
-        Pokemon[] player2 = {pokedex[0], pokedex[0], pokedex[1], pokedex[1], pokedex[2], pokedex[2]};
 
         //Media media = new Media(
         //"file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
         //MediaPlayer player = new MediaPlayer(media);
-        ImageView[] player1Pokeballs = {new ImageView(), new ImageView(), new ImageView(), new ImageView(), new ImageView(), new ImageView()};
-        ImageView[] player2Pokeballs = {new ImageView(), new ImageView(), new ImageView(), new ImageView(), new ImageView(), new ImageView()};
+        ImageView[] player1Pokeballs = new ImageView[6];
+        Arrays.setAll(player1Pokeballs, i -> new ImageView());
+        ImageView[] player2Pokeballs = new ImageView[6];
+        Arrays.setAll(player2Pokeballs, i -> new ImageView());
         Pane root = new Pane();
         root.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2,2));
         Scene battle = new Scene(root, 965, 600);
@@ -78,37 +78,49 @@ public class Game {
         setCoordinates(p1Text, 10, 260); setCoordinates(p2Text,770,140);
 
         // PLACING THE IMAGEVIEWS WHERE THE POKEMON GO ON THE BATTLEFIELD
-        poke1.setFitHeight(150); poke2.setFitHeight(150);
+        poke1.setFitHeight(100); poke2.setFitHeight(100);
         Pokemon currPoke1 = player1[0]; Pokemon currPoke2 = player2[0];
         poke1.setImage(currPoke1.getPokemonImage()); poke2.setImage(currPoke2.getPokemonImage());
-        setCoordinates(poke1, 230, 150); setCoordinates(poke2, 530, -10);
-
+        currPoke1 = getCurrentPok(poke1,player1);
+        currPoke2 = getCurrentPok(poke2,player2);
+        setCoordinates(poke1, 250, 150); setCoordinates(poke2, 565, 10);
         // ADDING MOST OF THE COMPONENTS TO THE SCENE
         root.getChildren().addAll(battleground, poke1, poke2, trainer1, trainer2, p1Text, p2Text, p1team, p2team);
 
 
+        final Button p1m1 = moveButton(getCurrentPok(poke1,player1).getMove0()), p1m2 = moveButton(currPoke1.getMove1()), p1m3 = moveButton(currPoke1.getMove2()),
+                p1m4 = moveButton(currPoke1.getMove3()), p2m1 = moveButton(currPoke2.getMove0()), p2m2 = moveButton(currPoke2.getMove1()),
+                p2m3 = moveButton(currPoke2.getMove2()), p2m4 = moveButton(currPoke2.getMove3());
         // POKEMON SWITCH BUTTONS AT THE BOTTOM
         for(int i = 0; i < 6; i++){
             Button pokeButton = pokeSwitchButton(player1[i].getPokemonImage());
-            setCoordinates(pokeButton, (150 + (40*i)), 500);
-//            pokeButton.setOnAction(e->{
-//
-//            });
+            setCoordinates(pokeButton, ((30*2*i)), 500);
+            final int a = i;
+            pokeButton.setOnAction(e->{
+                poke1.setImage(player1[a].getPokemonImage());
+                p1m1.setText(getCurrentPok(poke1,player1).getMove0());
+                p1m2.setText(getCurrentPok(poke1,player1).getMove1());
+                p1m3.setText(getCurrentPok(poke1,player1).getMove2());
+                p1m4.setText(getCurrentPok(poke1,player1).getMove3());
+
+            });
             root.getChildren().add(pokeButton);
         }
         for(int i = 0; i < 6; i++){
             Button pokeButton = pokeSwitchButton(player2[i].getPokemonImage());
-            setCoordinates(pokeButton, (520 + (40*i)), 500);
-//            pokeButton.setOnAction(e->{
-//
-//            });
+            setCoordinates(pokeButton, (500 + (30*2*i)), 500);
+            final int a = i;
+            pokeButton.setOnAction(e->{
+                poke2.setImage(player2[a].getPokemonImage());
+                p2m1.setText(getCurrentPok(poke2,player2).getMove0());
+                p2m2.setText(getCurrentPok(poke2,player2).getMove1());
+                p2m3.setText(getCurrentPok(poke2,player2).getMove2());
+                p2m4.setText(getCurrentPok(poke2,player2).getMove3());
+            });
             root.getChildren().add(pokeButton);
         }
 
         // MOVE BUTTONS
-        Button p1m1 = moveButton("waste"), p1m2 = moveButton("waste"), p1m3 = moveButton("waste"),
-                p1m4 = moveButton("waste"), p2m1 = moveButton("waste"), p2m2 = moveButton("waste"),
-                p2m3 = moveButton("waste"), p2m4 = moveButton("waste");
         setCoordinates(p1m1, 60, 380); setCoordinates(p1m2, 240, 380); setCoordinates(p1m3, 60, 440);
         setCoordinates(p1m4, 240, 440);
         setCoordinates(p2m1, 580, 380); setCoordinates(p2m2, 760, 380); setCoordinates(p2m3, 580, 440);
@@ -174,5 +186,13 @@ public class Game {
         battleground.setStyle("-fx-border-color: #4d4d4d; -fx-background-radius: 5; -fx-border-width: 6px;; -fx-border-radius: 5;" +
                 "-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);");
         battleground.setImage(backgrounds[arrayNum]);
+    }
+    static Pokemon getCurrentPok(ImageView pokImage, Pokemon[] team){
+        for (Pokemon p: team){
+            if (p.getPokemonImage() == pokImage.getImage()){
+                return p;
+            }
+        }
+        return null;
     }
 }

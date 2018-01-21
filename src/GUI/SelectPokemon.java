@@ -5,10 +5,12 @@ import Moves.Move;
 import Pokemon.Pokemans;
 import Pokemon.Pokemon;
 
+import com.sun.prism.paint.Color;
 import javafx.scene.ImageCursor;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -17,6 +19,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.awt.MouseInfo;
+
+import static com.sun.prism.paint.Color.*;
 
 
 /**
@@ -52,15 +56,21 @@ public class SelectPokemon {
         //Team 1 setup
         TextField[] team1 = new TextField[6];
         Button[] buttons1 = new Button[6];
-
+        TextArea stat= new TextArea();
+        stat.setOpacity(1);
+        stat.setWrapText(true);
+        stat.setDisable(true);
+        stat.setPrefColumnCount(10);
+        stat.setPrefRowCount(10);
+        setCoordinates(stat, 425,175);
         for (int i = 1; i <= 6; i++) {
             TextField tf = new TextField("Enter Pokedex Num");
             tf.setOpacity(0.90);
             setCoordinates(tf, 50, 250 + (i * 50));
             Button show = pokebutton();
             setCoordinates(show, 200, 250 + (i * 50));
-            tf.setOnAction(e -> checkPokedexNum(tf, pokefield));
-            show.setOnAction(e -> checkPokedexNum(tf, pokefield));
+            tf.setOnAction(e -> checkPokedexNum(tf, pokefield,stat));
+            show.setOnAction(e -> checkPokedexNum(tf, pokefield,stat));
             selectPane.getChildren().addAll(tf, show);
             team1[i - 1] = tf;
             buttons1[i - 1] = show;
@@ -75,8 +85,8 @@ public class SelectPokemon {
             setCoordinates(tf, 750, 250 + (i * 50));
             Button show = pokebutton();
             setCoordinates(show, 725, 250 + (i * 50));
-            tf.setOnAction(e -> checkPokedexNum(tf, pokefield));
-            show.setOnAction(e -> checkPokedexNum(tf, pokefield));
+            tf.setOnAction(e -> checkPokedexNum(tf, pokefield,stat));
+            show.setOnAction(e -> checkPokedexNum(tf, pokefield,stat));
             selectPane.getChildren().addAll(tf, show);
             team2[i - 1] = tf;
             buttons2[i - 1] = show;
@@ -98,7 +108,7 @@ public class SelectPokemon {
                 primaryStage.setScene(Game.startGameScene(primaryStage, getPokemonTeam(team1),getPokemonTeam(team2)));
             }
         });
-        selectPane.getChildren().addAll(confirm,random);
+        selectPane.getChildren().addAll(confirm,random,stat);
 
         selectPane.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2,2));
         return new Scene(selectPane, 965, 600);
@@ -121,7 +131,7 @@ public class SelectPokemon {
         return pok1;
     }
 
-    static public boolean checkPokedexNum(TextField choice, ImageView pokefield) {
+    static public boolean checkPokedexNum(TextField choice, ImageView pokefield, TextArea stat) {
         try {
             int num = Integer.parseInt(choice.getText());
             if (num > 151 || num < 1) {
@@ -131,6 +141,7 @@ public class SelectPokemon {
             for (Pokemon pok : pokedex) {
                 if (pok.getPokedexNum() == num) {
                     pokefield.setImage(pok.getPokemonImage());
+                    stat.setText(pok.toString());
                 }
             }
             return true;
@@ -162,7 +173,7 @@ public class SelectPokemon {
 
     static public boolean checkConfirm(TextField[] team1, TextField[] team2, ImageView pokefield) {
         for (TextField a : team1) {
-            if (checkPokedexNum(a, pokefield))
+            if (checkPokedexNum(a, pokefield,new TextArea()))
                 continue;
             else {
                 AlertBox.display("Error", "Error with pokemon on Team 1");
@@ -170,7 +181,7 @@ public class SelectPokemon {
             }
         }
         for (TextField a : team2) {
-            if (checkPokedexNum(a, pokefield))
+            if (checkPokedexNum(a, pokefield,new TextArea()))
                 continue;
             else {
                 AlertBox.display("Error", "Error with pokemon on Team 2");
@@ -181,16 +192,18 @@ public class SelectPokemon {
     }
     static public Pokemon[] getPokemonTeam(TextField[] pokedexNums){
         Pokemon[] team = new Pokemon[6];
+        int index = 0;
         for (TextField pokemon : pokedexNums) {
-            int index = 0;
             for(Pokemon p: pokedex){
                 if (p.getPokedexNum() == Integer.parseInt(pokemon.getText())){
                     team[index] = p;
-                    index++;
+                    break;
                 }
             }
+            index++;
         }
         return team;
     }
+
 
 }

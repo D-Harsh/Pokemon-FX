@@ -5,8 +5,8 @@ import Pokemon.Pokemon;
 
 public class HealMove extends Move{
 	double healstr;
-    public HealMove(String type, int pp, int acc, double healstr) {
-        super(type, pp,acc);
+    public HealMove(String type,String name, int pp, int acc, double healstr) {
+        super(type,name, pp,acc);
         this.healstr = healstr;
     }
 

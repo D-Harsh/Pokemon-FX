@@ -5,8 +5,8 @@ import Pokemon.Pokemon;
 public class ConditionMove extends Move{
 	
     int status; // 1 is paralyze 2 is burn
-    public ConditionMove(String type, int pp,int acc, int status) {
-        super(type, pp, acc);
+    public ConditionMove(String type,String name, int pp,int acc, int status) {
+        super(type,name, pp, acc);
         this.status = status;
     }
 
