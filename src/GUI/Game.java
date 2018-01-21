@@ -79,11 +79,12 @@ public class Game {
 
         // PLACING THE IMAGEVIEWS WHERE THE POKEMON GO ON THE BATTLEFIELD
         poke1.setFitHeight(100); poke2.setFitHeight(100);
+        poke1.setPreserveRatio(true); poke2.setPreserveRatio(true);
         Pokemon currPoke1 = player1[0]; Pokemon currPoke2 = player2[0];
         poke1.setImage(currPoke1.getPokemonImage()); poke2.setImage(currPoke2.getPokemonImage());
         currPoke1 = getCurrentPok(poke1,player1);
         currPoke2 = getCurrentPok(poke2,player2);
-        setCoordinates(poke1, 250, 150); setCoordinates(poke2, 565, 10);
+        setCoordinates(poke1, 245, 140); setCoordinates(poke2, 565, 20);
         // ADDING MOST OF THE COMPONENTS TO THE SCENE
         root.getChildren().addAll(battleground, poke1, poke2, trainer1, trainer2, p1Text, p2Text, p1team, p2team);
 

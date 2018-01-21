@@ -5,7 +5,6 @@ import Moves.Move;
 import Pokemon.Pokemans;
 import Pokemon.Pokemon;
 
-import com.sun.prism.paint.Color;
 import javafx.scene.ImageCursor;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -20,7 +19,6 @@ import javafx.stage.Stage;
 
 import java.awt.MouseInfo;
 
-import static com.sun.prism.paint.Color.*;
 
 
 /**
@@ -57,7 +55,7 @@ public class SelectPokemon {
         TextField[] team1 = new TextField[6];
         Button[] buttons1 = new Button[6];
         TextArea stat= new TextArea();
-        stat.setOpacity(1);
+        stat.setOpacity(0.7);
         stat.setWrapText(true);
         stat.setDisable(true);
         stat.setPrefColumnCount(10);
