@@ -1,20 +1,19 @@
 package GUI;
 
-import Moves.AttackMove;
-import Moves.Move;
+
 import Pokemon.Pokemon;
 import javafx.scene.ImageCursor;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 import javafx.scene.shape.Line;
-import Pokemon.Pokemans;
+import javafx.stage.Stage;
 
 import java.util.Arrays;
+
+import static GUI.Tools.setCoordinates;
 
 public class Game {
     static final String TRANSPARENT_BUTTON_HOVER = "-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 10000;";
@@ -175,11 +174,6 @@ public class Game {
         });
         // execute move code here....
         return moveButton;
-    }
-
-    static public void setCoordinates(Object a, int x, int y) {
-        ((Node) a).setLayoutX(x);
-        ((Node) a).setLayoutY(y);
     }
 
     static public void randBB(ImageView battleground, Image[] backgrounds){

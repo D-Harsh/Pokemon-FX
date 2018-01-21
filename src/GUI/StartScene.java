@@ -1,4 +1,5 @@
 package GUI;
+//Package Declaration and Imports for JavaFX Libraries
 
 import javafx.application.Application;
 import javafx.scene.ImageCursor;
@@ -7,11 +8,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
 public class StartScene extends Application {
+    //Scenes for
     static Pane pane = new Pane();
     static Scene startScene;
     static final String IDLE_BUTTON_STYLE = "-fx-background-color: #ffcc00;\n-fx-background-radius:13;\n" +
@@ -45,7 +47,6 @@ public class StartScene extends Application {
         });
         ImageView mew = new ImageView(new Image("Images/mew.gif")); ImageView mewtwo = new ImageView(new Image("Images/mewtwo.gif"));
         mew.setFitWidth(48);mew.setFitHeight(61.2);
-//        mewtwo.setFitWidth(120);mewtwo.setFitHeight(105.6);
         setCoordinates(mew, 90, 370); setCoordinates(mewtwo,650, 370);
 //		 Media media = new Media(
 //		 "file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
@@ -61,15 +62,6 @@ public class StartScene extends Application {
         setCoordinates(PvC, 200, 170);
         setCoordinates(PvE, 451, 170);
         setButtonHover(PvP); setButtonHover(PvC); setButtonHover(PvE);
-//      PvP.setOnAction(e ->{
-//            primaryStage.setScene(TBD);
-//        });
-//        PvC.setOnAction(e ->{
-//            primaryStage.setScene(TBD);
-//        });
-//        PvE.setOnAction(e ->{
-//            primaryStage.setScene(TBD);
-//        });
         pane.getChildren().addAll(background, PvP, PvC, PvE, title, field, easterEgg, mew, mewtwo);
         pane.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2,2));
         startScene = new Scene(pane, 965, 600);
