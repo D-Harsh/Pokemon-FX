@@ -13,16 +13,16 @@ public class HealMove extends Move{ // HealMove is a type of a Move and thus inh
     // ^ Constructor that allows for the creation of healing moves which aid a pokemon when it is low
 
     @Override
-    public void makeMove(Pokemon self) { /* Takes in the parameter self which represents the pokemon using the move,
+    public void makeMove(Pokemon opponent, Pokemon user) { /* Takes in the parameter self which represents the pokemon using the move,
                                         because heal moves heal the pokemon that uses the move*/
         if (ppCheck()) { // If the move has pp and is able to be used:
-            double max = self.getMaxhP(), hp = self.gethP(), newhP = hp + (healstr * max); /* Gets the maxhP of the pokemon
+            double max = user.getMaxhP(), hp = user.gethP(), newhP = hp + (healstr * max); /* Gets the maxhP of the pokemon
             and the current hP. These variables are used to calculate the newhP of the pokemon according to how much the
             heal move heals (a percentage)*/
             if (newhP <= max) {
-                self.sethP(newhP);
+                user.sethP(newhP);
             } else {
-                self.sethP(max);
+                user.sethP(max);
             }
             // ^ Sets the hP of the pokemon who used the heal move to the new hP after the move has been used
         }

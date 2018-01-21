@@ -18,28 +18,24 @@ public class StatusMove extends Move { // StatusMove is a type of a Move and thu
 	    }
 	    // ^ Constructor that allows status changing moves to be created
 
-	    @Override
-	    public int calculateDamage(Pokemon pokemon) {
-	        return 0;
-	    } // Because this kind of move does not do damage
-
-	    public void makeMove(Pokemon self, Pokemon opponent) { /* Takes in the pokemon using the move as a pararmeter, since the
+		@Override
+	    public void makeMove(Pokemon opponent, Pokemon user) { /* Takes in the pokemon using the move as a pararmeter, since the
 	    stat changes will apply to the pokemon using the move */
 	    	if (ppCheck()){
 				if (reciever.equals("s")){
 					if (statraise == 1) {
-						int SS = self.getSpeedStat();
-						self.setSpeedStat((int)(SS*multiplier));
+						int SS = user.getSpeedStat();
+						user.setSpeedStat((int)(SS*multiplier));
 					}
 					if (statraise == 2) {
-						double StrS = self.getStrengthStat();
-						self.setStrengthStat(StrS*multiplier);
+						double StrS = user.getStrengthStat();
+						user.setStrengthStat(StrS*multiplier);
 					}
 					if (statraise == 3) {
-						int SS = self.getSpeedStat();
-						self.setSpeedStat((int)(SS*multiplier));
-						double StrS = self.getStrengthStat();
-						self.setStrengthStat(StrS*multiplier);
+						int SS = user.getSpeedStat();
+						user.setSpeedStat((int)(SS*multiplier));
+						double StrS = user.getStrengthStat();
+						user.setStrengthStat(StrS*multiplier);
 					}
 				}
 				if (reciever.equals("o")){

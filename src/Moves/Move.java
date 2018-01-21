@@ -22,13 +22,14 @@ public class Move {
 		return 0;
 	}
 
-	public void makeMove(Pokemon opponent){
+	public void makeMove(Pokemon opponent, Pokemon user){
 	}
 	public boolean ppCheck(){
-		if (pp == 0){
+		if (pp <= 0){
 			AlertBox.display("No More PP","This move cannot be made");
 			return false;
 		}
+		pp--;
 		return true;
 	}
 }

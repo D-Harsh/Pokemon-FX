@@ -13,16 +13,18 @@ public class ConditionMove extends Move{ // ConditionMove is a type of a Move an
     // ^ Constructor that allows for the creation of condition moves that inflict certain conditions on pokemon
 
     @Override
-    public void makeMove(Pokemon userpokemon) {
-    	if (status == 1) {
-    		int SS = userpokemon.getSpeedStat();
-    		userpokemon.setSpeedStat((int) (SS*0.5));
-    	}
-    	// ^ If the pokemon is paralyzed then its speed stat is halved
-    	if (status == 2) {
-    		double StrS = userpokemon.getStrengthStat();
-    		userpokemon.setStrengthStat(StrS*0.5);
-    	}
-        // ^ If the pokemon is burned then its strength stat is halved
+    public void makeMove(Pokemon Opponent, Pokemon user) {
+        if (ppCheck()){
+            if (status == 1) {
+                int SS = user.getSpeedStat();
+                user.setSpeedStat((int) (SS * 0.5));
+            }
+            // ^ If the pokemon is paralyzed then its speed stat is halved
+            if (status == 2) {
+                double StrS = user.getStrengthStat();
+                user.setStrengthStat(StrS * 0.5);
+            }
+            // ^ If the pokemon is burned then its strength stat is halved
+        }
     }
 }
