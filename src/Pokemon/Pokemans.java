@@ -8,6 +8,7 @@ import Moves.StatusMove;
 import javafx.scene.image.Image;
 
 public class Pokemans {
+    static Move waste = new AttackMove("Fire", 1, 1, 1);
     static Move Flamethrower = new AttackMove("Fire", 25, 100, 35);
     static Move Earthquake = new AttackMove("Ground", 25, 100, 35);
     static Move Bug_Buzz = new AttackMove("Bug", 25, 90, 30);
@@ -40,7 +41,7 @@ public class Pokemans {
             new Pokemon("Ivysaur", "Grass", 60, 60, 0.85, waste, waste, waste, waste,
             new Image("Images/Pokemon/2.0.gif"), new Image("Images/Pokemon/2.1.gif"),2),
 
-            new Pokemon("Venusaur", "Grass", 80, 80, 1.2, waste, waste, waste, waste,
+            new Pokemon("Venusaur", "Grass", 80, 80, 1.25, waste, waste, waste, waste,
             new Image("Images/Pokemon/3.0.gif"), new Image("Images/Pokemon/3.1.gif"),3),
 
             new Pokemon("Charmander", "Fire", 39, 65, 0.7, waste, waste, waste, waste,
@@ -49,7 +50,7 @@ public class Pokemans {
             new Pokemon("Charmeleon", "Fire", 58, 80, 0.85, waste, waste, waste, waste,
             new Image("Images/Pokemon/5.0.gif"), new Image("Images/Pokemon/5.1.gif"), 5),
 
-            new Pokemon("Charizard", "Fire", 78, 100, 1.2, waste, waste, waste, waste,
+            new Pokemon("Charizard", "Fire", 78, 100, 1.25, waste, waste, waste, waste,
             new Image("Images/Pokemon/6.0.gif"), new Image("Images/Pokemon/6.1.gif"), 6),
 
             new Pokemon("Squirtle", "Water", 44, 43, 0.7, waste, waste, waste, waste,
@@ -58,7 +59,7 @@ public class Pokemans {
             new Pokemon("Wartortle", "Water", 59, 58, 0.85, waste, waste, waste, waste,
             new Image("Images/Pokemon/8.0.gif"), new Image("Images/Pokemon/8.1.gif"),8),
 
-            new Pokemon("Blastoise", "Water", 79, 78, 1.2, waste, waste, waste, waste,
+            new Pokemon("Blastoise", "Water", 79, 78, 1.25, waste, waste, waste, waste,
             new Image("Images/Pokemon/9.0.gif"), new Image("Images/Pokemon/9.1.gif"),9),
 
             new Pokemon("Caterpie", "Bug", 45, 45, 0.5, waste, waste, waste, waste,
@@ -85,7 +86,7 @@ public class Pokemans {
             new Pokemon("Pidgeotto", "Flying", 63, 71, 0.8, waste, waste, waste, waste,
             new Image("Images/Pokemon/17.0.gif"), new Image("Images/Pokemon/17.1.gif"), 17),
 
-            new Pokemon("Pidgeot", "Flying", 83, 101, 1.05, waste, waste, waste, waste,
+            new Pokemon("Pidgeot", "Flying", 83, 101, 1.15, waste, waste, waste, waste,
             new Image("Images/Pokemon/18.0.gif"), new Image("Images/Pokemon/18.1.gif"), 18),
 
             new Pokemon("Rattata", "Normal", 30, 72, 0.45, waste, waste, waste, waste,
@@ -123,8 +124,6 @@ public class Pokemans {
 
             new Pokemon("Nidorina", "Poison", 70, 56,0.8, waste, waste, waste, waste,
             new Image("Images/Pokemon/30.0.gif"), new Image("Images/Pokemon/30.1.gif"), 30),
-
-            // START HERE
 
             new Pokemon("Nidoqueen", "Poison", 90, 76, 1, waste, waste, waste, waste,
             new Image("Images/Pokemon/31.0.gif"), new Image("Images/Pokemon/31.1.gif"),31),
@@ -186,7 +185,7 @@ public class Pokemans {
             new Pokemon("Diglett", "Ground", 10, 95, 0.9, waste, waste, waste, waste,
             new Image("Images/Pokemon/50.0.gif"), new Image("Images/Pokemon/50.1.gif"),50),
 
-            new Pokemon("Dugtrio", "Ground", 35, 120, 1.4, waste, waste, waste, waste,
+            new Pokemon("Dugtrio", "Ground", 35, 120, 1.35, waste, waste, waste, waste,
             new Image("Images/Pokemon/51.0.gif"), new Image("Images/Pokemon/51.1.gif"),51),
 
             new Pokemon("Meowth", "Normal", 40, 90, 0.85, waste, waste, waste, waste,
@@ -228,7 +227,7 @@ public class Pokemans {
             new Pokemon("Kadabra", "Psychic", 40, 105, 1.1, waste, waste, waste, waste,
             new Image("Images/Pokemon/64.0.gif"), new Image("Images/Pokemon/64.1.gif"),64),
 
-            new Pokemon("Alakazam", "Psychic", 55, 120, 1.5, waste, waste, waste, waste,
+            new Pokemon("Alakazam", "Psychic", 55, 120, 1.46, waste, waste, waste, waste,
             new Image("Images/Pokemon/65.0.gif"), new Image("Images/Pokemon/65.1.gif"),65),
 
             new Pokemon("Machop", "Fighting", 70, 35, 0.75, waste, waste, waste, waste,
@@ -262,8 +261,232 @@ public class Pokemans {
             new Image("Images/Pokemon/75.0.gif"), new Image("Images/Pokemon/75.1.gif"),75),
 
             new Pokemon("Golem", "Rock", 80, 45, 1.3, waste, waste, waste, waste,
-            new Image("Images/Pokemon/76.0.gif"), new Image("Images/Pokemon/76.1.gif"),76)
+            new Image("Images/Pokemon/76.0.gif"), new Image("Images/Pokemon/76.1.gif"),76),
 
+            new Pokemon("Ponyta", "Fire", 50, 90, 0.7, waste, waste, waste, waste,
+            new Image("Images/Pokemon/77.0.gif"), new Image("Images/Pokemon/77.1.gif"),77),
+
+            new Pokemon("Rapidash", "Fire", 65, 105, 1.1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/78.0.gif"), new Image("Images/Pokemon/78.1.gif"),78),
+
+            new Pokemon("Slowpoke", "Psychic", 90, 15, 0.8, waste, waste, waste, waste,
+            new Image("Images/Pokemon/79.0.gif"), new Image("Images/Pokemon/79.1.gif"),79),
+
+            new Pokemon("Slowbro", "Psychic", 95, 30, 1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/80.0.gif"), new Image("Images/Pokemon/80.1.gif"),80),
+
+            new Pokemon("Magnemite", "Steel", 25, 45, 0.95, waste, waste, waste, waste,
+            new Image("Images/Pokemon/81.0.gif"), new Image("Images/Pokemon/81.1.gif"), 81),
+
+            new Pokemon("Magneton", "Steel", 50, 70, 1.15, waste, waste, waste, waste,
+            new Image("Images/Pokemon/82.0.gif"), new Image("Images/Pokemon/82.1.gif"), 82),
+
+            new Pokemon("Farfetch'd", "Flying", 52, 60, 1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/83.0.gif"), new Image("Images/Pokemon/83.1.gif"),83),
+
+            new Pokemon("Doduo", "Flying", 35, 75, 0.8, waste, waste, waste, waste,
+            new Image("Images/Pokemon/84.0.gif"), new Image("Images/Pokemon/84.1.gif"),84),
+
+            new Pokemon("Dodrio", "Flying", 60, 110, 1.2, waste, waste, waste, waste,
+            new Image("Images/Pokemon/85.0.gif"), new Image("Images/Pokemon/85.1.gif"),85),
+
+            new Pokemon("Seel", "Water", 65, 45, 0.75, waste, waste, waste, waste,
+            new Image("Images/Pokemon/86.0.gif"), new Image("Images/Pokemon/86.1.gif"),86),
+
+            new Pokemon("Dewgong", "Ice", 90, 70, 0.95, waste, waste, waste, waste,
+            new Image("Images/Pokemon/87.0.gif"), new Image("Images/Pokemon/87.1.gif"), 87),
+
+            new Pokemon("Grimer", "Poison", 80, 25, 0.8, waste, waste, waste, waste,
+            new Image("Images/Pokemon/88.0.gif"), new Image("Images/Pokemon/88.1.gif"), 88),
+
+            new Pokemon("Muk", "Poison", 105, 50, 0.95, waste, waste, waste, waste,
+            new Image("Images/Pokemon/89.0.gif"), new Image("Images/Pokemon/89.1.gif"),89),
+
+            new Pokemon("Shellder", "Water", 30, 40, 1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/90.0.gif"), new Image("Images/Pokemon/90.1.gif"),90),
+
+            new Pokemon("Cloyster", "Ice", 50, 70, 1.33, waste, waste, waste, waste,
+            new Image("Images/Pokemon/91.0.gif"), new Image("Images/Pokemon/91.1.gif"),91),
+
+            new Pokemon("Gastly", "Ghost", 30, 80, 0.8, waste, waste, waste, waste,
+            new Image("Images/Pokemon/92.0.gif"), new Image("Images/Pokemon/92.1.gif"),92),
+
+            new Pokemon("Haunter", "Ghost", 45, 95, 1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/93.0.gif"), new Image("Images/Pokemon/93.1.gif"), 93),
+
+            new Pokemon("Gengar", "Ghost", 60, 110, 1.35, waste, waste, waste, waste,
+            new Image("Images/Pokemon/94.0.gif"), new Image("Images/Pokemon/94.1.gif"), 94),
+
+            new Pokemon("Onix", "Rock", 35, 70, 1.05, waste, waste, waste, waste,
+            new Image("Images/Pokemon/95.0.gif"), new Image("Images/Pokemon/95.1.gif"),95),
+
+            new Pokemon("Drowzee", "Psychic", 60, 42, 0.8, waste, waste, waste, waste,
+            new Image("Images/Pokemon/96.0.gif"), new Image("Images/Pokemon/96.1.gif"),96),
+
+            new Pokemon("Hypno", "Psychic", 85, 67, 1.2, waste, waste, waste, waste,
+            new Image("Images/Pokemon/97.0.gif"), new Image("Images/Pokemon/97.1.gif"),97),
+
+            new Pokemon("Krabby", "Water", 30, 50, 0.8, waste, waste, waste, waste,
+            new Image("Images/Pokemon/98.0.gif"), new Image("Images/Pokemon/98.1.gif"),98),
+
+            new Pokemon("Kingler", "Water", 55, 75, 1.15, waste, waste, waste, waste,
+            new Image("Images/Pokemon/99.0.gif"), new Image("Images/Pokemon/99.1.gif"), 99),
+
+            new Pokemon("Voltorb", "Electric", 40, 100,0.8, waste, waste, waste, waste,
+            new Image("Images/Pokemon/100.0.gif"), new Image("Images/Pokemon/100.1.gif"), 100),
+
+            new Pokemon("Electrode", "Electric", 60, 150, 1.1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/101.0.gif"), new Image("Images/Pokemon/101.1.gif"),101),
+
+            new Pokemon("Exeggcute", "Psychic", 60, 40, 0.9, waste, waste, waste, waste,
+            new Image("Images/Pokemon/102.0.gif"), new Image("Images/Pokemon/102.1.gif"),102),
+
+            new Pokemon("Exeggutor", "Psychic", 95, 55, 1.2, waste, waste, waste, waste,
+            new Image("Images/Pokemon/103.0.gif"), new Image("Images/Pokemon/103.1.gif"),103),
+
+            new Pokemon("Cubone", "Ground", 50, 35, 1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/104.0.gif"), new Image("Images/Pokemon/104.1.gif"),104),
+
+            new Pokemon("Marowak", "Ground", 60, 45, 1.4, waste, waste, waste, waste,
+            new Image("Images/Pokemon/105.0.gif"), new Image("Images/Pokemon/105.1.gif"), 105),
+
+            new Pokemon("Hitmonlee", "Fighting", 50, 87, 1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/106.0.gif"), new Image("Images/Pokemon/106.1.gif"), 106),
+
+            new Pokemon("Hitmonchan", "Fighting", 50, 76, 1.28, waste, waste, waste, waste,
+            new Image("Images/Pokemon/107.0.gif"), new Image("Images/Pokemon/107.1.gif"),107),
+
+            new Pokemon("Lickitung", "Normal", 90, 50, 1.2, waste, waste, waste, waste,
+            new Image("Images/Pokemon/108.0.gif"), new Image("Images/Pokemon/108.1.gif"),108),
+
+            new Pokemon("Koffing", "Poison", 40, 35, 1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/109.0.gif"), new Image("Images/Pokemon/109.1.gif"),109),
+
+            new Pokemon("Weezing", "Poison", 65, 60, 1.25, waste, waste, waste, waste,
+            new Image("Images/Pokemon/110.0.gif"), new Image("Images/Pokemon/110.1.gif"),110),
+
+            new Pokemon("Rhyhorn", "Ground", 80, 25, 0.9, waste, waste, waste, waste,
+            new Image("Images/Pokemon/111.0.gif"), new Image("Images/Pokemon/111.1.gif"), 111),
+
+            new Pokemon("Rhydon", "Ground", 105, 40, 1.1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/112.0.gif"), new Image("Images/Pokemon/112.1.gif"), 112),
+
+            new Pokemon("Chansey", "Normal", 250, 50, 0.55, waste, waste, waste, waste,
+            new Image("Images/Pokemon/113.0.gif"), new Image("Images/Pokemon/113.1.gif"),113),
+
+            new Pokemon("Tangela", "Grass", 65, 60, 0.9, waste, waste, waste, waste,
+            new Image("Images/Pokemon/114.0.gif"), new Image("Images/Pokemon/114.1.gif"),114),
+
+            new Pokemon("Kangaskhan", "Normal", 105, 90, 1.25, waste, waste, waste, waste,
+            new Image("Images/Pokemon/115.0.gif"), new Image("Images/Pokemon/115.1.gif"),115),
+
+            new Pokemon("Horsea", "Water", 30, 60, 0.75, waste, waste, waste, waste,
+            new Image("Images/Pokemon/116.0.gif"), new Image("Images/Pokemon/116.1.gif"),116),
+
+            new Pokemon("Seadra", "Water", 55, 85, 1.1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/117.0.gif"), new Image("Images/Pokemon/117.1.gif"), 117),
+
+            new Pokemon("Goldeen", "Water", 45, 63, 0.8, waste, waste, waste, waste,
+            new Image("Images/Pokemon/118.0.gif"), new Image("Images/Pokemon/118.1.gif"), 118),
+
+            new Pokemon("Seaking", "Water", 80, 68, 1.1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/119.0.gif"), new Image("Images/Pokemon/119.1.gif"),119),
+
+            new Pokemon("Staryu", "Water", 30, 85, 0.9, waste, waste, waste, waste,
+            new Image("Images/Pokemon/120.0.gif"), new Image("Images/Pokemon/120.1.gif"),120),
+
+            new Pokemon("Starmie", "Water", 60, 115, 1.3, waste, waste, waste, waste,
+            new Image("Images/Pokemon/121.0.gif"), new Image("Images/Pokemon/121.1.gif"),121),
+
+            new Pokemon("Mr.Mime", "Psychic", 40, 90, 1.1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/122.0.gif"), new Image("Images/Pokemon/122.1.gif"),122),
+
+            new Pokemon("Scyther", "Flying", 70,105, 1.25, waste, waste, waste, waste,
+            new Image("Images/Pokemon/123.0.gif"), new Image("Images/Pokemon/123.1.gif"), 123),
+
+            new Pokemon("Jynx", "Ice", 65, 95, 0.95, waste, waste, waste, waste,
+            new Image("Images/Pokemon/124.0.gif"), new Image("Images/Pokemon/124.1.gif"), 124),
+
+            new Pokemon("Electabuzz", "Electric", 65, 105, 1.2, waste, waste, waste, waste,
+            new Image("Images/Pokemon/125.0.gif"), new Image("Images/Pokemon/125.1.gif"),125),
+
+            new Pokemon("Magmar", "Fire", 65, 93, 1.2, waste, waste, waste, waste,
+            new Image("Images/Pokemon/126.0.gif"), new Image("Images/Pokemon/126.1.gif"),126),
+
+            new Pokemon("Pinsir", "Bug", 65, 85, 1.25, waste, waste, waste, waste,
+            new Image("Images/Pokemon/127.0.gif"), new Image("Images/Pokemon/127.1.gif"),127),
+
+            new Pokemon("Tauros", "Normal", 75, 110, 1.05, waste, waste, waste, waste,
+            new Image("Images/Pokemon/128.0.gif"), new Image("Images/Pokemon/128.1.gif"),128),
+
+            new Pokemon("Magikarp", "Water", 20, 80, 10, waste, waste, waste, waste,
+            new Image("Images/Pokemon/129.0.gif"), new Image("Images/Pokemon/129.1.gif"), 129),
+
+            new Pokemon("Gyarados", "Water", 95, 81, 1.32, waste, waste, waste, waste,
+            new Image("Images/Pokemon/130.0.gif"), new Image("Images/Pokemon/130.1.gif"), 130),
+
+            new Pokemon("Lapras", "Water", 130, 60, 1.26, waste, waste, waste, waste,
+            new Image("Images/Pokemon/131.0.gif"), new Image("Images/Pokemon/131.1.gif"), 131),
+
+            new Pokemon("Ditto", "Normal", 48, 48, 1.5, waste, waste, waste, waste,
+            new Image("Images/Pokemon/132.0.gif"), new Image("Images/Pokemon/132.1.gif"), 132),
+
+            new Pokemon("Eevee", "Normal", 55, 55, 0.9, waste, waste, waste, waste,
+            new Image("Images/Pokemon/133.0.gif"), new Image("Images/Pokemon/133.1.gif"),133),
+
+            new Pokemon("Vaporeon", "Water", 130, 65, 1.25, waste, waste, waste, waste,
+            new Image("Images/Pokemon/134.0.gif"), new Image("Images/Pokemon/134.1.gif"),134),
+
+            new Pokemon("Jolteon", "Electric", 65, 130, 1.25, waste, waste, waste, waste,
+            new Image("Images/Pokemon/135.0.gif"), new Image("Images/Pokemon/135.1.gif"),135),
+
+            new Pokemon("Flareon", "Fire", 65, 65, 1.44, waste, waste, waste, waste,
+            new Image("Images/Pokemon/136.0.gif"), new Image("Images/Pokemon/136.1.gif"),136),
+
+            new Pokemon("Porygon", "Normal", 65, 40, 1.2, waste, waste, waste, waste,
+            new Image("Images/Pokemon/137.0.gif"), new Image("Images/Pokemon/137.1.gif"), 137),
+
+            new Pokemon("Omanyte", "Rock", 35, 35, 1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/138.0.gif"), new Image("Images/Pokemon/138.1.gif"), 138),
+
+            new Pokemon("Omastar", "Rock", 70, 55, 1.2, waste, waste, waste, waste,
+            new Image("Images/Pokemon/139.0.gif"), new Image("Images/Pokemon/139.1.gif"),139),
+
+            new Pokemon("Kabuto", "Rock", 30, 55, 0.7, waste, waste, waste, waste,
+            new Image("Images/Pokemon/140.0.gif"), new Image("Images/Pokemon/140.1.gif"),140),
+
+            new Pokemon("Kabutops", "Rock", 60, 80, 1.23, waste, waste, waste, waste,
+            new Image("Images/Pokemon/141.0.gif"), new Image("Images/Pokemon/141.1.gif"),141),
+
+            new Pokemon("Aerodactyl", "Rock", 80, 130, 1.15, waste, waste, waste, waste,
+            new Image("Images/Pokemon/142.0.gif"), new Image("Images/Pokemon/142.1.gif"),142),
+
+            new Pokemon("Snorlax", "Normal", 180, 30, 0.86, waste, waste, waste, waste,
+            new Image("Images/Pokemon/143.0.gif"), new Image("Images/Pokemon/143.1.gif"), 143),
+
+            new Pokemon("Articuno", "Ice", 90, 85, 1.5, waste, waste, waste, waste,
+            new Image("Images/Pokemon/144.0.gif"), new Image("Images/Pokemon/144.1.gif"), 144),
+
+            new Pokemon("Zapdos", "Electric", 90, 100, 1.5, waste, waste, waste, waste,
+            new Image("Images/Pokemon/145.0.gif"), new Image("Images/Pokemon/145.1.gif"),145),
+
+            new Pokemon("Moltres", "Fire", 90, 90, 1.5, waste, waste, waste, waste,
+            new Image("Images/Pokemon/146.0.gif"), new Image("Images/Pokemon/146.1.gif"),146),
+
+            new Pokemon("Dratini", "Dragon", 41, 50, 0.8, waste, waste, waste, waste,
+            new Image("Images/Pokemon/147.0.gif"), new Image("Images/Pokemon/147.1.gif"),147),
+
+            new Pokemon("Dragonair", "Dragon", 61, 70, 1, waste, waste, waste, waste,
+            new Image("Images/Pokemon/148.0.gif"), new Image("Images/Pokemon/148.1.gif"),148),
+
+            new Pokemon("Dragonite", "Dragon", 91, 70, 1.45, waste, waste, waste, waste,
+            new Image("Images/Pokemon/149.0.gif"), new Image("Images/Pokemon/149.1.gif"),149),
+
+            new Pokemon("Mewtwo", "Psychic", 106, 130, 1.65, waste, waste, waste, waste,
+            new Image("Images/Pokemon/150.0.gif"), new Image("Images/Pokemon/150.1.gif"),150),
+
+            new Pokemon("Mew", "Psychic", 100, 100, 1.38, waste, waste, waste, waste,
+            new Image("Images/Pokemon/151.0.gif"), new Image("Images/Pokemon/151.1.gif"), 151)
     };
 
 
