@@ -43,11 +43,7 @@ public class Pokemans {
             new Pokemon("Ivysaur", "Grass", 60, 60, 0.85, waste, waste, waste, waste,
             new Image("Images/Pokemon/2.0.gif"), new Image("Images/Pokemon/2.1.gif"),2),
 
-<<<<<<< HEAD
             new Pokemon("Venusaur", "Grass", 80, 80, 1.25, waste, waste, waste, waste,
-=======
-            new Pokemon("Venusaur", "Grass", 80, 80, 1.2, Vine_Whip, waste, waste, waste,
->>>>>>> 7569fc9d5b1da2a4540df33cafc46dd193a2ae60
             new Image("Images/Pokemon/3.0.gif"), new Image("Images/Pokemon/3.1.gif"),3),
 
             new Pokemon("Charmander", "Fire", 39, 65, 0.7, waste, waste, waste, waste,
