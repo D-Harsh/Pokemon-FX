@@ -1,5 +1,5 @@
 package GUI;
-
+//Package Declaration and Imports for JavaFX Libraries
 
 import Pokemon.Pokemans;
 import Pokemon.Pokemon;
@@ -12,23 +12,20 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
 import static GUI.Tools.*;
 
-
-/**
- * Created by Harsh on 2018-01-17.
- */
 public class SelectPokemon {
-    //    static Move waste = new AttackMove("Fire", 25, 100, 100);
+    //Pokedex from the Pokemon Package
     static Pokemon[] pokedex = Pokemans.pokedex;
 
     static public Scene getChooseScene(Stage primaryStage) {
+        //sets up the background elements and pokemon field for this scene
         ImageView trainer1 = new ImageView(new Image("Images/trainer1.gif"));
         ImageView trainer2 = new ImageView(new Image("Images/trainer2.gif"));
         ImageView pokeball = new ImageView(new Image("Images/pokeballanimated.gif"));
         ImageView players = new ImageView(new Image("Images/p1p2.png"));
         ImageView pokefield = new ImageView();
+        //organizes the images in the scene and places them
         trainer2.setFitHeight(200);
         trainer2.setFitWidth(200);
         trainer2.setPreserveRatio(true);
@@ -40,13 +37,13 @@ public class SelectPokemon {
         setCoordinates(pokeball, 350, 400);
         setCoordinates(trainer1, 30, 100);
         setCoordinates(trainer2, 700, 100);
+        //Background and Pane Set Up
         ImageView background = new ImageView(new Image("Images/pikbg.gif"));
         background.setFitHeight(600);
         background.setFitWidth(965);
         Pane selectPane = new Pane();
         selectPane.getChildren().addAll(background, trainer1, trainer2, players, pokeball, pokefield);
-        //text fields and buttons
-        //Team 1 setup
+        //Text Field List for team 1 is created and a stats field is also created and positioned
         TextField[] team1 = new TextField[6];
         Button[] buttons1 = new Button[6];
         TextArea stat = new TextArea();
@@ -56,6 +53,7 @@ public class SelectPokemon {
         stat.setPrefColumnCount(10);
         stat.setPrefRowCount(10);
         setCoordinates(stat, 425, 175);
+        //Text fields for team 1 and buttons for team 1 are created and assigned functions
         for (int i = 1; i <= 6; i++) {
             TextField tf = new TextField("Enter Pokedex Num");
             tf.setOpacity(0.90);
@@ -70,6 +68,7 @@ public class SelectPokemon {
         }
 
         //Team 2 setup
+        //Text fields for team 2 and buttons for team 2 are created and assigned functions
         TextField[] team2 = new TextField[6];
         Button[] buttons2 = new Button[6];
         for (int i = 1; i <= 6; i++) {
@@ -84,15 +83,18 @@ public class SelectPokemon {
             team2[i - 1] = tf;
             buttons2[i - 1] = show;
         }
+        //The randomize button is created for teh random battle option
         Button random = button("Randomize");
         setButtonHover(random);
         setCoordinates(random, 240, 500);
+        //When clicked the random button sets values for each pokemon
         random.setOnAction(e -> {
             for (int x = 0; x < team1.length; x++) {
                 team1[x].setText(String.valueOf((int) Math.floor(Math.random() * 150) + 1));
                 team2[x].setText(String.valueOf((int) Math.floor(Math.random() * 150) + 1));
             }
         });
+        //Confirm Button to start game play
         Button confirm = button("Confirm");
         setButtonHover(confirm);
         setCoordinates(confirm, 590, 500);
@@ -101,13 +103,15 @@ public class SelectPokemon {
                 primaryStage.setScene(Game.startGameScene(primaryStage, getPokemonTeam(team1), getPokemonTeam(team2)));
             }
         });
+        //Music
+        musicPlease();
+        //Final setup of GUI elements and the Scene is returned
         selectPane.getChildren().addAll(confirm, random, stat);
-
         selectPane.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2, 2));
         return new Scene(selectPane, 965, 600);
     }
 
-
+    //Method for matching pokedex number to pokemon and image
     static public boolean checkPokedexNum(TextField choice, ImageView pokefield, TextArea stat) {
         try {
             int num = Integer.parseInt(choice.getText());
@@ -128,7 +132,7 @@ public class SelectPokemon {
         }
     }
 
-
+    //Makes sure every thing works before proceeding wih the game
     static public boolean checkConfirm(TextField[] team1, TextField[] team2, ImageView pokefield) {
         for (TextField a : team1) {
             if (checkPokedexNum(a, pokefield, new TextArea()))
@@ -149,6 +153,7 @@ public class SelectPokemon {
         return true;
     }
 
+    //Obtains the Pokemon Team for the battles stage of the game
     static public Pokemon[] getPokemonTeam(TextField[] pokedexNums) {
         Pokemon[] team = new Pokemon[6];
         int index = 0;
@@ -163,6 +168,5 @@ public class SelectPokemon {
         }
         return team;
     }
-
 
 }

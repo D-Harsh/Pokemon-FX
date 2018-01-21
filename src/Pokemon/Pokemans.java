@@ -27,8 +27,8 @@ public class Pokemans {
     static Move Recover = new HealMove("Fire","Recover", 16, 100, 25);
     static Move Synthesis = new HealMove("Fire","Synthesis", 8, 100, 15);
     static Move Roost = new HealMove("Flying", "Roost",16, 100, 20);
-    static Move Thunderwave = new StatusMove("Electric", "Thunder Wave",32, 90, 1);
-    static Move WillOWisp = new StatusMove("Fire","Willow Wisp", 32, 85, 2);
+//    static Move Thunderwave = new StatusMove("Electric", "Thunder Wave",32, 90, 1);
+//    static Move WillOWisp = new StatusMove("Fire","Willow Wisp", 32, 85, 2);
     static Move SwordsDance = new ConditionMove("Normal","Swords Dance", 25, 100, 2);
     static Move DragonDance = new ConditionMove("Dragon","Dragon Dance", 25, 100, 3);
     static Move Agility = new ConditionMove("Psychic","Agility" ,25, 100, 1);

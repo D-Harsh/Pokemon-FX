@@ -1,14 +1,19 @@
 package GUI;
+//Package Declaration and Imports for JavaFX Libraries
 
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 /**
  * Created by Harsh on 2018-01-21.
  */
+//Class for reusing important CSS and Methods
 public class Tools {
+    //CSS for different button styles
     public static final String IDLE_BUTTON_STYLE = "-fx-background-color: #ffcc00;\n-fx-background-radius:13;\n" +
             "\n-fx-text-fill: white;\n-fx-font: 20px Tahoma;\n-fx-border-width: 6px;\n" +
             "-fx-border-color: #5c85d6;\n-fx-border-radius: 7;";
@@ -17,22 +22,27 @@ public class Tools {
             "-fx-border-color: #002b80;\n-fx-border-radius: 7;";
     public static final String INVISIBLE_BUTTON_STYLE = "-fx-border-color: transparent;\n-fx-border-width: 0;\n" +
             "-fx-background-radius: 0;\n-fx-background-color: transparent;";
+
+    //Positioning Method for any GUI element
     public static void setCoordinates(Object a, int x, int y) {
         ((Node) a).setLayoutX(x);
         ((Node) a).setLayoutY(y);
     }
 
+    //Simple Button Method with predefined styles
     public static Button button(String label) {
         Button button = new Button(label);
         button.setStyle(IDLE_BUTTON_STYLE);
         return button;
     }
 
-    public static void setButtonHover(Button button){
+    //Button Hover method
+    public static void setButtonHover(Button button) {
         button.setOnMouseEntered(e -> button.setStyle(HOVERED_BUTTON_STYLE));
         button.setOnMouseExited(e -> button.setStyle(IDLE_BUTTON_STYLE));
     }
 
+    //Pokeball button creation method
     public static Button pokebutton() {
         Button pok1 = new Button();
         pok1.setStyle("-fx-background-radius: 4em; " + "-fx-min-width: 20px; " + "-fx-min-height: 20px; "
@@ -43,5 +53,13 @@ public class Tools {
         pokeball.setFitWidth(50);
         pok1.setGraphic(pokeball);
         return pok1;
+    }
+
+    //Music Player Method
+    public static void musicPlease() {
+        Media media = new Media(
+                "file:/" + (System.getProperty("user.dir").replace('\\', '/')).replace(" ", "%20") + "/" + "src/Images/Theme.mp3");
+        MediaPlayer player = new MediaPlayer(media);
+        player.play();
     }
 }

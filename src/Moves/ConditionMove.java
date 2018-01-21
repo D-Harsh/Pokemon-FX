@@ -1,17 +1,16 @@
 package Moves;
-import Pokemon.Pokemon;
+import Pokemon.Pokemon; /* Requires variables such as the hP of a pokemon which are stored under the Pokemon Class
+						and thus the Pokemon class from the Pokemon folder must be imported to gain access to such variables*/
 
 
-public class ConditionMove extends Move{
+public class ConditionMove extends Move{ // ConditionMove is a type of a Move and thus inherits the Move class
 	
     int status; // 1 is paralyze 2 is burn
     public ConditionMove(String type,String name, int pp,int acc, int status) {
         super(type,name, pp, acc);
         this.status = status;
     }
-
-
-
+    // ^ Constructor that allows for the creation of condition moves that inflict certain conditions on pokemon
 
     @Override
     public void makeMove(Pokemon userpokemon) {
@@ -19,9 +18,11 @@ public class ConditionMove extends Move{
     		int SS = userpokemon.getSpeedStat();
     		userpokemon.setSpeedStat((int) (SS*0.5));
     	}
+    	// ^ If the pokemon is paralyzed then its speed stat is halved
     	if (status == 2) {
     		double StrS = userpokemon.getStrengthStat();
     		userpokemon.setStrengthStat(StrS*0.5);
     	}
+        // ^ If the pokemon is burned then its strength stat is halved
     }
 }
