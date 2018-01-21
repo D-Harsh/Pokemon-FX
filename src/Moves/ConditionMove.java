@@ -3,11 +3,11 @@ import Pokemon.Pokemon;
 
 
 public class ConditionMove extends Move{
-	// if statraise = 1 speed will be doubled and if statraise = 2 strength will be doubled, 3 is both
-	int statraise;
-    public ConditionMove(String type, int pp,int acc, int statraise) {
+	
+    int status; // 1 is paralyze 2 is burn
+    public ConditionMove(String type, int pp,int acc, int status) {
         super(type, pp, acc);
-        this.statraise = statraise;
+        this.status = status;
     }
 
     @Override
@@ -15,21 +15,16 @@ public class ConditionMove extends Move{
         return 0;
     }
 
+
     @Override
     public void makeMove(Pokemon userpokemon) {
-    	if (statraise == 1) {
+    	if (status == 1) {
     		int SS = userpokemon.getSpeedStat();
-    		userpokemon.setSpeedStat(SS*2);
+    		userpokemon.setSpeedStat((int) (SS*0.5));
     	}
-    	if (statraise == 2) {
+    	if (status == 2) {
     		double StrS = userpokemon.getStrengthStat();
-    		userpokemon.setStrengthStat(StrS*2);
-    	}
-    	if (statraise == 3) {
-    		int SS = userpokemon.getSpeedStat();
-    		userpokemon.setSpeedStat(SS*2);
-    		double StrS = userpokemon.getStrengthStat();
-    		userpokemon.setStrengthStat(StrS*2);
+    		userpokemon.setStrengthStat(StrS*0.5);
     	}
     }
 }
