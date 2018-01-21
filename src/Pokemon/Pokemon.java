@@ -112,7 +112,7 @@ public class Pokemon {
 	}
 
 	public void useMove(Pokemon opponent, Move move) {
-        move.makeMove(opponent);
+        move.makeMove(opponent, this);
     }
 
 //    public static class Charizad extends Pokemon {
