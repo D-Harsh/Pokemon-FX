@@ -10,7 +10,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+
 import java.util.Arrays;
+
 import static GUI.Tools.*;
 
 public class Game {
@@ -94,9 +96,10 @@ public class Game {
 
 
         //Making Stat Boxes for Both Current Pokemon
-        final TextArea stat1 = makeStatBox(30, 10 ), stat2  = makeStatBox(800,175);
-        stat1.setText(currPoke1.toString()); stat2.setText(currPoke2.toString());
-        root.getChildren().addAll(stat1,stat2);
+        final TextArea stat1 = makeStatBox(30, 10), stat2 = makeStatBox(800, 175);
+        stat1.setText(currPoke1.toString());
+        stat2.setText(currPoke2.toString());
+        root.getChildren().addAll(stat1, stat2);
 
 
         final Button p1m1 = moveButton(currPoke1.getMove0()), p1m2 = moveButton(currPoke1.getMove1()), p1m3 = moveButton(currPoke1.getMove2()),
@@ -201,7 +204,7 @@ public class Game {
         battleground.setImage(backgrounds[arrayNum]);
     }
 
-    static public TextArea makeStatBox(int x, int y){
+    static public TextArea makeStatBox(int x, int y) {
         TextArea stat = new TextArea();
         stat.setOpacity(0.95);
         stat.setWrapText(true);
@@ -209,7 +212,7 @@ public class Game {
         stat.setPrefColumnCount(10);
         stat.setPrefRowCount(10);
         stat.setStyle("-fx-background-color: rgba(0,0,0,0.7);");
-        setCoordinates(stat,x,y);
+        setCoordinates(stat, x, y);
         return stat;
     }
 
