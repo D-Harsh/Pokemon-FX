@@ -10,7 +10,7 @@ public class Pokemon {
     String name, type;
     int speedStat, healthIV, speedIV,pokedexNum;
     double strengthStat, strengthIV, hP, maxhP;
-    Move move0, move1, move2, move3;
+    public Move move0, move1, move2, move3;
     Image pokemonview, pokemonview2;
 
     public String getMove0() {

@@ -57,7 +57,9 @@ public class SelectPokemon {
         stat.setPrefColumnCount(10);
         stat.setPrefRowCount(10);
         stat.setStyle("-fx-background-color: rgba(0,0,0,0.7);");
+        stat.setOnMouseEntered(e-> stat.setStyle("-fx-background-color: rgba(255,255,255,0.7);"));
         setCoordinates(stat, 425, 160);
+
 
         //Text fields for team 1 and buttons for team 1 are created and assigned functions
         for (int i = 1; i <= 6; i++) {

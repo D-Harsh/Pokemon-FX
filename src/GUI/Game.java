@@ -14,6 +14,7 @@ import java.util.Arrays;
 import static GUI.Tools.*;
 
 public class Game {
+    static boolean turn;
 
     static public Scene startGameScene(Stage primaryStage, Pokemon[] player1, Pokemon[] player2) {
         final ImageView battleground = new ImageView(), bg = new ImageView(), poke1 = new ImageView(), poke2 = new ImageView(),
@@ -99,34 +100,97 @@ public class Game {
         final Button p1m1 = moveButton(currPoke1.getMove0()), p1m2 = moveButton(currPoke1.getMove1()), p1m3 = moveButton(currPoke1.getMove2()),
                 p1m4 = moveButton(currPoke1.getMove3()), p2m1 = moveButton(currPoke2.getMove0()), p2m2 = moveButton(currPoke2.getMove1()),
                 p2m3 = moveButton(currPoke2.getMove2()), p2m4 = moveButton(currPoke2.getMove3());
+
+        Button home = homeButton(primaryStage);
+        setCoordinates(home, 430,320);
+        root.getChildren().add(home);
+
         // POKEMON SWITCH BUTTONS AT THE BOTTOM
+        Button[] switchTeam1= new Button[6], switchTeam2 = new Button[6];
+        Button player1Moves[] = {p1m1,p1m2,p1m3,p1m4};
+        Button player2Moves[] = {p2m1,p2m2,p2m3,p2m4};
+        Pokemon pok1 = getCurrentPok(poke1, player1), pok2 = getCurrentPok(poke2, player2);
+        turn = pok1.getSpeedStat() > pok2.getSpeedStat();
+        if(turn)disable(player2Moves);
+        else{disable(player1Moves);}
+        for (int i = 0; i < 4; i++) {
+            int a = i;
+            player1Moves[i].setOnAction(e -> {
+                switch(a) {
+                    case(0): getCurrentPok(poke1,player1).move0.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
+                    case(1): getCurrentPok(poke1,player1).move1.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
+                    case(2): getCurrentPok(poke1,player1).move2.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
+                    case(3): getCurrentPok(poke1,player1).move3.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
+                }
+                stat1.setText(getCurrentPok(poke1, player1).toString());
+                stat2.setText(getCurrentPok(poke2, player2).toString());
+                enable(player2Moves);
+                enable(switchTeam2);
+                disable(player1Moves);
+                disable(switchTeam1);
+            });
+        }
+        for (int i = 0; i < 4; i++) {
+            int a = i;
+            player2Moves[i].setOnAction(e -> {
+                switch(a) {
+                    case(0): getCurrentPok(poke2,player2).move0.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
+                    case(1): getCurrentPok(poke2,player2).move1.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
+                    case(2): getCurrentPok(poke2,player2).move2.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
+                    case(3): getCurrentPok(poke2,player2).move3.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
+                }
+                stat1.setText(getCurrentPok(poke1, player1).toString());
+                stat2.setText(getCurrentPok(poke2, player2).toString());
+
+                enable(player1Moves);
+                enable(switchTeam1);
+                disable(player2Moves);
+                disable(switchTeam2);
+            });
+        }
         for (int i = 0; i < 6; i++) {
-            Button pokeButton = pokeSwitchButton(player1[i].getPokemonImage());
-            setCoordinates(pokeButton, ((30 * 2 * i)), 500);
+           switchTeam1[i] = pokeSwitchButton(player1[i].getPokemonImage());
+            setCoordinates(switchTeam1[i], ((30 * 2 * i)), 500);
             final int a = i;
-            pokeButton.setOnAction(e -> {
+            switchTeam1[i].setOnAction(e -> {
+                if (player1[a].gethP() <= 0){
+                    root.getChildren().remove(switchTeam1[a]);
+                }
                 poke1.setImage(player1[a].getPokemonImage());
                 p1m1.setText(getCurrentPok(poke1, player1).getMove0());
                 p1m2.setText(getCurrentPok(poke1, player1).getMove1());
                 p1m3.setText(getCurrentPok(poke1, player1).getMove2());
                 p1m4.setText(getCurrentPok(poke1, player1).getMove3());
                 stat1.setText(getCurrentPok(poke1, player1).toString());
+                enable(player2Moves);
+                enable(switchTeam2);
+                disable(player1Moves);
+                disable(switchTeam1);
             });
-            root.getChildren().add(pokeButton);
+            root.getChildren().add(switchTeam1[i]);
         }
+
         for (int i = 0; i < 6; i++) {
-            Button pokeButton = pokeSwitchButton(player2[i].getPokemonImage());
-            setCoordinates(pokeButton, (500 + (30 * 2 * i)), 500);
+            switchTeam2[i] = pokeSwitchButton(player2[i].getPokemonImage());
+            setCoordinates(switchTeam2[i], (500 + (60 * i)), 500);
             final int a = i;
-            pokeButton.setOnAction(e -> {
+            switchTeam2[i].setOnAction(e -> {
+                if (player2[a].gethP() <= 0){
+                    root.getChildren().remove(switchTeam2[a]);
+                }
                 poke2.setImage(player2[a].getPokemonImage());
                 p2m1.setText(getCurrentPok(poke2, player2).getMove0());
                 p2m2.setText(getCurrentPok(poke2, player2).getMove1());
                 p2m3.setText(getCurrentPok(poke2, player2).getMove2());
                 p2m4.setText(getCurrentPok(poke2, player2).getMove3());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
+                enable(player1Moves);
+                enable(switchTeam1);
+                disable(player2Moves);
+                disable(switchTeam2);
+
             });
-            root.getChildren().add(pokeButton);
+            root.getChildren().add(switchTeam2[i]);
         }
 
         // MOVE BUTTONS
@@ -156,15 +220,10 @@ public class Game {
             root.getChildren().addAll(player2Pokeballs[i]);
         }
 
-
-
-        Button home = homeButton(primaryStage);
-        setCoordinates(home, 430,320);
-        root.getChildren().add(home);
         return battle;
     }
 
-    static public Button pokeSwitchButton(Image pokeImage) {
+    static Button pokeSwitchButton(Image pokeImage) {
         Button pokeSwitchButton = new Button();
         pokeSwitchButton.setStyle(INVISIBLE_BUTTON_STYLE);
         ImageView pokemon = new ImageView(pokeImage);
@@ -180,7 +239,7 @@ public class Game {
         return pokeSwitchButton;
     }
 
-    static public Button moveButton(String moveName) {
+    static Button moveButton(String moveName) {
         Button moveButton = new Button(moveName);
         moveButton.setStyle(MOVE_BUTTON_STYLE);
         moveButton.setOnMouseEntered(e -> {
@@ -194,14 +253,14 @@ public class Game {
         return moveButton;
     }
 
-    static public void randBB(ImageView battleground, Image[] backgrounds) {
+    static void randBB(ImageView battleground, Image[] backgrounds) {
         int arrayNum = (int) (Math.random() * 8);
         battleground.setStyle("-fx-border-color: #4d4d4d; -fx-background-radius: 5; -fx-border-width: 6px;; -fx-border-radius: 5;" +
                 "-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);");
         battleground.setImage(backgrounds[arrayNum]);
     }
 
-    static public TextArea makeStatBox(int x, int y) {
+    static TextArea makeStatBox(int x, int y) {
         TextArea stat = new TextArea();
         stat.setOpacity(0.95);
         stat.setWrapText(true);
@@ -220,5 +279,47 @@ public class Game {
             }
         }
         return null;
+    }
+
+    static boolean checkWin(Pokemon[] team1, Pokemon[] team2){
+        int counter = 0;
+        for (Pokemon pok: team1){
+            if (pok.gethP()<0){
+                counter++;
+                if (counter == 6){
+                    return true;
+                }
+                continue;
+            }
+            counter = 0;
+            break;
+        }
+        for (Pokemon pok: team2){
+            if (pok.gethP()<0){
+                counter++;
+                if (counter == 6){
+                    return true;
+                }
+                continue;
+            }
+            break;
+        }
+        return false;
+    }
+
+    static boolean checkDeath(Pokemon a){
+        return (a.gethP() <= 0);
+    }
+
+    static void disable(Button[] moves){
+        for(Button a: moves ){
+            a.setDisable(true);
+        }
+    }
+
+    static void enable(Button[] moves){
+        for(Button a: moves ){
+            a.setDisable(false);
+        }
     }
 }

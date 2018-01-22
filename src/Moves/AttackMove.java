@@ -175,19 +175,23 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         if (Math.random()*99 + 1 <= accuracy) {
             this.damage = strengthStat * dmgmult * damage * STAB; // The total damage the move does is the product of these multipliers
         }
-
-        this.damage = 0;
+        else {
+            this.damage = 0;
+        }
     }
 
-
+    @Override
     public void makeMove(Pokemon opponent, Pokemon attacker) {
+        System.out.println("hello");
         if (ppCheck()) {
             double hP = opponent.gethP(); // Gets the hP of the opponent
             calculateDamage(attacker, opponent); // Calculates the damage the move will do
             hP = hP - damage; // Subtracting the damage the move does in hP from the hP of the defending pokemon
             opponent.sethP(hP); // Setting this new hP after the execution of the move to the hP of the defending pokemon
+            System.out.println(hP);
         }
     }
+    @Override
     public String displayInfo() {
         return ("\n" + getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nBase Damage: "
                 + damage + "\nAccuracy: " + getAccuracy() + "%");
