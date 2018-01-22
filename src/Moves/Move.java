@@ -34,7 +34,9 @@ public class Move {
 		this.accuracy = accuracy;
 	}
 
-	public int calculateDamage(Pokemon pokemon){
+	public void calculateDamage(Pokemon attacker, Pokemon pokemon){}
+
+	public double getDamage(){
 		return 0;
 	}
 

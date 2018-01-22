@@ -124,10 +124,17 @@ public class Game {
                 }
                 stat1.setText(getCurrentPok(poke1, player1).toString());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
-                enable(player2Moves);
-                enable(switchTeam2);
-                disable(player1Moves);
-                disable(switchTeam1);
+                if (getCurrentPok(poke2,player2).gethP() > 0) {
+                    enable(player2Moves);
+                    enable(switchTeam2);
+                    disable(player1Moves);
+                    disable(switchTeam1);
+                }
+                else{
+                    enable(switchTeam2);
+                    disable(player1Moves);
+                    disable(switchTeam1);
+                }
             });
         }
         for (int i = 0; i < 4; i++) {
@@ -141,11 +148,17 @@ public class Game {
                 }
                 stat1.setText(getCurrentPok(poke1, player1).toString());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
-
-                enable(player1Moves);
-                enable(switchTeam1);
-                disable(player2Moves);
-                disable(switchTeam2);
+                if (getCurrentPok(poke1,player1).gethP() > 0) {
+                    enable(player1Moves);
+                    enable(switchTeam1);
+                    disable(player2Moves);
+                    disable(switchTeam2);
+                }
+                else{
+                    enable(switchTeam1);
+                    disable(player2Moves);
+                    disable(switchTeam2);
+                }
             });
         }
         for (int i = 0; i < 6; i++) {
@@ -219,7 +232,10 @@ public class Game {
             player2Pokeballs[i].setFitWidth(35);
             root.getChildren().addAll(player2Pokeballs[i]);
         }
+        if((checkWin(player1,player2))){
+            AlertBox.display("CONGRATS WE HAVE A WINNER","Player");
 
+        }
         return battle;
     }
 

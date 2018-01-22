@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b400d61c-5431-4b64-8968-d0acd717b0d5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/AI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/Game.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/SelectPokemon.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/SelectPokemon.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/AttackMove.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/AttackMove.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemon.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemon.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/Move.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/Move.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Game.java" afterPath="$PROJECT_DIR$/src/GUI/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/SelectPokemon.java" afterPath="$PROJECT_DIR$/src/GUI/SelectPokemon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/AttackMove.java" afterPath="$PROJECT_DIR$/src/Moves/AttackMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pokemon/Pokemon.java" afterPath="$PROJECT_DIR$/src/Pokemon/Pokemon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/Move.java" afterPath="$PROJECT_DIR$/src/Moves/Move.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +31,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="147" column="37" lean-forward="true" selection-start-line="147" selection-start-column="37" selection-end-line="147" selection-end-column="37" />
+            <state relative-caret-position="302">
+              <caret line="19" column="66" lean-forward="false" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
@@ -53,8 +51,8 @@
       <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Moves/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state relative-caret-position="393">
+              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ppCheck#0;class#Move#0" expanded="false" />
@@ -63,12 +61,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/AI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AttackMove.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Moves/AttackMove.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="188" column="57" lean-forward="false" selection-start-line="188" selection-start-column="57" selection-end-line="188" selection-end-column="57" />
-              <folding />
+            <state relative-caret-position="156">
+              <caret line="185" column="24" lean-forward="true" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
+              <folding>
+                <element signature="e#8356#8357#0" expanded="true" />
+                <element signature="e#8385#8386#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,14 +135,15 @@
         <option value="$PROJECT_DIR$/src/GUI/Main.java" />
         <option value="$PROJECT_DIR$/src/GUI/StartScene.java" />
         <option value="$PROJECT_DIR$/src/GUI/Tools.java" />
-        <option value="$PROJECT_DIR$/src/Moves/Move.java" />
         <option value="$PROJECT_DIR$/src/Moves/ConditionMove.java" />
         <option value="$PROJECT_DIR$/src/Moves/HealMove.java" />
         <option value="$PROJECT_DIR$/src/Moves/StatusMove.java" />
         <option value="$PROJECT_DIR$/src/GUI/SelectPokemon.java" />
         <option value="$PROJECT_DIR$/src/Pokemon/Pokemon.java" />
-        <option value="$PROJECT_DIR$/src/Moves/AttackMove.java" />
         <option value="$PROJECT_DIR$/src/GUI/Game.java" />
+        <option value="$PROJECT_DIR$/src/Moves/AttackMove.java" />
+        <option value="$PROJECT_DIR$/src/Moves/Move.java" />
+        <option value="$PROJECT_DIR$/src/GUI/AI.java" />
       </list>
     </option>
   </component>
@@ -1020,8 +1034,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Moves/Move.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="393">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ppCheck#0;class#Move#0" expanded="false" />
@@ -1031,16 +1045,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Moves/AttackMove.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="188" column="57" lean-forward="false" selection-start-line="188" selection-start-column="57" selection-end-line="188" selection-end-column="57" />
-          <folding />
+        <state relative-caret-position="156">
+          <caret line="185" column="24" lean-forward="true" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
+          <folding>
+            <element signature="e#8356#8357#0" expanded="true" />
+            <element signature="e#8385#8386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/AI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="147" column="37" lean-forward="true" selection-start-line="147" selection-start-column="37" selection-end-line="147" selection-end-column="37" />
+        <state relative-caret-position="302">
+          <caret line="19" column="66" lean-forward="false" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
