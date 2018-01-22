@@ -12,22 +12,14 @@ import javafx.stage.Stage;
 import static GUI.Tools.*;
 
 //Inheritance of the Application JavaFX Library
-public class StartScene extends Application {
-    //Basic Pane and Scene for start screen GUI
-    static Pane pane = new Pane();
-    static Scene startScene;
+public class StartScene {
 
-    //Application Launcher
-    public static void main(String[] args) {
-        launch(args);
-    }
 
     //Starts the application
-    public void start(Stage primaryStage) {
-        //Start Screen Set Up
-        primaryStage.setTitle("Pokemon");
-        //Keeps the resolution of the application fixed
-        primaryStage.setResizable(false);
+    static public Scene startScene(Stage primaryStage) {
+        //Basic Pane and Scene for start screen GUI
+        Pane pane = new Pane();
+        Scene startScene;
         //Buttons for different modes of the game and their actions when clicked
         Button PvP = button("Player vs Player"), PvC = button("Computer"), PvE = button("Elite Four");
         PvP.setOnAction(e -> primaryStage.setScene(SelectPokemon.getChooseScene(primaryStage)));
@@ -46,7 +38,7 @@ public class StartScene extends Application {
             field.setImage(null);
         });
         //Some music for the game
-        musicPlease();
+//        musicPlease();
         //More ImageViews for On screen Pokemon with dimension constraints
         ImageView mew = new ImageView(new Image("Images/mew.gif"));
         ImageView mewtwo = new ImageView(new Image("Images/mewtwo.gif"));
@@ -75,9 +67,7 @@ public class StartScene extends Application {
         pane.getChildren().addAll(background, PvP, PvC, PvE, title, field, easterEgg, mew, mewtwo);
         pane.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2, 2));
         startScene = new Scene(pane, 965, 600);
-        primaryStage.setScene(startScene);
-        primaryStage.show();
-
+        return startScene;
     }
 
 }

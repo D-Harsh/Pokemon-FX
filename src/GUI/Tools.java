@@ -2,11 +2,13 @@ package GUI;
 //Package Declaration and Imports for JavaFX Libraries
 
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
 
 /**
  * Created by Harsh on 2018-01-21.
@@ -66,5 +68,13 @@ public class Tools {
                 "file:/" + (System.getProperty("user.dir").replace('\\', '/')).replace(" ", "%20") + "/" + "src/Images/Theme.mp3");
         MediaPlayer player = new MediaPlayer(media);
         player.play();
+    }
+    public static Button homeButton(Stage primaryStage){
+        Button Home = button("Home");
+        setButtonHover(Home);
+        setCoordinates(Home, 0, 0);
+        Scene Back = StartScene.startScene(primaryStage);
+        Home.setOnAction(e-> primaryStage.setScene(Back));
+        return Home;
     }
 }

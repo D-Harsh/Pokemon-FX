@@ -28,5 +28,8 @@ public class HealMove extends Move{ // HealMove is a type of a Move and thus inh
         }
 
     }
-    //
+    public String displayInfo(){
+        return ("\n" + getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nHeal: "
+                + healstr + "%" + "\nAccuracy: " + getAccuracy() + "%");
+    }
 }

@@ -3,9 +3,24 @@ import GUI.AlertBox;
 import Pokemon.Pokemon;
 
 public class Move {
+	public String getType() {
+		return type;
+	}
+
+	public int getPp() {
+		return pp;
+	}
+
+	public int getAccuracy() {
+		return accuracy;
+	}
+
+	public int getMaxPP() {
+		return maxPP;
+	}
+
 	String type, name;
-	int pp;
-	int accuracy;
+	int pp, accuracy, maxPP;
 
 	public String getName() {
 		return name;
@@ -15,6 +30,7 @@ public class Move {
 		this.name = name;
 		this.type = type;
 		this.pp = pp;
+		this.maxPP = pp;
 		this.accuracy = accuracy;
 	}
 
@@ -23,6 +39,9 @@ public class Move {
 	}
 
 	public void makeMove(Pokemon opponent, Pokemon user){
+	}
+	public String displayInfo(){
+		return "";
 	}
 	public boolean ppCheck(){
 		if (pp <= 0){

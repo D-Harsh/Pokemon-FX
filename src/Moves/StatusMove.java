@@ -58,4 +58,25 @@ public class StatusMove extends Move { // StatusMove is a type of a Move and thu
 	    }
 	    /*Sets the new stat of the pokemon depending on what stat(s) is/are being raised and on what pokemon the stats
 	    * are being applied to */
+		public String displayInfo(){
+			String recieve = "";
+			String stat = "";
+			if (reciever.equals("s")){
+				recieve = "User";
+			}
+			if (reciever.equals("o")){
+				recieve = "Opponent";
+			}
+			if (statraise == 1){
+				stat = "Speed";
+			}
+			if (statraise == 2){
+				stat = "Strength";
+			}
+			if(statraise == 3){
+				stat = "Strength & Speed";
+			}
+			return ("\n" + getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nChanges " + stat
+					+ "\nby x" + multiplier + "\nInflicted on " + recieve);
+		}
 }

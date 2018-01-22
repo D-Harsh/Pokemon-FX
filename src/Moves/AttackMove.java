@@ -172,7 +172,11 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
 		/* If the type of the of the move a pokemon uses is the same as the type of the pokemon itself, then an additional
 			30% of damage is dealt by the move*/
 
-        this.damage = strengthStat * dmgmult * damage; // The total damage the move does is the product of these multipliers
+        if (Math.random()*99 + 1 <= accuracy) {
+            this.damage = strengthStat * dmgmult * damage * STAB; // The total damage the move does is the product of these multipliers
+        }
+
+        this.damage = 0;
     }
 
 
@@ -183,5 +187,9 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
             hP = hP - damage; // Subtracting the damage the move does in hP from the hP of the defending pokemon
             opponent.sethP(hP); // Setting this new hP after the execution of the move to the hP of the defending pokemon
         }
+    }
+    public String displayInfo() {
+        return ("\n" + getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nBase Damage: "
+                + damage + "\nAccuracy: " + getAccuracy() + "%");
     }
 }

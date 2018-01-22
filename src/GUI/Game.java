@@ -10,9 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
-
 import java.util.Arrays;
-
 import static GUI.Tools.*;
 
 public class Game {
@@ -24,10 +22,6 @@ public class Game {
                 new Image("Images/bb4.png"), new Image("Images/bb5.png"), new Image("Images/bb6.png"),
                 new Image("Images/bb7.jpg"), new Image("Images/bb8.png"), new Image("Images/bb9.png")};
 
-
-        //Media media = new Media(
-        //"file:/C:/Users/Harsh/Documents/School%20Stuff/Grade%2012/CompSci/Pokemon-FX/src/Images/Theme.mp3");
-        //MediaPlayer player = new MediaPlayer(media);
         ImageView[] player1Pokeballs = new ImageView[6];
         Arrays.setAll(player1Pokeballs, i -> new ImageView());
         ImageView[] player2Pokeballs = new ImageView[6];
@@ -161,9 +155,12 @@ public class Game {
             player2Pokeballs[i].setFitWidth(35);
             root.getChildren().addAll(player2Pokeballs[i]);
         }
-        musicPlease();
 
 
+
+        Button home = homeButton(primaryStage);
+        setCoordinates(home, 430,320);
+        root.getChildren().add(home);
         return battle;
     }
 

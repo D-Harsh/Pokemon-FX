@@ -113,11 +113,10 @@ public class SelectPokemon {
             }
         });
 
-        //Music
-        musicPlease();
-
+        //Makes Home Button
+        Button home = homeButton(primaryStage);
         //Final setup of GUI elements and the Scene is returned
-        selectPane.getChildren().addAll(confirm, random, stat);
+        selectPane.getChildren().addAll(confirm, random, stat, home);
         selectPane.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2, 2));
         return new Scene(selectPane, 965, 600);
     }
@@ -143,7 +142,7 @@ public class SelectPokemon {
         }
     }
 
-    //Makes sure every thing works before proceeding wih the game
+    //Makes sure every thing works before proceeding with the game
     static public boolean checkConfirm(TextField[] team1, TextField[] team2, ImageView pokefield) {
         for (TextField a : team1) {
             if (checkPokedexNum(a, pokefield, new TextArea()))

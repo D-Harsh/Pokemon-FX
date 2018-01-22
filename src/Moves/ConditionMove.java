@@ -14,7 +14,7 @@ public class ConditionMove extends Move{ // ConditionMove is a type of a Move an
 
     @Override
     public void makeMove(Pokemon Opponent, Pokemon user) {
-        if (ppCheck()){
+        if (ppCheck()&& Math.random()*99 + 1 <= accuracy){
             if (status == 1) {
                 int SS = user.getSpeedStat();
                 user.setSpeedStat((int) (SS * 0.5));
@@ -26,5 +26,21 @@ public class ConditionMove extends Move{ // ConditionMove is a type of a Move an
             }
             // ^ If the pokemon is burned then its strength stat is halved
         }
+//        else{
+//
+//        }
     }
+    public String displayInfo() {
+        String condition = "";
+        if (status == 1){
+            condition = "Paralyze";
+        }
+        if (status == 2){
+            condition = "Burn";
+        }
+
+        return ("\n" + getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nCondition: "
+                + condition + "\nAccuracy: " + getAccuracy() + "%");
+    }
+
 }
