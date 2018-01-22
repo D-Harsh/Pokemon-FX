@@ -6,7 +6,7 @@ import Pokemon.Pokemon; /* Requires variables such as the strengthStat of a poke
 
 
 public class StatusMove extends Move { // StatusMove is a type of a Move and thus inherits the Move class
-		int statraise; 	// if statraise = 1 speed will be doubled and if statraise = 2 strength will be doubled, 3 is both
+		int statraise; 	// if statraise = 1 speed will be multiplied and if statraise = 2 strength will be multiplied, 3 is both
 		double multiplier; // The amount the move multiplies the stat(s)
 		String reciever; /* If reciever = "s" then the move is used on the pokemon using it, if "o" it is used on the
 						opposition*/

@@ -32,11 +32,11 @@ public class Pokemans {
     static Move Recover = new HealMove("Fire","Recover", 16, 100, 25);
     static Move Synthesis = new HealMove("Fire","Synthesis", 8, 100, 15);
     static Move Roost = new HealMove("Flying", "Roost",16, 100, 20);
-    static Move Thunder_Wave = new StatusMove("Electric", "Thunder Wave",32, 90, 1);
-    static Move WillOWisp = new StatusMove("Fire","Willow Wisp", 32, 85, 2);
-    static Move Swords_Dance = new ConditionMove("Normal","Swords Dance", 25, 100, 2);
-    static Move Dragon_Dance = new ConditionMove("Dragon","Dragon Dance", 25, 100, 3);
-    static Move Agility = new ConditionMove("Psychic","Agility" ,25, 100, 1);
+    static Move Thunder_Wave = new ConditionMove("Electric", "Thunder Wave",32, 90, 1);
+    static Move WillOWisp = new ConditionMove("Fire","Willow Wisp", 32, 85, 2);
+    static Move Swords_Dance = new StatusMove("Normal","Swords Dance", 25, 100, 2, 2, "s");
+    static Move Dragon_Dance = new StatusMove("Dragon","Dragon Dance", 25, 100, 3, 1.5, "s");
+    static Move Agility = new StatusMove("Psychic","Agility" ,25, 100, 1, 2, "s");
     static Move Razor_Leaf = new AttackMove("Grass","Razor Leaf" ,16, 90, 13);
     static Move Tackle = new AttackMove("Normal","Tackle" ,32, 100, 10);
     static Move Solar_Beam = new AttackMove("Grass", "Solar Beam", 8, 85, 21);
@@ -99,6 +99,15 @@ public class Pokemans {
     static Move Ancient_Power = new AttackMove("Rock", "Ancient Power", 16, 100, 13);
     static Move High_Horsepower = new AttackMove("Ground", "High Horsepower", 10, 90, 19);
     static Move Burn_Up = new AttackMove("Fire", "Burn Up", 5, 100, 20);
+	static Move Quiver_Dance = new StatusMove("Bug","Quiver Dance", 25, 100, 3, 1.5, "s");
+	static Move Glare = new ConditionMove("Normal", "Glare",32, 100, 1);
+	static Move Growl = new StatusMove("Normal","Growl" ,25, 100, 2, 0.5, "0");;
+	static Move Leer = new StatusMove("Normal","Leer" ,25, 100, 2, 0.5, "o");;
+	static Move Defense_Curl = new StatusMove("Normal","Defense Curl" ,25, 100, 2, 0.5, "o");;
+	static Move Calm_Mind = new StatusMove("Psychic","Agility" ,25, 100, 2, 1.5, "s");;
+	static Move Rock_Polish = new StatusMove("Rock","Rock Polish" ,25, 100, 1, 2, "s");;
+	static Move Nasty_Plot = new StatusMove("Dark","Nasty Plot" ,25, 100, 2, 2, "s");
+	static Move Transform = new AttackMove("Normal", "Transform", 32, 100, 0);
 
 
 
