@@ -80,13 +80,8 @@ public class Elite4 {
             selectPane.getChildren().addAll(tf, show);
             team1[i - 1] = tf;
             buttons1[i - 1] = show;
-        }
-        int newteam1[] = new int[6];
-        for (TextField x : team1) {
-            int index = 0;
-            newteam1[index] = Integer.parseInt(x.getText());
-            index++;
-        }
+        }     
+       
 
         int LoreleiTeam[] = new int [6];
         LoreleiTeam[0] = 87;
@@ -114,7 +109,7 @@ public class Elite4 {
         setCoordinates(confirm, 590, 500);
         confirm.setOnAction(e -> {
             if (checkConfirm(team1, pokefield)) {
-                primaryStage.setScene(AIGame.startGameScene(primaryStage, getPokemonTeam(newteam1), getPokemonTeam(LoreleiTeam)));
+                primaryStage.setScene(AIGame.startGameScene(primaryStage, getPokemonTeam(ConvertTeam(team1)), getPokemonTeam(LoreleiTeam)));
             }
         });
 
@@ -174,6 +169,15 @@ public class Elite4 {
             index++;
         }
         return team;
+    }
+    static public int[]ConvertTeam (TextField[] team) {
+    	int [] newteam1 = new int [6];
+		for (TextField x : team) {
+            int index = 0;
+            newteam1[index] = Integer.parseInt(x.getText());
+            index++;
+        }
+        return newteam1;
     }
 
 }
