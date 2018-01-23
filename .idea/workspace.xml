@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b400d61c-5431-4b64-8968-d0acd717b0d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemans.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemans.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemon.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemon.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Game.java" afterPath="$PROJECT_DIR$/src/GUI/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/AttackMove.java" afterPath="$PROJECT_DIR$/src/Moves/AttackMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/ConditionMove.java" afterPath="$PROJECT_DIR$/src/Moves/ConditionMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/HealMove.java" afterPath="$PROJECT_DIR$/src/Moves/HealMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/Move.java" afterPath="$PROJECT_DIR$/src/Moves/Move.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/StatusMove.java" afterPath="$PROJECT_DIR$/src/Moves/StatusMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pokemon/Pokemans.java" afterPath="$PROJECT_DIR$/src/Pokemon/Pokemans.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pokemon/Pokemon.java" afterPath="$PROJECT_DIR$/src/Pokemon/Pokemon.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +24,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2226">
-              <caret line="401" column="65" lean-forward="true" selection-start-line="401" selection-start-column="65" selection-end-line="401" selection-end-column="65" />
+            <state relative-caret-position="271">
+              <caret line="363" column="26" lean-forward="true" selection-start-line="363" selection-start-column="26" selection-end-line="363" selection-end-column="26" />
               <folding>
                 <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
                 <element signature="method#moveButton#0;class#Game#0" expanded="false" />
@@ -43,7 +33,6 @@
                 <element signature="method#makeStatBox#0;class#Game#0" expanded="false" />
                 <element signature="method#makeHPBox#0;class#Game#0" expanded="false" />
                 <element signature="method#getCurrentPok#0;class#Game#0" expanded="false" />
-                <element signature="method#checkWin#0;class#Game#0" expanded="false" />
                 <element signature="method#disable#0;class#Game#0" expanded="false" />
                 <element signature="method#enable#0;class#Game#0" expanded="false" />
                 <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
@@ -1233,8 +1222,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2226">
-          <caret line="401" column="65" lean-forward="true" selection-start-line="401" selection-start-column="65" selection-end-line="401" selection-end-column="65" />
+        <state relative-caret-position="271">
+          <caret line="363" column="26" lean-forward="true" selection-start-line="363" selection-start-column="26" selection-end-line="363" selection-end-column="26" />
           <folding>
             <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
             <element signature="method#moveButton#0;class#Game#0" expanded="false" />
@@ -1242,7 +1231,6 @@
             <element signature="method#makeStatBox#0;class#Game#0" expanded="false" />
             <element signature="method#makeHPBox#0;class#Game#0" expanded="false" />
             <element signature="method#getCurrentPok#0;class#Game#0" expanded="false" />
-            <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
             <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />

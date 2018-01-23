@@ -360,7 +360,7 @@ public class Game {
     static boolean checkWin(Pokemon[] team1, Pokemon[] team2, Stage primary){
         int counter = 0;
         for (Pokemon pok: team1){
-            if (pok.gethP()<0){
+            if (pok.gethP()<=0){
                 counter++;
                 if (counter == 6){
                     AlertBox.display("Winner","Player 2 won");
