@@ -51,7 +51,7 @@ public class Elite4 {
 
         //Background and Pane Set Up
         ImageView background = new ImageView(new Image("Images/E4 Background.gif"));
-
+        
         background.setFitHeight(600);
         background.setFitWidth(965);
         Pane selectPane = new Pane();
@@ -81,8 +81,8 @@ public class Elite4 {
             selectPane.getChildren().addAll(tf, show);
             team1[i - 1] = tf;
             buttons1[i - 1] = show;
-        }
-
+        }     
+       
 
         int LoreleiTeam[] = new int [6];
         LoreleiTeam[0] = 87;
@@ -91,7 +91,35 @@ public class Elite4 {
         LoreleiTeam[3] = 124;
         LoreleiTeam[4] = 131;
         LoreleiTeam[5] = 129;
-
+        
+        int BrunoTeam[] = new int [6];
+        BrunoTeam[0] = 95;
+        BrunoTeam[1] = 95;
+        BrunoTeam[2] = 106;
+        BrunoTeam[3] = 107;
+        BrunoTeam[4] = 68;
+        BrunoTeam[5] = 129;
+        
+        int AgathaTeam[] = new int [6];
+        AgathaTeam[0] = 93;
+        AgathaTeam[1] = 94;
+        AgathaTeam[2] = 94;
+        AgathaTeam[3] = 42;
+        AgathaTeam[4] = 24;
+        AgathaTeam[5] = 129;
+        
+        int LanceTeam[] = new int [6];
+        LanceTeam[0] = 147;
+        LanceTeam[1] = 147;
+        LanceTeam[2] = 148;
+        LanceTeam[3] = 130;
+        LanceTeam[4] = 142;
+        LanceTeam[5] = 129;
+        
+        Pokemon[] LanceTeam1 = getPokemonTeam(LanceTeam);
+        Pokemon[] AgathaTeam1 = getPokemonTeam(BrunoTeam);
+        Pokemon[] BrunoTeam1 = getPokemonTeam(BrunoTeam);
+        
         //The randomize button is created for teh random battle option
         Button random = button("Randomize");
         setButtonHover(random);
@@ -172,9 +200,9 @@ public class Elite4 {
         return team;
     }
     static public int[]ConvertTeam (TextField[] team) {
-        int [] newteam1 = new int [6];
-        for (TextField x : team) {
-            int index = 0;
+    	int [] newteam1 = new int [6];
+        int index = 0;
+		for (TextField x : team) {
             newteam1[index] = Integer.parseInt(x.getText());
             index++;
         }

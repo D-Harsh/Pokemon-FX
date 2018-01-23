@@ -16,7 +16,7 @@ import Moves.Move;
 public class LanceAI {
     static boolean turn;
 
-    static public Scene startGameScene(Stage primaryStage, Pokemon[] player1, Pokemon[] LoreleiTeam) {
+    static public Scene startGameScene(Stage primaryStage, Pokemon[] player1, Pokemon[] LanceTeam1) {
         final ImageView battleground = new ImageView(), bg = new ImageView(), poke1 = new ImageView(), poke2 = new ImageView(),
                 p1Text = new ImageView(), p2Text = new ImageView();
         Image[] backgrounds = {new Image("Images/bb1.png"), new Image("Images/bb2.png"), new Image("Images/bb3.jpg"),
@@ -25,8 +25,8 @@ public class LanceAI {
 
         Button Nextmember = button("Next Member");
         Nextmember.setDisable(true);
-
-
+        
+        
         ImageView[] player1Pokeballs = new ImageView[6];
         Arrays.setAll(player1Pokeballs, i -> new ImageView());
         ImageView[] player2Pokeballs = new ImageView[6];
@@ -50,7 +50,7 @@ public class LanceAI {
         // PLACING THE TWO TRAINERS THAT REPRESENT EACH PLAYER
         ImageView trainer1 = new ImageView(new Image("Images/trainer1.gif"));
         setCoordinates(trainer1, 50, 200);
-        ImageView Lorelei = new ImageView(new Image("Images/Lorelei.png"));
+        ImageView Lorelei = new ImageView(new Image("Images/Trainer2.png"));
         setCoordinates(Lorelei, 820, 40);
         trainer1.setPreserveRatio(true); // Prevents the trainer image from being distorted
         trainer1.setFitHeight(100);
@@ -61,7 +61,7 @@ public class LanceAI {
 
         // PLACING THE PLAYER1 and PLAYER2 TEXT
         p1Text.setImage(new Image("Images/player1.png"));
-        p2Text.setImage(new Image("Images/Loreleitxt.png"));
+        p2Text.setImage(new Image("Images/Lancetxt.png"));
         p1Text.setPreserveRatio(true);
         p2Text.setPreserveRatio(true);
         p1Text.setFitWidth(170);
@@ -75,11 +75,11 @@ public class LanceAI {
         poke1.setPreserveRatio(true);
         poke2.setPreserveRatio(true);
         Pokemon currPoke1 = player1[0];
-        Pokemon currPoke2 = LoreleiTeam[0];
+        Pokemon currPoke2 = LanceTeam1[0];
         poke1.setImage(currPoke1.getPokemonImage());
         poke2.setImage(currPoke2.getPokemonImage());
         currPoke1 = getCurrentPok(poke1, player1);
-        currPoke2 = getCurrentPok(poke2, LoreleiTeam);
+        currPoke2 = getCurrentPok(poke2, LanceTeam1);
         setCoordinates(poke1, 245, 140);
         setCoordinates(poke2, 565, 20);
         // ADDING MOST OF THE COMPONENTS TO THE SCENE
@@ -103,54 +103,54 @@ public class LanceAI {
         // POKEMON SWITCH BUTTONS AT THE BOTTOM
         Button[] switchTeam1= new Button[6];
         Button player1Moves[] = {p1m1,p1m2,p1m3,p1m4};
-        Pokemon pok1 = getCurrentPok(poke1, player1), pok2 = getCurrentPok(poke2, LoreleiTeam);
-
+        Pokemon pok1 = getCurrentPok(poke1, player1), pok2 = getCurrentPok(poke2, LanceTeam1);
+        
         if(!turn)disable(player1Moves);
         if (pok1.getSpeedStat() > pok2.getSpeedStat()) {
-            for (int i = 0; i < 4; i++) {
+        	for (int i = 0; i < 4; i++) {
                 int a = i;
-                player1Moves[i].setOnAction(e -> {checkWin(player1,LoreleiTeam,primaryStage);
+                player1Moves[i].setOnAction(e -> {checkWin(player1,LanceTeam1,primaryStage);
                     switch(a) {
-                        case(0): getCurrentPok(poke1,player1).move0.makeMove(getCurrentPok(poke2,LoreleiTeam),getCurrentPok(poke1,player1));
-                        case(1): getCurrentPok(poke1,player1).move1.makeMove(getCurrentPok(poke2,LoreleiTeam),getCurrentPok(poke1,player1));
-                        case(2): getCurrentPok(poke1,player1).move2.makeMove(getCurrentPok(poke2,LoreleiTeam),getCurrentPok(poke1,player1));
-                        case(3): getCurrentPok(poke1,player1).move3.makeMove(getCurrentPok(poke2,LoreleiTeam),getCurrentPok(poke1,player1));
+                        case(0): getCurrentPok(poke1,player1).move0.makeMove(getCurrentPok(poke2,LanceTeam1),getCurrentPok(poke1,player1));
+                        case(1): getCurrentPok(poke1,player1).move1.makeMove(getCurrentPok(poke2,LanceTeam1),getCurrentPok(poke1,player1));
+                        case(2): getCurrentPok(poke1,player1).move2.makeMove(getCurrentPok(poke2,LanceTeam1),getCurrentPok(poke1,player1));
+                        case(3): getCurrentPok(poke1,player1).move3.makeMove(getCurrentPok(poke2,LanceTeam1),getCurrentPok(poke1,player1));
                     }
                     stat1.setText(getCurrentPok(poke1, player1).toString());
-                    stat2.setText(getCurrentPok(poke2, LoreleiTeam).toString());
-                    if (getCurrentPok(poke2,LoreleiTeam).gethP() > 0) {
-                        makeMoveAI(getCurrentPok(poke2, LoreleiTeam), getCurrentPok(poke1, player1));
-
+                    stat2.setText(getCurrentPok(poke2, LanceTeam1).toString());
+                    if (getCurrentPok(poke2,LanceTeam1).gethP() > 0) {
+                    	makeMoveAI(getCurrentPok(poke2, LanceTeam1), getCurrentPok(poke1, player1));
+                    	
                         disable(player1Moves);
                         disable(switchTeam1);
                     }
                     else{
                         poke2.setImage(null);
-                        for (Pokemon x : LoreleiTeam) {
-                            if (x.gethP() > 0) {
-                                poke2.setImage(x.getPokemonImage());
-                            }
-                            else {
-                                Nextmember.setDisable(false);
-
-                            }
+                        for (Pokemon x : LanceTeam1) {
+                        	if (x.gethP() > 0) {
+                        		poke2.setImage(x.getPokemonImage());                        		
+                        	}
+                        	else {
+                        		Nextmember.setDisable(false);
+                        		
+                        	}
                         }
-
-                        stat2.setText(getCurrentPok(poke2, LoreleiTeam).toString());
+                        
+                        stat2.setText(getCurrentPok(poke2, LanceTeam1).toString());
                         disable(player1Moves);
                         disable(switchTeam1);
                     }
-                    checkWin(player1,LoreleiTeam,primaryStage);
+                    checkWin(player1,LanceTeam1,primaryStage);
                 });
             }
         }
-
-
+        
+        
         for (int i = 0; i < 6; i++) {
-            switchTeam1[i] = pokeSwitchButton(player1[i].getPokemonImage());
+           switchTeam1[i] = pokeSwitchButton(player1[i].getPokemonImage());
             setCoordinates(switchTeam1[i], ((30 * 2 * i)), 500);
             final int a = i;
-            switchTeam1[i].setOnAction(e -> {checkWin(player1,LoreleiTeam,primaryStage);
+            switchTeam1[i].setOnAction(e -> {checkWin(player1,LanceTeam1,primaryStage);
                 if (player1[a].gethP() <= 0){
                     root.getChildren().remove(switchTeam1[a]);
                 }
@@ -160,22 +160,22 @@ public class LanceAI {
                 p1m3.setText(getCurrentPok(poke1, player1).getMove2());
                 p1m4.setText(getCurrentPok(poke1, player1).getMove3());
                 stat1.setText(getCurrentPok(poke1, player1).toString());
-                makeMoveAI(getCurrentPok(poke2, LoreleiTeam), getCurrentPok(poke1, player1));
+                makeMoveAI(getCurrentPok(poke2, LanceTeam1), getCurrentPok(poke1, player1));
                 disable(player1Moves);
                 disable(switchTeam1);
-                checkWin(player1,LoreleiTeam,primaryStage);
+                checkWin(player1,LanceTeam1,primaryStage);
             });
             root.getChildren().add(switchTeam1[i]);
         }
 
-
+        
 
         // MOVE BUTTONS
         setCoordinates(p1m1, 60, 400);
         setCoordinates(p1m2, 240, 400);
         setCoordinates(p1m3, 580, 400);
         setCoordinates(p1m4, 760, 400);
-
+       
         root.getChildren().addAll(p1m1, p1m2, p1m3, p1m4/*, p2m1, p2m2, p2m3, p2m4*/);
 
         // PLACING POKEBALLS TO INDICATE EACH PLAYERS TEAM:
@@ -197,7 +197,7 @@ public class LanceAI {
     }
 
 
-    static Button pokeSwitchButton(Image pokeImage) {
+	static Button pokeSwitchButton(Image pokeImage) {
         Button pokeSwitchButton = new Button();
         pokeSwitchButton.setStyle(INVISIBLE_BUTTON_STYLE);
         ImageView pokemon = new ImageView(pokeImage);
@@ -296,7 +296,7 @@ public class LanceAI {
             a.setDisable(false);
         }
     }
-
+    
 
     static void findDeadPokemon(Pokemon[] pokemons,Button[] switchButtons, Pane root) {
         for (int i = 0; i < 6; i++) {

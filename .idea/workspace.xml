@@ -2,30 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b400d61c-5431-4b64-8968-d0acd717b0d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/AgathaAI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/BrunoAI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/LanceAI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/AIGame.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/AIGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/AgathaAI.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/AgathaAI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/BrunoAI.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/BrunoAI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/Elite4.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/Elite4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/Game.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/StartScene.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/StartScene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/AttackMove.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/AttackMove.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/ConditionMove.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/ConditionMove.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/HealMove.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/HealMove.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/StatusMove.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Moves/StatusMove.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemans.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemans.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemon.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/Pokemon/Pokemon.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/LanceAI.class" afterPath="$PROJECT_DIR$/out/production/Pokemon-FX/GUI/LanceAI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/AIGame.java" afterPath="$PROJECT_DIR$/src/GUI/AIGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/AgathaAI.java" afterPath="$PROJECT_DIR$/src/GUI/AgathaAI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/BrunoAI.java" afterPath="$PROJECT_DIR$/src/GUI/BrunoAI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Elite4.java" afterPath="$PROJECT_DIR$/src/GUI/Elite4.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Game.java" afterPath="$PROJECT_DIR$/src/GUI/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StartScene.java" afterPath="$PROJECT_DIR$/src/GUI/StartScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/AttackMove.java" afterPath="$PROJECT_DIR$/src/Moves/AttackMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/ConditionMove.java" afterPath="$PROJECT_DIR$/src/Moves/ConditionMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/HealMove.java" afterPath="$PROJECT_DIR$/src/Moves/HealMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moves/StatusMove.java" afterPath="$PROJECT_DIR$/src/Moves/StatusMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pokemon/Pokemans.java" afterPath="$PROJECT_DIR$/src/Pokemon/Pokemans.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pokemon/Pokemon.java" afterPath="$PROJECT_DIR$/src/Pokemon/Pokemon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/LanceAI.java" afterPath="$PROJECT_DIR$/src/GUI/LanceAI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,12 +30,22 @@
     <favorites_list name="Pokemon-FX" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf>
+      <file leaf-file-name="AIGame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/AIGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="410" column="35" lean-forward="true" selection-start-line="410" selection-start-column="35" selection-end-line="410" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="127">
+              <caret line="226" column="15" lean-forward="false" selection-start-line="226" selection-start-column="15" selection-end-line="226" selection-end-column="15" />
               <folding>
                 <element signature="method#moveButton#0;class#Game#0" expanded="false" />
                 <element signature="method#randBB#0;class#Game#0" expanded="false" />
@@ -64,46 +61,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pokemans.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pokemon/Pokemans.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="494" column="0" lean-forward="false" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartScene.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/StartScene.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Elite4.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Elite4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="117" column="47" lean-forward="true" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
+            <state relative-caret-position="196">
+              <caret line="203" column="22" lean-forward="true" selection-start-line="203" selection-start-column="22" selection-end-line="203" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AIGame.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GUI/AIGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="45" column="76" lean-forward="false" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -143,6 +108,9 @@
       <find>checkWin</find>
       <find>comp</find>
       <find>poke1</find>
+      <find>switchTeam1</find>
+      <find>findDead</find>
+      <find>makeMo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,10 +145,10 @@
         <option value="$PROJECT_DIR$/src/Pokemon/Pokemon.java" />
         <option value="$PROJECT_DIR$/src/Pokemon/Pokemans.java" />
         <option value="$PROJECT_DIR$/src/GUI/StartScene.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Elite4.java" />
         <option value="$PROJECT_DIR$/src/GUI/BrunoAI.java" />
         <option value="$PROJECT_DIR$/src/GUI/LanceAI.java" />
         <option value="$PROJECT_DIR$/src/GUI/AgathaAI.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Elite4.java" />
         <option value="$PROJECT_DIR$/src/GUI/AIGame.java" />
         <option value="$PROJECT_DIR$/src/GUI/Game.java" />
       </list>
@@ -207,7 +175,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,46 +203,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pokemon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pokemon-FX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pokemon-FX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Moves" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pokemon-FX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pokemon-FX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -294,8 +224,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -608,7 +536,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18177083" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3109375" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -740,7 +668,6 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
-            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -761,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +744,6 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
-            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -849,7 +773,7 @@
         <state relative-caret-position="2350">
           <caret line="94" column="55" lean-forward="false" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -867,7 +791,6 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
-            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -921,7 +844,7 @@
         <state relative-caret-position="1974">
           <caret line="94" column="55" lean-forward="false" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -939,7 +862,6 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
-            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1065,7 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,7 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,28 +1031,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pokemon/Pokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2150">
-          <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#2964#2965#0" expanded="true" />
-            <element signature="e#2998#2999#0" expanded="true" />
-            <element signature="e#3036#3037#0" expanded="true" />
-            <element signature="e#3071#3072#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pokemon/Pokemans.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="494" column="0" lean-forward="false" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1160,6 +1064,40 @@
         <state relative-caret-position="263">
           <caret line="237" column="39" lean-forward="true" selection-start-line="237" selection-start-column="39" selection-end-line="237" selection-end-column="39" />
           <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/StartScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pokemon/Pokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="77" column="17" lean-forward="false" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#2964#2965#0" expanded="true" />
+            <element signature="e#2998#2999#0" expanded="true" />
+            <element signature="e#3036#3037#0" expanded="true" />
+            <element signature="e#3071#3072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Elite4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="203" column="22" lean-forward="true" selection-start-line="203" selection-start-column="22" selection-end-line="203" selection-end-column="22" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1167,8 +1105,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="127">
+          <caret line="226" column="15" lean-forward="false" selection-start-line="226" selection-start-column="15" selection-end-line="226" selection-end-column="15" />
           <folding>
             <element signature="method#moveButton#0;class#Game#0" expanded="false" />
             <element signature="method#randBB#0;class#Game#0" expanded="false" />
@@ -1183,28 +1121,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/StartScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Elite4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="117" column="47" lean-forward="true" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/AIGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="45" column="76" lean-forward="false" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
+        <state relative-caret-position="117">
+          <caret line="410" column="35" lean-forward="true" selection-start-line="410" selection-start-column="35" selection-end-line="410" selection-end-column="35" />
           <folding />
         </state>
       </provider>

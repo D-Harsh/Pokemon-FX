@@ -25,8 +25,8 @@ public class AIGame {
 
         Button Nextmember = button("Next Member");
         Nextmember.setDisable(true);
-
-
+        
+        
         ImageView[] player1Pokeballs = new ImageView[6];
         Arrays.setAll(player1Pokeballs, i -> new ImageView());
         ImageView[] player2Pokeballs = new ImageView[6];
@@ -107,9 +107,10 @@ public class AIGame {
         /*Button player2Moves[] = {p2m1,p2m2,p2m3,p2m4};*/
         Pokemon pok1 = getCurrentPok(poke1, player1), pok2 = getCurrentPok(poke2, LoreleiTeam);
         /*turn = pok1.getSpeedStat() > pok2.getSpeedStat();*/
-        if(!turn)disable(player1Moves);
+//        if(!turn)disable(player1Moves);
+//        else{disable()}
         if (pok1.getSpeedStat() > pok2.getSpeedStat()) {
-            for (int i = 0; i < 4; i++) {
+        	for (int i = 0; i < 4; i++) {
                 int a = i;
                 player1Moves[i].setOnAction(e -> {
                     checkWin(player1,LoreleiTeam,primaryStage);
@@ -123,7 +124,7 @@ public class AIGame {
                     stat1.setText(getCurrentPok(poke1, player1).toString());
                     stat2.setText(getCurrentPok(poke2, LoreleiTeam).toString());
                     if (getCurrentPok(poke2,LoreleiTeam).gethP() > 0) {
-                        makeMoveAI(getCurrentPok(poke2, LoreleiTeam), getCurrentPok(poke1, player1));
+                    	makeMoveAI(getCurrentPok(poke2, LoreleiTeam), getCurrentPok(poke1, player1));
                     	/*enable(player2Moves);
                         enable(switchTeam2);*/
                         disable(player1Moves);
@@ -132,15 +133,15 @@ public class AIGame {
                     else{
                         poke2.setImage(null);
                         for (Pokemon x : LoreleiTeam) {
-                            if (x.gethP() > 0) {
-                                poke2.setImage(x.getPokemonImage());
-                            }
-                            else {
-                                Nextmember.setDisable(false);
-                                Nextmember.setOnAction(z -> primaryStage.setScene(BrunoAI.startGameScene(primaryStage, player1, LoreleiTeam)));
-                            }
+                        	if (x.gethP() > 0) {
+                        		poke2.setImage(x.getPokemonImage());                        		
+                        	}
+                        	else {
+                        		Nextmember.setDisable(false);
+                        		Nextmember.setOnAction(z -> primaryStage.setScene(BrunoAI.startGameScene(primaryStage, player1, LoreleiTeam)));
+                        	}
                         }
-
+                        
                         stat2.setText(getCurrentPok(poke2, LoreleiTeam).toString());
                         /*enable(switchTeam2);*/
                         disable(player1Moves);
@@ -150,7 +151,7 @@ public class AIGame {
                 });
             }
         }
-
+        
         /*for (int i = 0; i < 4; i++) {
             int a = i;
             player2Moves[i].setOnAction(e -> {
@@ -179,6 +180,7 @@ public class AIGame {
             });
         }*/
         for (int i = 0; i < 6; i++) {
+            System.out.println("HEllo");
             switchTeam1[i] = pokeSwitchButton(player1[i].getPokemonImage());
             setCoordinates(switchTeam1[i], ((30 * 2 * i)), 500);
             final int a = i;
@@ -254,7 +256,7 @@ public class AIGame {
     }
 
 
-    static Button pokeSwitchButton(Image pokeImage) {
+	static Button pokeSwitchButton(Image pokeImage) {
         Button pokeSwitchButton = new Button();
         pokeSwitchButton.setStyle(INVISIBLE_BUTTON_STYLE);
         ImageView pokemon = new ImageView(pokeImage);
@@ -353,7 +355,7 @@ public class AIGame {
             a.setDisable(false);
         }
     }
-
+    
 
     static void findDeadPokemon(Pokemon[] pokemons,Button[] switchButtons, Pane root) {
         for (int i = 0; i < 6; i++) {

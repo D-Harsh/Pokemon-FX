@@ -126,6 +126,15 @@ public class Game {
         if(turn)disable(player2Moves);
         else{disable(player1Moves);}
         //LOOP FOR ASSIGNING MOVE BUTTONS FOR PLAYER 1 THEIR FUNCTIONALITY
+        TextArea MoveInfo = new TextArea();
+        MoveInfo.setWrapText(true);
+        MoveInfo.setDisable(true);
+        MoveInfo.setPrefColumnCount(10);
+        MoveInfo.setPrefRowCount(6);
+        MoveInfo.setStyle("-fx-background-color: #000000;");
+        MoveInfo.setOpacity(0);
+        setCoordinates(MoveInfo, 393, 382);
+        root.getChildren().add(MoveInfo);
         for (int i = 0; i < 4; i++) {
             int a = i;
             //MOVES BUTTONS MAKE THE MOVE THEY POSSESS WHEN CLICKED AND SWITCH TURNS
@@ -139,7 +148,7 @@ public class Game {
                 if(a==3)
                     getCurrentPok(poke1,player1).move3.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
                 //FINDS IF ANY POKEMON DIED BECAUSE OF THE MOVE
-                findDeadPokemon(player2,switchTeam2,root);
+                findDeadPokemon(player2,switchTeam2,root,player2Pokeballs,"r");
                 //REFRESHES STAT BOXES
                 stat1.setText(getCurrentPok(poke1, player1).toString());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
@@ -162,6 +171,21 @@ public class Game {
                     disable(switchTeam1);
                 }
             });
+            player1Moves[i].setOnMouseEntered(e ->{
+                MoveInfo.setOpacity(0.9);
+                if(a==0)
+                    MoveInfo.setText(getCurrentPok(poke1,player1).move0.displayInfo());
+                if(a==1)
+                    MoveInfo.setText(getCurrentPok(poke1,player1).move1.displayInfo());
+                if(a==2)
+                    MoveInfo.setText(getCurrentPok(poke1,player1).move2.displayInfo());
+                if(a==3)
+                    MoveInfo.setText(getCurrentPok(poke1,player1).move3.displayInfo());
+            });
+            player1Moves[i].setOnMouseExited(e ->{
+                MoveInfo.setOpacity(0);
+                MoveInfo.setText("");
+            });
         }
         //LOOP FOR ASSIGNING MOVE BUTTONS FOR PLAYER 2 THEIR FUNCTIONALITY
         for (int i = 0; i < 4; i++) {
@@ -177,7 +201,7 @@ public class Game {
                 if(a==3)
                     getCurrentPok(poke2,player2).move3.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
                 //FINDS IF ANY POKEMON DIED BECAUSE OF THE MOVE
-                findDeadPokemon(player1,switchTeam1,root);
+                findDeadPokemon(player1,switchTeam1,root,player1Pokeballs,"l");
 
                 //REFRESHES STAT BOXES
                 stat1.setText(getCurrentPok(poke1, player1).toString());
@@ -200,6 +224,21 @@ public class Game {
                     disable(player2Moves);
                     disable(switchTeam2);
                 }
+            });
+            player2Moves[i].setOnMouseEntered(e ->{
+                MoveInfo.setOpacity(0.9);
+                if(a==0)
+                    MoveInfo.setText(getCurrentPok(poke2,player2).move0.displayInfo());
+                if(a==1)
+                    MoveInfo.setText(getCurrentPok(poke2,player2).move1.displayInfo());
+                if(a==2)
+                    MoveInfo.setText(getCurrentPok(poke2,player2).move2.displayInfo());
+                if(a==3)
+                    MoveInfo.setText(getCurrentPok(poke2,player2).move3.displayInfo());
+            });
+            player2Moves[i].setOnMouseExited(e ->{
+                MoveInfo.setOpacity(0);
+                MoveInfo.setText("");
             });
         }
         //LOOPS FOR SETTING THE FUNCTIONALITY OF THE SWITCH POKEMON BUTTONS FOR PLAYER 1
@@ -403,10 +442,18 @@ public class Game {
         }
     }
     //METHOD FOR FINDING IF POKEMON HAVE FAINTED
-    static void findDeadPokemon(Pokemon[] pokemons,Button[] switchButtons, Pane root) {
+    static void findDeadPokemon(Pokemon[] pokemons,Button[] switchButtons, Pane root, ImageView[] pokeBalls, String orientation) {
         for (int i = 0; i < 6; i++) {
             if (pokemons[i].gethP() <= 0) {
                 root.getChildren().remove(switchButtons[i]);
+                if (orientation == "r"){
+                    pokeBalls[i].setImage(new Image("Images/deadleftpokeball.png"));
+                }
+                else{
+                    pokeBalls[i].setImage(new Image("Images/deadrightpokeball.png"));
+                }
+
+
             }
         }
     }
