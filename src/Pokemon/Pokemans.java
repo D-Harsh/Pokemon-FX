@@ -1,5 +1,5 @@
 package Pokemon;
-
+//Package Declaration and Imports for JavaFX Libraries
 import Moves.AttackMove;
 import Moves.ConditionMove;
 import Moves.HealMove;

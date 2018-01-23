@@ -1,4 +1,5 @@
 package Pokemon;
+//Package Declaration and Imports for JavaFX Libraries
 import Moves.Move;
 import javafx.scene.image.Image;
 
