@@ -1,10 +1,10 @@
-package Moves;
+package Moves; // Part of the Moves package of the pokemon class
 import Pokemon.Pokemon; /* Requires variables such as the hP of a pokemon which are stored under the Pokemon Class
 						and thus the Pokemon class from the Pokemon folder must be imported to gain access to such variables*/
 
 
 public class ConditionMove extends Move{ // ConditionMove is a type of a Move and thus inherits the Move class
-	
+
     int status; // 1 is paralyze 2 is burn
     public ConditionMove(String type,String name, int pp,int acc, int status) {
         super(type,name, pp, acc);

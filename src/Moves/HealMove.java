@@ -1,11 +1,11 @@
-package Moves;
+package Moves; // Part of the Moves package of the pokemon class
 
 import Pokemon.Pokemon; /* Requires variables such as the hP of a pokemon which are stored under the Pokemon Class
 						and thus the Pokemon class from the Pokemon folder must be imported to gain access to such variables*/
 
 
 public class HealMove extends Move{ // HealMove is a type of a Move and thus inherits the Move class
-	double healstr; // Variable that represents the amount any heal move heals. healstr is a percentage heal
+    double healstr; // Variable that represents the amount any heal move heals. healstr is a percentage heal
     public HealMove(String type,String name, int pp, int acc, double healstr) {
         super(type,name, pp,acc);
         this.healstr = healstr;

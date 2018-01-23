@@ -176,6 +176,7 @@ public class Game {
                     getCurrentPok(poke2,player2).move3.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
                 //FINDS IF ANY POKEMON DIED BECAUSE OF THE MOVE
                 findDeadPokemon(player1,switchTeam1,root);
+                checkWin(player1,player2,primaryStage);
                 //REFRESHES STAT BOXES
                 stat1.setText(getCurrentPok(poke1, player1).toString());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
@@ -183,7 +184,6 @@ public class Game {
                 hp1.setText("Health: "+(int)(getCurrentPok(poke1, player1).gethP()*100/getCurrentPok(poke1, player1).getMaxhP())+"%");
                 hp2.setText("Health: "+(int)(getCurrentPok(poke2, player2).gethP()*100/getCurrentPok(poke2, player2).getMaxhP())+"%");
                 //CHECKS IF A WINNER EXISTS
-                checkWin(player1,player2,primaryStage);
                 //NEXT TURN SETUP
                 if (getCurrentPok(poke1,player1).gethP() > 0) {
                     enable(player1Moves);
@@ -206,10 +206,10 @@ public class Game {
             final int a = i;
             //ASSIGNING THE CHANGE POKEMON FUNCTION TO SWITCH BUTTONS
             switchTeam1[i].setOnAction(e -> {
+                checkWin(player1,player2,primaryStage);
                 if (player1[a].gethP() <= 0){
                     root.getChildren().remove(switchTeam1[a]);
                 }
-                checkWin(player1,player2,primaryStage);
                 //STAT BOX, HP BOX AND IMAGE CHANGE FOR SWITCHED OUT POKEMON
                 poke1.setImage(player1[a].getPokemonImage2());
                 p1m1.setText(getCurrentPok(poke1, player1).getMove0());
@@ -234,10 +234,10 @@ public class Game {
             final int a = i;
             //ASSIGNING THE CHANGE POKEMON FUNCTION TO SWITCH BUTTONS
             switchTeam2[i].setOnAction(e -> {
+                checkWin(player1,player2,primaryStage);
                 if (player2[a].gethP() <= 0){
                     root.getChildren().remove(switchTeam2[a]);
                 }
-                checkWin(player1,player2,primaryStage);
                 //STAT BOX, HP BOX AND IMAGE CHANGE FOR SWITCHED OUT POKEMON
                 poke2.setImage(player2[a].getPokemonImage());
                 p2m1.setText(getCurrentPok(poke2, player2).getMove0());

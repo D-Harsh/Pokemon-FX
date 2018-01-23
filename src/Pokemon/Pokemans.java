@@ -1,18 +1,18 @@
 package Pokemon;
-//Package Declaration and Imports for JavaFX Libraries
+
 import Moves.AttackMove;
 import Moves.ConditionMove;
 import Moves.HealMove;
 import Moves.Move;
-import Moves.StatusMove;
-import javafx.scene.image.Image;
+import Moves.StatusMove; // The above imports including this one import all the
+import javafx.scene.image.Image; // Imports javafx.scene.image.Image to allow for images to be used to represent Pokemon
 
 public class Pokemans {
     static Move Dream_Eater = new AttackMove("Psychic", "Dream Eater", 8, 90, 18);;
     static Move Brave_Bird = new AttackMove("Flying", "Brave Bird", 16, 100, 19);
     static Move Signal_Beam = new AttackMove("Bug", "Signal Beam", 16, 100, 15);
     static Move Sludge_Wave = new AttackMove("Poison", "Sludge Wave", 16, 100, 16);
-    static Move Night_Shade = new AttackMove("Ghost", "Brave Bird", 16, 100, 19);
+    static Move Night_Shade = new AttackMove("Ghost", "Night Shade", 16, 100, 19);
     static Move Struggle = new AttackMove("Normal", "Struggle", 100, 100, 1);
     static Move Flamethrower = new AttackMove("Fire", "Flamethrower", 25, 100, 17);
     static Move Earthquake = new AttackMove("Ground", "Earthquake", 25, 100, 17);

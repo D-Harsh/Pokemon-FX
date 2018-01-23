@@ -1,11 +1,12 @@
-package Moves;
+package Moves; // Part of the Moves package of the pokemon class
 
 import Pokemon.Pokemon; /* Requires variables such as the type of a pokemon which are stored under the Pokemon Class
                         and thus the Pokemon class from the Pokemon folder must be imported to gain access to such variables*/
 
 
 public class AttackMove extends Move { // AttackMove is a type of a Move and thus inherits the Move class
-    double damage; // This variable represents the amount of damage to HP an attacking move will do
+    double damage; // This variable represents the amount of damage to HP an attacking move will do before any multipliers
+    double damageDealt; // This variable represents the damage to HP done by an attack after all multipliers are considered
 
     public AttackMove(String type, String name, int pp, int accuracy, int damage) {
         super(type, name, pp, accuracy); /* Sets the parameters/attributes of the superclass Move, to which the "AttackMove"
@@ -173,11 +174,11 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
 			30% of damage is dealt by the move*/
 
         if (Math.random()*99 + 1 <= accuracy) {
-            this.damage = strengthStat * dmgmult * damage * STAB; // The total damage the move does is the product of these multipliers
+            this.damageDealt = (strengthStat * dmgmult * damage * STAB) + (attacker.getStrengthIV() * 0.3); // The total damage the move does is the product of these multipliers
         }
 
         else {
-            this.damage = 0;
+            this.damageDealt = 0;
         }
     }
 
@@ -186,7 +187,7 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         if (ppCheck()) {
             double hP = opponent.gethP(); // Gets the hP of the opponent
             calculateDamage(attacker, opponent); // Calculates the damage the move will do
-            hP = hP - (damage/2); // Subtracting the damage the move does in hP from the hP of the defending pokemon
+            hP = hP - (damageDealt/2); // Subtracting the damage the move does in hP from the hP of the defending pokemon
             opponent.sethP((int)hP); // Setting this new hP after the execution of the move to the hP of the defending pokemon
         }
     }
@@ -197,5 +198,9 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
 
     public double getDamage() {
         return damage;
+    }
+
+    public double getDamageDealt() {
+        return damageDealt;
     }
 }

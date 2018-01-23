@@ -1,11 +1,6 @@
-package Pokemon;
-//Package Declaration and Imports for JavaFX Libraries
-import Moves.Move;
-import javafx.scene.image.Image;
-
-/**
- * Created by Harsh on 2018-01-08.
- */
+package Pokemon; // Part of the pokemon package of the pokemonfx file
+import Moves.Move; // Imports move.move as each pokemon is assigned 4 moves
+import javafx.scene.image.Image; // Images need to be used to represent pokemon (gifs)
 
 public class Pokemon {
     String name, type; // Variables representing the name and type of a pokemon
@@ -119,11 +114,23 @@ public class Pokemon {
         return strengthStat;
     }
 
+    public int getHealthIV() {
+        return healthIV;
+    }
+
+    public int getSpeedIV() {
+        return speedIV;
+    }
+
+    public double getStrengthIV() {
+        return strengthIV;
+    }
+
     public void setStrengthStat(double stengthStat) {
         this.strengthStat = stengthStat;
     }
 
-    // ^ More getters and setters for pokemon attributes such as hP
+    // ^ More getters and setters for pokemon attributes such as hP and IVS
 
     public void useMove(Pokemon opponent, Move move) {
         move.makeMove(opponent, this);
