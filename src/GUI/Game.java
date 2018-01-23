@@ -176,13 +176,14 @@ public class Game {
                     getCurrentPok(poke2,player2).move3.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
                 //FINDS IF ANY POKEMON DIED BECAUSE OF THE MOVE
                 findDeadPokemon(player1,switchTeam1,root);
-                checkWin(player1,player2,primaryStage);
+
                 //REFRESHES STAT BOXES
                 stat1.setText(getCurrentPok(poke1, player1).toString());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
                 //REFRESHES HP BOXES
                 hp1.setText("Health: "+(int)(getCurrentPok(poke1, player1).gethP()*100/getCurrentPok(poke1, player1).getMaxhP())+"%");
                 hp2.setText("Health: "+(int)(getCurrentPok(poke2, player2).gethP()*100/getCurrentPok(poke2, player2).getMaxhP())+"%");
+                checkWin(player1,player2,primaryStage);
                 //CHECKS IF A WINNER EXISTS
                 //NEXT TURN SETUP
                 if (getCurrentPok(poke1,player1).gethP() > 0) {
@@ -360,7 +361,7 @@ public class Game {
     static boolean checkWin(Pokemon[] team1, Pokemon[] team2, Stage primary){
         int counter = 0;
         for (Pokemon pok: team1){
-            if (pok.gethP()<=0){
+            if (pok.gethP()<= 0){
                 counter++;
                 if (counter == 6){
                     AlertBox.display("Winner","Player 2 won");
@@ -373,10 +374,10 @@ public class Game {
             break;
         }
         for (Pokemon pok: team2){
-            if (pok.gethP()<0){
+            if (pok.gethP()<=0){
                 counter++;
                 if (counter == 6){
-                    AlertBox.display("Winner","Player 2 won");
+                    AlertBox.display("Winner","Player 1 won");
                     primary.setScene(StartScene.startScene(primary));
                     return true;
                 }
