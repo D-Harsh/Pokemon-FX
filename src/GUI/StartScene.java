@@ -23,6 +23,7 @@ public class StartScene {
         //Buttons for different modes of the game and their actions when clicked
         Button PvP = button("Player vs Player"), PvC = button("Computer"), PvE = button("Elite Four");
         PvP.setOnAction(e -> primaryStage.setScene(SelectPokemon.getChooseScene(primaryStage)));
+        PvE.setOnAction(e -> primaryStage.setScene(Elite4.getChooseScene(primaryStage)));
         //Easter Egg button that pops a Pikachu from no where  for fun
         Button easterEgg = new Button();
         easterEgg.setStyle(INVISIBLE_BUTTON_STYLE);

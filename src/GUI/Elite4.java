@@ -24,7 +24,6 @@ public class Elite4 {
         ImageView Lorelei = new ImageView(new Image("Images/Lorelei.png"));
         ImageView Bruno = new ImageView(new Image("Images/Bruno.png"));
         ImageView LanceAgatha = new ImageView(new Image("Images/LanceAgatha.png"));
-
         ImageView pokeball = new ImageView(new Image("Images/pokeballanimated.gif"));
         ImageView El4text = new ImageView(new Image("Images/E4 text.png"));
         ImageView pokefield = new ImageView();
@@ -51,7 +50,7 @@ public class Elite4 {
         setCoordinates(LanceAgatha, 800, 150);
 
         //Background and Pane Set Up
-        ImageView background = new ImageView(new Image("Images/pikbg.gif"));
+        ImageView background = new ImageView(new Image("Images/E4 Background.gif"));
         background.setFitHeight(600);
         background.setFitWidth(965);
         Pane selectPane = new Pane();
@@ -115,7 +114,7 @@ public class Elite4 {
         setCoordinates(confirm, 590, 500);
         confirm.setOnAction(e -> {
             if (checkConfirm(team1, pokefield)) {
-                primaryStage.setScene(Game.startGameScene(primaryStage, getPokemonTeam(newteam1), getPokemonTeam(LoreleiTeam)));
+                primaryStage.setScene(AIGame.startGameScene(primaryStage, getPokemonTeam(newteam1), getPokemonTeam(LoreleiTeam)));
             }
         });
 
