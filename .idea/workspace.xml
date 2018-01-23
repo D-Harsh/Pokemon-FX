@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b400d61c-5431-4b64-8968-d0acd717b0d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/Elite4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Game.java" afterPath="$PROJECT_DIR$/src/GUI/Game.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +24,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+            <state relative-caret-position="2137">
+              <caret line="342" column="5" lean-forward="true" selection-start-line="342" selection-start-column="5" selection-end-line="342" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
@@ -37,6 +36,7 @@
                 <element signature="method#checkWin#0;class#Game#0" expanded="false" />
                 <element signature="method#disable#0;class#Game#0" expanded="false" />
                 <element signature="method#enable#0;class#Game#0" expanded="false" />
+                <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -45,23 +45,10 @@
       <file leaf-file-name="Elite4.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/Elite4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" column="60" lean-forward="true" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+            <state relative-caret-position="406">
+              <caret line="84" column="36" lean-forward="true" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Moves/Move.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#ppCheck#0;class#Move#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -70,24 +57,9 @@
       <file leaf-file-name="AI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/AI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AttackMove.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Moves/AttackMove.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4625">
-              <caret line="185" column="24" lean-forward="false" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
-              <folding>
-                <element signature="e#8356#8357#0" expanded="true" />
-                <element signature="e#8385#8386#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-694">
+              <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,11 +118,11 @@
         <option value="$PROJECT_DIR$/src/Moves/StatusMove.java" />
         <option value="$PROJECT_DIR$/src/GUI/SelectPokemon.java" />
         <option value="$PROJECT_DIR$/src/Pokemon/Pokemon.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Game.java" />
         <option value="$PROJECT_DIR$/src/Moves/AttackMove.java" />
         <option value="$PROJECT_DIR$/src/Moves/Move.java" />
         <option value="$PROJECT_DIR$/src/GUI/AI.java" />
         <option value="$PROJECT_DIR$/src/GUI/Elite4.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Game.java" />
       </list>
     </option>
   </component>
@@ -536,18 +508,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22374429" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22374429" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -564,7 +537,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -605,6 +577,7 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
+            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -614,7 +587,7 @@
         <state relative-caret-position="750">
           <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#ppCheck#0;class#Move#0" expanded="false" />
           </folding>
         </state>
@@ -625,7 +598,7 @@
         <state relative-caret-position="125">
           <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -635,8 +608,8 @@
         <state relative-caret-position="4625">
           <caret line="185" column="24" lean-forward="true" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
           <folding>
-            <element signature="e#8356#8357#0" expanded="true" />
-            <element signature="e#8385#8386#0" expanded="true" />
+            <element signature="e#8356#8357#0" expanded="false" />
+            <element signature="e#8385#8386#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -655,6 +628,7 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
+            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -664,7 +638,7 @@
         <state relative-caret-position="650">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#ppCheck#0;class#Move#0" expanded="false" />
           </folding>
         </state>
@@ -689,8 +663,8 @@
         <state relative-caret-position="600">
           <caret line="186" column="19" lean-forward="true" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
           <folding>
-            <element signature="e#8356#8357#0" expanded="true" />
-            <element signature="e#8385#8386#0" expanded="true" />
+            <element signature="e#8356#8357#0" expanded="false" />
+            <element signature="e#8385#8386#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -708,7 +682,7 @@
         <state relative-caret-position="100">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#checkPokedexNum#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#checkConfirm#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#getPokemonTeam#0;class#SelectPokemon#0" expanded="false" />
@@ -730,6 +704,7 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
+            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -739,7 +714,7 @@
         <state relative-caret-position="3125">
           <caret line="125" column="52" lean-forward="false" selection-start-line="125" selection-start-column="52" selection-end-line="125" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#checkPokedexNum#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#checkConfirm#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#getPokemonTeam#0;class#SelectPokemon#0" expanded="false" />
@@ -772,7 +747,7 @@
         <state relative-caret-position="2900">
           <caret line="116" column="47" lean-forward="true" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="47" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#checkPokedexNum#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#checkConfirm#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#getPokemonTeam#0;class#SelectPokemon#0" expanded="false" />
@@ -817,6 +792,7 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
+            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -836,7 +812,7 @@
         <state relative-caret-position="1425">
           <caret line="57" column="27" lean-forward="false" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#checkPokedexNum#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#checkConfirm#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#getPokemonTeam#0;class#SelectPokemon#0" expanded="false" />
@@ -868,6 +844,7 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
+            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -895,7 +872,7 @@
         <state relative-caret-position="300">
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#ppCheck#0;class#Move#0" expanded="false" />
           </folding>
         </state>
@@ -935,6 +912,7 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
+            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -952,7 +930,7 @@
         <state relative-caret-position="315">
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#ppCheck#0;class#Move#0" expanded="false" />
           </folding>
         </state>
@@ -963,7 +941,7 @@
         <state relative-caret-position="1365">
           <caret line="65" column="38" lean-forward="true" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#checkPokedexNum#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#checkConfirm#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#getPokemonTeam#0;class#SelectPokemon#0" expanded="false" />
@@ -1065,7 +1043,7 @@
         <state relative-caret-position="-394">
           <caret line="101" column="52" lean-forward="true" selection-start-line="101" selection-start-column="52" selection-end-line="101" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#checkPokedexNum#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#checkConfirm#0;class#SelectPokemon#0" expanded="false" />
             <element signature="method#getPokemonTeam#0;class#SelectPokemon#0" expanded="false" />
@@ -1086,7 +1064,7 @@
         <state relative-caret-position="750">
           <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#ppCheck#0;class#Move#0" expanded="false" />
           </folding>
         </state>
@@ -1097,26 +1075,24 @@
         <state relative-caret-position="4625">
           <caret line="185" column="24" lean-forward="false" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
           <folding>
-            <element signature="e#8356#8357#0" expanded="true" />
-            <element signature="e#8385#8386#0" expanded="true" />
+            <element signature="e#8356#8357#0" expanded="false" />
+            <element signature="e#8385#8386#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/AI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-694">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        <state relative-caret-position="2137">
+          <caret line="342" column="5" lean-forward="true" selection-start-line="342" selection-start-column="5" selection-end-line="342" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
@@ -1127,14 +1103,15 @@
             <element signature="method#checkWin#0;class#Game#0" expanded="false" />
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
+            <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Elite4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="60" lean-forward="true" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+        <state relative-caret-position="406">
+          <caret line="84" column="36" lean-forward="true" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

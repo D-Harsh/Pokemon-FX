@@ -122,6 +122,7 @@ public class Game {
                     case(2): getCurrentPok(poke1,player1).move2.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
                     case(3): getCurrentPok(poke1,player1).move3.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
                 }
+                findDeadPokemon(player2,switchTeam2,root);
                 stat1.setText(getCurrentPok(poke1, player1).toString());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
                 if (getCurrentPok(poke2,player2).gethP() > 0) {
@@ -131,10 +132,12 @@ public class Game {
                     disable(switchTeam1);
                 }
                 else{
+                    poke2.setImage(null);
                     enable(switchTeam2);
                     disable(player1Moves);
                     disable(switchTeam1);
                 }
+                checkWin(player1,player2,primaryStage);
             });
         }
         for (int i = 0; i < 4; i++) {
@@ -146,6 +149,7 @@ public class Game {
                     case(2): getCurrentPok(poke2,player2).move2.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
                     case(3): getCurrentPok(poke2,player2).move3.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
                 }
+                findDeadPokemon(player1,switchTeam1,root);
                 stat1.setText(getCurrentPok(poke1, player1).toString());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
                 if (getCurrentPok(poke1,player1).gethP() > 0) {
@@ -155,10 +159,12 @@ public class Game {
                     disable(switchTeam2);
                 }
                 else{
+                    poke1.setImage(null);
                     enable(switchTeam1);
                     disable(player2Moves);
                     disable(switchTeam2);
                 }
+                checkWin(player1,player2,primaryStage);
             });
         }
         for (int i = 0; i < 6; i++) {
@@ -179,6 +185,7 @@ public class Game {
                 enable(switchTeam2);
                 disable(player1Moves);
                 disable(switchTeam1);
+                checkWin(player1,player2,primaryStage);
             });
             root.getChildren().add(switchTeam1[i]);
         }
@@ -201,7 +208,7 @@ public class Game {
                 enable(switchTeam1);
                 disable(player2Moves);
                 disable(switchTeam2);
-
+                checkWin(player1,player2,primaryStage);
             });
             root.getChildren().add(switchTeam2[i]);
         }
@@ -231,10 +238,6 @@ public class Game {
             player2Pokeballs[i].setPreserveRatio(true);
             player2Pokeballs[i].setFitWidth(35);
             root.getChildren().addAll(player2Pokeballs[i]);
-        }
-        if((checkWin(player1,player2))){
-            AlertBox.display("CONGRATS WE HAVE A WINNER","Player");
-
         }
         return battle;
     }
@@ -297,12 +300,14 @@ public class Game {
         return null;
     }
 
-    static boolean checkWin(Pokemon[] team1, Pokemon[] team2){
+    static boolean checkWin(Pokemon[] team1, Pokemon[] team2, Stage primary){
         int counter = 0;
         for (Pokemon pok: team1){
             if (pok.gethP()<0){
                 counter++;
                 if (counter == 6){
+                    AlertBox.display("Winner","Player 2 won");
+                    primary.setScene(StartScene.startScene(primary));
                     return true;
                 }
                 continue;
@@ -314,6 +319,8 @@ public class Game {
             if (pok.gethP()<0){
                 counter++;
                 if (counter == 6){
+                    AlertBox.display("Winner","Player 2 won");
+                    primary.setScene(StartScene.startScene(primary));
                     return true;
                 }
                 continue;
@@ -321,10 +328,6 @@ public class Game {
             break;
         }
         return false;
-    }
-
-    static boolean checkDeath(Pokemon a){
-        return (a.gethP() <= 0);
     }
 
     static void disable(Button[] moves){
@@ -336,6 +339,14 @@ public class Game {
     static void enable(Button[] moves){
         for(Button a: moves ){
             a.setDisable(false);
+        }
+    }
+
+    static void findDeadPokemon(Pokemon[] pokemons,Button[] switchButtons, Pane root) {
+        for (int i = 0; i < 6; i++) {
+            if (pokemons[i].gethP() <= 0) {
+                root.getChildren().remove(switchButtons[i]);
+            }
         }
     }
 }
