@@ -1,6 +1,5 @@
 package GUI;
 //Package Declaration and Imports for JavaFX Libraries
-
 import Pokemon.Pokemans;
 import Pokemon.Pokemon;
 import javafx.scene.ImageCursor;
@@ -12,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+//Custom Made tools class import
 import static GUI.Tools.*;
 
 public class SelectPokemon {
@@ -92,7 +92,7 @@ public class SelectPokemon {
             buttons2[i - 1] = show;
         }
 
-        //The randomize button is created for teh random battle option
+        //The randomize button is created for the random battle option
         Button random = button("Randomize");
         setButtonHover(random);
         setCoordinates(random, 240, 500);

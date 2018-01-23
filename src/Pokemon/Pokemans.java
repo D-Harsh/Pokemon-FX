@@ -99,20 +99,19 @@ public class Pokemans {
     static Move Ancient_Power = new AttackMove("Rock", "Ancient Power", 16, 100, 13);
     static Move High_Horsepower = new AttackMove("Ground", "High Horsepower", 10, 90, 19);
     static Move Burn_Up = new AttackMove("Fire", "Burn Up", 5, 100, 20);
-	static Move Quiver_Dance = new StatusMove("Bug","Quiver Dance", 25, 100, 3, 1.5, "s");
-	static Move Glare = new ConditionMove("Normal", "Glare",32, 100, 1);
-	static Move Growl = new StatusMove("Normal","Growl" ,25, 100, 2, 0.5, "0");;
-	static Move Leer = new StatusMove("Normal","Leer" ,25, 100, 2, 0.5, "o");;
-	static Move Defense_Curl = new StatusMove("Normal","Defense Curl" ,25, 100, 2, 0.5, "o");;
-	static Move Calm_Mind = new StatusMove("Psychic","Agility" ,25, 100, 2, 1.5, "s");;
-	static Move Rock_Polish = new StatusMove("Rock","Rock Polish" ,25, 100, 1, 2, "s");;
-	static Move Nasty_Plot = new StatusMove("Dark","Nasty Plot" ,25, 100, 2, 2, "s");
-	static Move Transform = new AttackMove("Normal", "Transform", 32, 100, 0);
+    static Move Quiver_Dance = new StatusMove("Bug","Quiver Dance", 25, 100, 3, 1.5, "s");
+    static Move Glare = new ConditionMove("Normal", "Glare",32, 100, 1);
+    static Move Growl = new StatusMove("Normal","Growl" ,25, 100, 2, 0.5, "0");;
+    static Move Leer = new StatusMove("Normal","Leer" ,25, 100, 2, 0.5, "o");;
+    static Move Defense_Curl = new StatusMove("Normal","Defense Curl" ,25, 100, 2, 0.5, "o");;
+    static Move Calm_Mind = new StatusMove("Psychic","Agility" ,25, 100, 2, 1.5, "s");;
+    static Move Rock_Polish = new StatusMove("Rock","Rock Polish" ,25, 100, 1, 2, "s");;
+    static Move Nasty_Plot = new StatusMove("Dark","Nasty Plot" ,25, 100, 2, 2, "s");
+    static Move Transform = new AttackMove("Normal", "Transform", 32, 100, 0);
 
+    // The lines above create a bunch of different moves with different properties
 
-
-
-    public static Pokemon[] pokedex = {
+    public static Pokemon[] pokedex = { // List named pokedex which stores all the pokemon
             new Pokemon("Bulbasaur", "Grass", 45, 45, 0.7, Tackle, Acid_Spray, Synthesis, Razor_Leaf,
                     new Image("Images/Pokemon/1.0.gif"), new Image("Images/Pokemon/1.1.gif"), 1),
 
@@ -566,6 +565,8 @@ public class Pokemans {
             new Pokemon("Mew", "Psychic", 100, 100, 1.38, Psychic, Ice_Beam, Shadow_Ball, Thunderbolt,
                     new Image("Images/Pokemon/151.0.gif"), new Image("Images/Pokemon/151.1.gif"), 151)
     };
+    /* ^ Making the first 151 Pokemon from Gen 1, assigning their stats, info, moves and gifs. All gifs are from:
+        http://www.pokestadium.com/tools/sprites */
 
 
 }

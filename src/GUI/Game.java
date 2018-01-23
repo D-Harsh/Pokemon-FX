@@ -1,5 +1,5 @@
 package GUI;
-
+//Package Declaration and Imports for JavaFX Libraries
 import Pokemon.Pokemon;
 import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
@@ -11,12 +11,15 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import java.util.Arrays;
+//Custom Made tools class import
 import static GUI.Tools.*;
 
 public class Game {
+    //Boolean for turn determined through speed
     static boolean turn;
-
+    //Method that returns the game play scene
     static public Scene startGameScene(Stage primaryStage, Pokemon[] player1, Pokemon[] player2) {
+
         final ImageView battleground = new ImageView(), bg = new ImageView(), poke1 = new ImageView(), poke2 = new ImageView(),
                 p1Text = new ImageView(), p2Text = new ImageView();
         Image[] backgrounds = {new Image("Images/bb1.png"), new Image("Images/bb2.png"), new Image("Images/bb3.jpg"),
@@ -27,9 +30,12 @@ public class Game {
         Arrays.setAll(player1Pokeballs, i -> new ImageView());
         ImageView[] player2Pokeballs = new ImageView[6];
         Arrays.setAll(player2Pokeballs, i -> new ImageView());
+
         Pane root = new Pane();
         root.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2, 2));
         Scene battle = new Scene(root, 965, 600);
+
+
         // SCENE BACKGROUND SETUP:
         bg.setImage(new Image("Images/battlescene.jpg"));
         bg.setFitHeight(600);
@@ -86,18 +92,17 @@ public class Game {
         currPoke2 = getCurrentPok(poke2, player2);
         setCoordinates(poke1, 245, 140);
         setCoordinates(poke2, 565, 20);
-        // ADDING MOST OF THE COMPONENTS TO THE SCENE
+        // ADDING COMPONENTS TO THE SCENE
         root.getChildren().addAll(battleground, poke1, poke2, trainer1, trainer2, p1Text, p2Text, p1team, p2team);
 
 
-        //Making Stat Boxes for Both Current Pokemon
+        //Making Stat and hP Boxes for Both Current Pokemon
         final TextArea stat1 = makeStatBox(30, 10), stat2 = makeStatBox(800, 175),
                 hp1 = makeHPBox(220,250), hp2 = makeHPBox(560,175);
         hp1.setText("Health: 100%");hp2.setText("Health: 100%");
         stat1.setText(currPoke1.toString());
         stat2.setText(currPoke2.toString());
         root.getChildren().addAll(stat1, stat2,hp1,hp2);
-
 
         final Button p1m1 = moveButton(currPoke1.getMove0()), p1m2 = moveButton(currPoke1.getMove1()), p1m3 = moveButton(currPoke1.getMove2()),
                 p1m4 = moveButton(currPoke1.getMove3()), p2m1 = moveButton(currPoke2.getMove0()), p2m2 = moveButton(currPoke2.getMove1()),
