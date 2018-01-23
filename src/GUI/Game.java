@@ -83,7 +83,9 @@ public class Game {
 
         // PLACING THE IMAGEVIEWS WHERE THE POKEMON GO ON THE BATTLEFIELD
         poke1.setFitHeight(100);
+        poke1.setFitWidth(100);
         poke2.setFitHeight(100);
+        poke2.setFitWidth(100);
         poke1.setPreserveRatio(true);
         poke2.setPreserveRatio(true);
         Pokemon currPoke1 = player1[0];
@@ -294,6 +296,7 @@ public class Game {
         ImageView pokemon = new ImageView(pokeImage);
         pokemon.setPreserveRatio(true);
         pokemon.setFitHeight(75);
+        pokemon.setFitWidth(75);
         pokeSwitchButton.setGraphic(pokemon);
         pokeSwitchButton.setOnMouseEntered(e -> {
             pokeSwitchButton.setStyle(TRANSPARENT_BUTTON_HOVER);

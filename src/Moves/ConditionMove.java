@@ -39,7 +39,7 @@ public class ConditionMove extends Move{ // ConditionMove is a type of a Move an
             condition = "Burn";
         }
 
-        return ("\n" + getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nCondition: "
+        return (getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nCondition: "
                 + condition + "\nAccuracy: " + getAccuracy() + "%");
     }
 

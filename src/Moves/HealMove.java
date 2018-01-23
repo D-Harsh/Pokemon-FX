@@ -16,7 +16,7 @@ public class HealMove extends Move{ // HealMove is a type of a Move and thus inh
     public void makeMove(Pokemon opponent, Pokemon user) { /* Takes in the parameter self which represents the pokemon using the move,
                                         because heal moves heal the pokemon that uses the move*/
         if (ppCheck()) { // If the move has pp and is able to be used:
-            double max = user.getMaxhP(), hp = user.gethP(), newhP = hp + (healstr * max); /* Gets the maxhP of the pokemon
+            double max = user.getMaxhP(), hp = user.gethP(), newhP = hp + ((0.01*healstr) * max); /* Gets the maxhP of the pokemon
             and the current hP. These variables are used to calculate the newhP of the pokemon according to how much the
             heal move heals (a percentage)*/
             if (newhP <= max) {
@@ -29,7 +29,7 @@ public class HealMove extends Move{ // HealMove is a type of a Move and thus inh
 
     }
     public String displayInfo(){
-        return ("\n" + getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nHeal: "
+        return (getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nHeal: "
                 + healstr + "%" + "\nAccuracy: " + getAccuracy() + "%");
     }
 }

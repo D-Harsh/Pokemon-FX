@@ -67,11 +67,10 @@ public class Pokemon {
         return "\nName='" + name + '\'' +
                 ", \nType='" + type + '\'' +
                 ", \nSpeedStat=" + speedStat +
-                ", \nHealthIV=" + healthIV +
                 ", \nSpeedIV=" + speedIV +
+                ", \nStrengthIV=" + strengthIV +
                 ", \nPokedexNum=" + pokedexNum +
-                ", \nStrengthStat=" + (int)strengthStat +
-//                ", \nStrengthIV=" + strengthIV +
+                ", \nStrengthStat=" + strengthStat +
                 ", \nhP=" + hP;
     }
     /* The toString method returns a string representation of all the attributes of a Pokemon, this is useful for when
@@ -90,7 +89,7 @@ public class Pokemon {
     public void generateIVs() {
         this.healthIV = (int)(Math.random() * 31);
         this.speedIV = (int)(Math.random() * 31);
-        this.strengthIV = (Math.random() * 0.5);
+        this.strengthIV = (int)(Math.random() * 31);
     }
     // Generates 3 random IVs
 

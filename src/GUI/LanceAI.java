@@ -13,7 +13,7 @@ import java.util.Arrays;
 import static GUI.Tools.*;
 import Moves.Move;
 
-public class AIGame {
+public class LanceAI {
     static boolean turn;
 
     static public Scene startGameScene(Stage primaryStage, Pokemon[] player1, Pokemon[] LoreleiTeam) {
@@ -94,38 +94,33 @@ public class AIGame {
 
 
         final Button p1m1 = moveButton(currPoke1.getMove0()), p1m2 = moveButton(currPoke1.getMove1()), p1m3 = moveButton(currPoke1.getMove2()),
-                p1m4 = moveButton(currPoke1.getMove3())/*, p2m1 = moveButton(currPoke2.getMove0()), p2m2 = moveButton(currPoke2.getMove1()),
-                p2m3 = moveButton(currPoke2.getMove2()), p2m4 = moveButton(currPoke2.getMove3())*/;
+                p1m4 = moveButton(currPoke1.getMove3());
 
         Button home = homeButton(primaryStage);
         setCoordinates(home, 430,320);
         root.getChildren().add(home);
 
         // POKEMON SWITCH BUTTONS AT THE BOTTOM
-        Button[] switchTeam1= new Button[6]/*, switchTeam2 = new Button[6]*/;
+        Button[] switchTeam1= new Button[6];
         Button player1Moves[] = {p1m1,p1m2,p1m3,p1m4};
-        /*Button player2Moves[] = {p2m1,p2m2,p2m3,p2m4};*/
         Pokemon pok1 = getCurrentPok(poke1, player1), pok2 = getCurrentPok(poke2, LoreleiTeam);
-        /*turn = pok1.getSpeedStat() > pok2.getSpeedStat();*/
+
         if(!turn)disable(player1Moves);
         if (pok1.getSpeedStat() > pok2.getSpeedStat()) {
             for (int i = 0; i < 4; i++) {
                 int a = i;
-                player1Moves[i].setOnAction(e -> {
-                    checkWin(player1,LoreleiTeam,primaryStage);
+                player1Moves[i].setOnAction(e -> {checkWin(player1,LoreleiTeam,primaryStage);
                     switch(a) {
                         case(0): getCurrentPok(poke1,player1).move0.makeMove(getCurrentPok(poke2,LoreleiTeam),getCurrentPok(poke1,player1));
                         case(1): getCurrentPok(poke1,player1).move1.makeMove(getCurrentPok(poke2,LoreleiTeam),getCurrentPok(poke1,player1));
                         case(2): getCurrentPok(poke1,player1).move2.makeMove(getCurrentPok(poke2,LoreleiTeam),getCurrentPok(poke1,player1));
                         case(3): getCurrentPok(poke1,player1).move3.makeMove(getCurrentPok(poke2,LoreleiTeam),getCurrentPok(poke1,player1));
                     }
-                   /* findDeadPokemon(LoreleiTeam,switchTeam2,root);*/
                     stat1.setText(getCurrentPok(poke1, player1).toString());
                     stat2.setText(getCurrentPok(poke2, LoreleiTeam).toString());
                     if (getCurrentPok(poke2,LoreleiTeam).gethP() > 0) {
                         makeMoveAI(getCurrentPok(poke2, LoreleiTeam), getCurrentPok(poke1, player1));
-                    	/*enable(player2Moves);
-                        enable(switchTeam2);*/
+
                         disable(player1Moves);
                         disable(switchTeam1);
                     }
@@ -137,12 +132,11 @@ public class AIGame {
                             }
                             else {
                                 Nextmember.setDisable(false);
-                                Nextmember.setOnAction(z -> primaryStage.setScene(BrunoAI.startGameScene(primaryStage, player1, LoreleiTeam)));
+
                             }
                         }
 
                         stat2.setText(getCurrentPok(poke2, LoreleiTeam).toString());
-                        /*enable(switchTeam2);*/
                         disable(player1Moves);
                         disable(switchTeam1);
                     }
@@ -151,39 +145,12 @@ public class AIGame {
             }
         }
 
-        /*for (int i = 0; i < 4; i++) {
-            int a = i;
-            player2Moves[i].setOnAction(e -> {
-                switch(a) {
-                    case(0): getCurrentPok(poke2,LoreleiTeam).move0.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,LoreleiTeam));
-                    case(1): getCurrentPok(poke2,LoreleiTeam).move1.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,LoreleiTeam));
-                    case(2): getCurrentPok(poke2,LoreleiTeam).move2.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,LoreleiTeam));
-                    case(3): getCurrentPok(poke2,LoreleiTeam).move3.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,LoreleiTeam));
-                }
-                findDeadPokemon(player1,switchTeam1,root);
-                stat1.setText(getCurrentPok(poke1, player1).toString());
-                stat2.setText(getCurrentPok(poke2, LoreleiTeam).toString());
-                if (getCurrentPok(poke1,player1).gethP() > 0) {
-                    enable(player1Moves);
-                    enable(switchTeam1);
-                    disable(player2Moves);
-                    disable(switchTeam2);
-                }
-                else{
-                    poke1.setImage(null);
-                    enable(switchTeam1);
-                    disable(player2Moves);
-                    disable(switchTeam2);
-                }
-                checkWin(player1,LoreleiTeam,primaryStage);
-            });
-        }*/
+
         for (int i = 0; i < 6; i++) {
             switchTeam1[i] = pokeSwitchButton(player1[i].getPokemonImage());
             setCoordinates(switchTeam1[i], ((30 * 2 * i)), 500);
             final int a = i;
-            switchTeam1[i].setOnAction(e -> {
-                checkWin(player1,LoreleiTeam,primaryStage);
+            switchTeam1[i].setOnAction(e -> {checkWin(player1,LoreleiTeam,primaryStage);
                 if (player1[a].gethP() <= 0){
                     root.getChildren().remove(switchTeam1[a]);
                 }
@@ -201,38 +168,14 @@ public class AIGame {
             root.getChildren().add(switchTeam1[i]);
         }
 
-        /*for (int i = 0; i < 6; i++) {
-            switchTeam2[i] = pokeSwitchButton(LoreleiTeam[i].getPokemonImage());
-            setCoordinates(switchTeam2[i], (500 + (60 * i)), 500);
-            final int a = i;
-            switchTeam2[i].setOnAction(e -> {
-                if (LoreleiTeam[a].gethP() <= 0){
-                    root.getChildren().remove(switchTeam2[a]);
-                }
-                poke2.setImage(LoreleiTeam[a].getPokemonImage());
-                p2m1.setText(getCurrentPok(poke2, LoreleiTeam).getMove0());
-                p2m2.setText(getCurrentPok(poke2, LoreleiTeam).getMove1());
-                p2m3.setText(getCurrentPok(poke2, LoreleiTeam).getMove2());
-                p2m4.setText(getCurrentPok(poke2, LoreleiTeam).getMove3());
-                stat2.setText(getCurrentPok(poke2, LoreleiTeam).toString());
-                enable(player1Moves);
-                enable(switchTeam1);
-                disable(player2Moves);
-                disable(switchTeam2);
-                checkWin(player1,LoreleiTeam,primaryStage);
-            });
-            root.getChildren().add(switchTeam2[i]);
-        }*/
+
 
         // MOVE BUTTONS
         setCoordinates(p1m1, 60, 400);
         setCoordinates(p1m2, 240, 400);
         setCoordinates(p1m3, 580, 400);
         setCoordinates(p1m4, 760, 400);
-       /* setCoordinates(p2m1, 580, 380);
-        setCoordinates(p2m2, 760, 380);
-        setCoordinates(p2m3, 580, 440);
-        setCoordinates(p2m4, 760, 440);*/
+
         root.getChildren().addAll(p1m1, p1m2, p1m3, p1m4/*, p2m1, p2m2, p2m3, p2m4*/);
 
         // PLACING POKEBALLS TO INDICATE EACH PLAYERS TEAM:

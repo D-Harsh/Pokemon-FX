@@ -35,8 +35,8 @@ public class Elite4 {
         Bruno.setFitHeight(150);
         Bruno.setFitWidth(150);
         Bruno.setPreserveRatio(true);
-        LanceAgatha.setFitHeight(150);
-        LanceAgatha.setFitWidth(200);
+        LanceAgatha.setFitHeight(200);
+        LanceAgatha.setFitWidth(250);
         LanceAgatha.setPreserveRatio(true);
         El4text.setFitWidth(400);
         El4text.setFitHeight(200);
@@ -45,12 +45,13 @@ public class Elite4 {
         setCoordinates(pokefield, 450, 350);
         setCoordinates(pokeball, 350, 400);
         setCoordinates(trainer1, 30, 100);
-        setCoordinates(Lorelei, 500, 100);
-        setCoordinates(Bruno, 675, 160);
-        setCoordinates(LanceAgatha, 800, 150);
+        setCoordinates(Lorelei, 600, 100);
+        setCoordinates(Bruno, 775, 170);
+        setCoordinates(LanceAgatha, 700, 275);
 
         //Background and Pane Set Up
         ImageView background = new ImageView(new Image("Images/E4 Background.gif"));
+
         background.setFitHeight(600);
         background.setFitWidth(965);
         Pane selectPane = new Pane();
@@ -66,7 +67,7 @@ public class Elite4 {
         stat.setPrefColumnCount(10);
         stat.setPrefRowCount(10);
         stat.setStyle("-fx-background-color: rgba(0,0,0,0.7);");
-        setCoordinates(stat, 300, 160);
+        setCoordinates(stat, 400, 160);
 
         //Text fields for team 1 and buttons for team 1 are created and assigned functions
         for (int i = 1; i <= 6; i++) {
@@ -80,8 +81,8 @@ public class Elite4 {
             selectPane.getChildren().addAll(tf, show);
             team1[i - 1] = tf;
             buttons1[i - 1] = show;
-        }     
-       
+        }
+
 
         int LoreleiTeam[] = new int [6];
         LoreleiTeam[0] = 87;
@@ -171,8 +172,8 @@ public class Elite4 {
         return team;
     }
     static public int[]ConvertTeam (TextField[] team) {
-    	int [] newteam1 = new int [6];
-		for (TextField x : team) {
+        int [] newteam1 = new int [6];
+        for (TextField x : team) {
             int index = 0;
             newteam1[index] = Integer.parseInt(x.getText());
             index++;

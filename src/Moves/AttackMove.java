@@ -25,9 +25,13 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         double STAB = 1; // Same Type Attack Bonus is a multiplier which adds damage to a move if it is of the same type as the pokemon using it
         String attackertype = attacker.getType(); // Gets pokemon type of attacker
         String defendertype = defender.getType(); // Gets pokemon type of defender
+        double IVBoost = 0; /* The bonus damage dealt due to bonus hP that is used in calculating the overall damage dealt
+        . This was made seperate from IVDMG because if a type is immune to another than IVS should not add additional damage*/
+        double IVDMG = attacker.getStrengthIV() * 0.5; // The actual bonus damage dealt due to hP
         if (type.equals("Normal")) {
             if (defendertype.equals("Rock")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Ghost")) {
                 dmgmult = 0;
@@ -36,9 +40,11 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         if (type.equals("Fighting")) {
             if (defendertype.equals("Normal") || defendertype.equals("Rock") || defendertype.equals("Ice")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Flying") || defendertype.equals("Poison") || defendertype.equals("Bug") || defendertype.equals("Psychic")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Ghost")) {
                 dmgmult = 0;
@@ -48,27 +54,33 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         if (type.equals("Flying")) {
             if (defendertype.equals("Grass") || defendertype.equals("Fighting") || defendertype.equals("Bug")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Rock") || defendertype.equals("Electric")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
         }
 
         if (type.equals("Poison")) {
             if (defendertype.equals("Bug") || defendertype.equals("Grass")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Ground") || defendertype.equals("Poison") || defendertype.equals("Rock") || defendertype.equals("Ghost")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
         }
 
         if (type.equals("Ground")) {
             if (defendertype.equals("Poison") || defendertype.equals("Rock") || defendertype.equals("Fire") || defendertype.equals("Electric")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Bug") || defendertype.equals("Grass")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Flying")) {
                 dmgmult = 0;
@@ -78,24 +90,29 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         if (type.equals("Rock")) {
             if (defendertype.equals("Flying") || defendertype.equals("Bug") || defendertype.equals("Fire") || defendertype.equals("Ice")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Fighting") || defendertype.equals("Ground")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
         }
 
         if (type.equals("Bug")) {
             if (defendertype.equals("Poison") || defendertype.equals("Grass") || defendertype.equals("Psychic")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Fight") || defendertype.equals("Flying") || defendertype.equals("Ghost") || defendertype.equals("Fire")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
         }
 
         if (type.equals("Ghost")) {
             if (defendertype.equals("Ghost")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Psychic") || defendertype.equals("Normal")) {
                 dmgmult = 0;
@@ -105,36 +122,44 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         if (type.equals("Fire")) {
             if (defendertype.equals("Bug") || defendertype.equals("Grass") || defendertype.equals("Ice")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Ground") || defendertype.equals("Water") || defendertype.equals("Fire") || defendertype.equals("Dragon")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
         }
 
         if (type.equals("Water")) {
             if (defendertype.equals("Ground") || defendertype.equals("Rock") || defendertype.equals("Fire")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Grass") || defendertype.equals("Water") || defendertype.equals("Dragon")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
         }
 
         if (type.equals("Grass")) {
             if (defendertype.equals("Rock") || defendertype.equals("Water")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Poison") || defendertype.equals("Bug") || defendertype.equals("Fire") || defendertype.equals("Flying") || defendertype.equals("Grass")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
         }
 
         if (type.equals("Electric")) {
             if (defendertype.equals("Flying") || defendertype.equals("Water")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Electric") || defendertype.equals("Grass") || defendertype.equals("Dragon")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Ground")) {
                 dmgmult = 0;
@@ -144,24 +169,29 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         if (type.equals("Psychic")) {
             if (defendertype.equals("Fighting") || defendertype.equals("Poison")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Psychic")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
         }
 
         if (type.equals("Ice")) {
             if (defendertype.equals("Flying") || defendertype.equals("Grass") || defendertype.equals("Ground") || defendertype.equals("Dragon")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
             if (defendertype.equals("Water") || defendertype.equals("Ice")) {
                 dmgmult = 0.5;
+                IVBoost = IVDMG;
             }
         }
 
         if (type.equals("Dragon")) {
             if (defendertype.equals("Dragon")) {
                 dmgmult = 2;
+                IVBoost = IVDMG;
             }
         }
     	/* ^ These if statements are used to determine if a move made by the attacking pokemon is effective, not very effective
@@ -174,7 +204,7 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
 			30% of damage is dealt by the move*/
 
         if (Math.random()*99 + 1 <= accuracy) {
-            this.damageDealt = (strengthStat * dmgmult * damage * STAB) + (attacker.getStrengthIV() * 0.3); // The total damage the move does is the product of these multipliers
+            this.damageDealt = (1.5 * strengthStat * dmgmult * damage * STAB) + (IVBoost); // The total damage the move does is the product of these multipliers
         }
 
         else {
@@ -192,8 +222,8 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         }
     }
     public String displayInfo() {
-        return ("\n" + getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nBase Damage: "
-                + damage + "\nAccuracy: " + getAccuracy() + "%");
+        return (getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nBase Damage: "
+                + 1.5*damage + "\nAccuracy: " + getAccuracy() + "%");
     }
 
     public double getDamage() {

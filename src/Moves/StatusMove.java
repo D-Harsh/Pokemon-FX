@@ -76,7 +76,7 @@ public class StatusMove extends Move { // StatusMove is a type of a Move and thu
 		if(statraise == 3){
 			stat = "Strength & Speed";
 		}
-		return ("\n" + getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nChanges " + stat
+		return (getName() + "\nType='" + type + "'\nPP: " + getPp() + "/" + getMaxPP() + "\nChanges " + stat
 				+ "\nby x" + multiplier + "\nInflicted on " + recieve);
 	}
 }

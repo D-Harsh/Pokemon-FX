@@ -21,7 +21,7 @@ public class StartScene {
         Pane pane = new Pane();
         Scene startScene;
         //Buttons for different modes of the game and their actions when clicked
-        Button PvP = button("Player vs Player"), PvC = button("Computer"), PvE = button("Elite Four");
+        Button PvP = button("Player vs Player"), PvE = button("Elite Four");
         PvP.setOnAction(e -> primaryStage.setScene(SelectPokemon.getChooseScene(primaryStage)));
         PvE.setOnAction(e -> primaryStage.setScene(Elite4.getChooseScene(primaryStage)));
         //Easter Egg button that pops a Pikachu from no where  for fun
@@ -58,14 +58,12 @@ public class StartScene {
         setCoordinates(title, 100, 230);
         setCoordinates(mew, 90, 370);
         setCoordinates(mewtwo, 650, 370);
-        setCoordinates(PvP, 300, 80);
-        setCoordinates(PvC, 200, 170);
-        setCoordinates(PvE, 451, 170);
+        setCoordinates(PvP, 300, 375);
+        setCoordinates(PvE, 500, 375);
         setButtonHover(PvP);
-        setButtonHover(PvC);
         setButtonHover(PvE);
         //Adds everything the Pane and the Start scene is added to the Window
-        pane.getChildren().addAll(background, PvP, PvC, PvE, title, field, easterEgg, mew, mewtwo);
+        pane.getChildren().addAll(background, title, field, easterEgg, mew, mewtwo, PvP, PvE);
         pane.setCursor(new ImageCursor(new Image("Images/cursor.gif"), 2, 2));
         startScene = new Scene(pane, 965, 600);
         return startScene;

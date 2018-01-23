@@ -101,7 +101,7 @@ public class Pokemans {
     static Move Burn_Up = new AttackMove("Fire", "Burn Up", 5, 100, 20);
     static Move Quiver_Dance = new StatusMove("Bug","Quiver Dance", 25, 100, 3, 1.5, "s");
     static Move Glare = new ConditionMove("Normal", "Glare",32, 100, 1);
-    static Move Growl = new StatusMove("Normal","Growl" ,25, 100, 2, 0.5, "0");;
+    static Move Growl = new StatusMove("Normal","Growl" ,25, 100, 2, 0.5, "o");;
     static Move Leer = new StatusMove("Normal","Leer" ,25, 100, 2, 0.5, "o");;
     static Move Defense_Curl = new StatusMove("Normal","Defense Curl" ,25, 100, 2, 0.5, "o");;
     static Move Calm_Mind = new StatusMove("Psychic","Agility" ,25, 100, 2, 1.5, "s");;
