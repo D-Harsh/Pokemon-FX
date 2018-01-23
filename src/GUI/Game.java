@@ -185,6 +185,7 @@ public class Game {
                 if (player1[a].gethP() <= 0){
                     root.getChildren().remove(switchTeam1[a]);
                 }
+                checkWin(player1,player2,primaryStage);
                 poke1.setImage(player1[a].getPokemonImage2());
                 p1m1.setText(getCurrentPok(poke1, player1).getMove0());
                 p1m2.setText(getCurrentPok(poke1, player1).getMove1());
@@ -196,7 +197,6 @@ public class Game {
                 enable(switchTeam2);
                 disable(player1Moves);
                 disable(switchTeam1);
-                checkWin(player1,player2,primaryStage);
             });
             root.getChildren().add(switchTeam1[i]);
         }
@@ -209,6 +209,7 @@ public class Game {
                 if (player2[a].gethP() <= 0){
                     root.getChildren().remove(switchTeam2[a]);
                 }
+                checkWin(player1,player2,primaryStage);
                 poke2.setImage(player2[a].getPokemonImage());
                 p2m1.setText(getCurrentPok(poke2, player2).getMove0());
                 p2m2.setText(getCurrentPok(poke2, player2).getMove1());
@@ -220,7 +221,6 @@ public class Game {
                 enable(switchTeam1);
                 disable(player2Moves);
                 disable(switchTeam2);
-                checkWin(player1,player2,primaryStage);
             });
             root.getChildren().add(switchTeam2[i]);
         }

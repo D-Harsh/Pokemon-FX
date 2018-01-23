@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b400d61c-5431-4b64-8968-d0acd717b0d5" name="Default" comment="" />
+    <list default="true" id="b400d61c-5431-4b64-8968-d0acd717b0d5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Game.java" afterPath="$PROJECT_DIR$/src/GUI/Game.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,13 +21,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6475">
-              <caret line="285" column="0" lean-forward="true" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+            <state relative-caret-position="275">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
                 <element signature="method#moveButton#0;class#Game#0" expanded="false" />
                 <element signature="method#randBB#0;class#Game#0" expanded="false" />
@@ -76,18 +77,18 @@
       <file leaf-file-name="StartScene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/StartScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="-573">
               <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AttackMove.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AttackMove.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Moves/AttackMove.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="187" column="50" lean-forward="true" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
+            <state relative-caret-position="652">
+              <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
               <folding>
                 <element signature="method#AttackMove#0;class#AttackMove#0" expanded="false" />
                 <element signature="method#calculateDamage#0;class#AttackMove#0" expanded="false" />
@@ -138,6 +139,7 @@
       <find>hp1</find>
       <find>hp</find>
       <find>checkwin</find>
+      <find>check</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,8 +174,8 @@
         <option value="$PROJECT_DIR$/src/GUI/Elite4.java" />
         <option value="$PROJECT_DIR$/src/Pokemon/Pokemon.java" />
         <option value="$PROJECT_DIR$/src/Moves/AttackMove.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Game.java" />
         <option value="$PROJECT_DIR$/Pokemon-FX.iml" />
+        <option value="$PROJECT_DIR$/src/GUI/Game.java" />
       </list>
     </option>
   </component>
@@ -577,7 +579,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -669,7 +671,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
             <element signature="method#moveButton#0;class#Game#0" expanded="false" />
             <element signature="method#randBB#0;class#Game#0" expanded="false" />
@@ -748,7 +749,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
             <element signature="method#moveButton#0;class#Game#0" expanded="false" />
             <element signature="method#randBB#0;class#Game#0" expanded="false" />
@@ -837,7 +837,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
             <element signature="method#moveButton#0;class#Game#0" expanded="false" />
             <element signature="method#randBB#0;class#Game#0" expanded="false" />
@@ -890,7 +889,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
             <element signature="method#moveButton#0;class#Game#0" expanded="false" />
             <element signature="method#randBB#0;class#Game#0" expanded="false" />
@@ -959,7 +957,6 @@
         <state relative-caret-position="3843">
           <caret line="183" column="8" lean-forward="false" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
             <element signature="method#moveButton#0;class#Game#0" expanded="false" />
             <element signature="method#randBB#0;class#Game#0" expanded="false" />
@@ -1103,14 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/StartScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1145,17 +1134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Moves/AttackMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="187" column="50" lean-forward="true" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
-          <folding>
-            <element signature="method#AttackMove#0;class#AttackMove#0" expanded="false" />
-            <element signature="method#calculateDamage#0;class#AttackMove#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pokemon.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1174,10 +1152,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6475">
-          <caret line="285" column="0" lean-forward="true" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+        <state relative-caret-position="275">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#pokeSwitchButton#0;class#Game#0" expanded="false" />
             <element signature="method#moveButton#0;class#Game#0" expanded="false" />
             <element signature="method#randBB#0;class#Game#0" expanded="false" />
@@ -1188,6 +1165,25 @@
             <element signature="method#disable#0;class#Game#0" expanded="false" />
             <element signature="method#enable#0;class#Game#0" expanded="false" />
             <element signature="method#findDeadPokemon#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/StartScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-573">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Moves/AttackMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding>
+            <element signature="method#AttackMove#0;class#AttackMove#0" expanded="false" />
+            <element signature="method#calculateDamage#0;class#AttackMove#0" expanded="false" />
           </folding>
         </state>
       </provider>
