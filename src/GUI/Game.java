@@ -80,7 +80,7 @@ public class Game {
         poke2.setPreserveRatio(true);
         Pokemon currPoke1 = player1[0];
         Pokemon currPoke2 = player2[0];
-        poke1.setImage(currPoke1.getPokemonImage());
+        poke1.setImage(currPoke1.getPokemonImage2());
         poke2.setImage(currPoke2.getPokemonImage());
         currPoke1 = getCurrentPok(poke1, player1);
         currPoke2 = getCurrentPok(poke2, player2);
@@ -91,10 +91,12 @@ public class Game {
 
 
         //Making Stat Boxes for Both Current Pokemon
-        final TextArea stat1 = makeStatBox(30, 10), stat2 = makeStatBox(800, 175);
+        final TextArea stat1 = makeStatBox(30, 10), stat2 = makeStatBox(800, 175),
+                hp1 = makeHPBox(220,250), hp2 = makeHPBox(560,175);
+        hp1.setText("Health: 100%");hp2.setText("Health: 100%");
         stat1.setText(currPoke1.toString());
         stat2.setText(currPoke2.toString());
-        root.getChildren().addAll(stat1, stat2);
+        root.getChildren().addAll(stat1, stat2,hp1,hp2);
 
 
         final Button p1m1 = moveButton(currPoke1.getMove0()), p1m2 = moveButton(currPoke1.getMove1()), p1m3 = moveButton(currPoke1.getMove2()),
@@ -116,15 +118,20 @@ public class Game {
         for (int i = 0; i < 4; i++) {
             int a = i;
             player1Moves[i].setOnAction(e -> {
-                switch(a) {
-                    case(0): getCurrentPok(poke1,player1).move0.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
-                    case(1): getCurrentPok(poke1,player1).move1.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
-                    case(2): getCurrentPok(poke1,player1).move2.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
-                    case(3): getCurrentPok(poke1,player1).move3.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
-                }
+                if(a==0)
+                    getCurrentPok(poke1,player1).move0.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
+                if(a==1)
+                    getCurrentPok(poke1,player1).move1.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
+                if(a==2)
+                    getCurrentPok(poke1,player1).move2.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
+                if(a==3)
+                    getCurrentPok(poke1,player1).move3.makeMove(getCurrentPok(poke2,player2),getCurrentPok(poke1,player1));
                 findDeadPokemon(player2,switchTeam2,root);
                 stat1.setText(getCurrentPok(poke1, player1).toString());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
+                hp1.setText("Health: "+(int)(getCurrentPok(poke1, player1).gethP()*100/getCurrentPok(poke1, player1).getMaxhP())+"%");
+                hp2.setText("Health: "+(int)(getCurrentPok(poke2, player2).gethP()*100/getCurrentPok(poke2, player2).getMaxhP())+"%");
+                checkWin(player1,player2,primaryStage);
                 if (getCurrentPok(poke2,player2).gethP() > 0) {
                     enable(player2Moves);
                     enable(switchTeam2);
@@ -137,21 +144,25 @@ public class Game {
                     disable(player1Moves);
                     disable(switchTeam1);
                 }
-                checkWin(player1,player2,primaryStage);
             });
         }
         for (int i = 0; i < 4; i++) {
             int a = i;
             player2Moves[i].setOnAction(e -> {
-                switch(a) {
-                    case(0): getCurrentPok(poke2,player2).move0.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
-                    case(1): getCurrentPok(poke2,player2).move1.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
-                    case(2): getCurrentPok(poke2,player2).move2.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
-                    case(3): getCurrentPok(poke2,player2).move3.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
-                }
+                if(a==0)
+                    getCurrentPok(poke2,player2).move0.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
+                if(a==1)
+                    getCurrentPok(poke2,player2).move1.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
+                if(a==2)
+                    getCurrentPok(poke2,player2).move2.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
+                if(a==3)
+                    getCurrentPok(poke2,player2).move3.makeMove(getCurrentPok(poke1,player1),getCurrentPok(poke2,player2));
                 findDeadPokemon(player1,switchTeam1,root);
                 stat1.setText(getCurrentPok(poke1, player1).toString());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
+                hp1.setText("Health: "+(int)(getCurrentPok(poke1, player1).gethP()*100/getCurrentPok(poke1, player1).getMaxhP())+"%");
+                hp2.setText("Health: "+(int)(getCurrentPok(poke2, player2).gethP()*100/getCurrentPok(poke2, player2).getMaxhP())+"%");
+                checkWin(player1,player2,primaryStage);
                 if (getCurrentPok(poke1,player1).gethP() > 0) {
                     enable(player1Moves);
                     enable(switchTeam1);
@@ -164,7 +175,6 @@ public class Game {
                     disable(player2Moves);
                     disable(switchTeam2);
                 }
-                checkWin(player1,player2,primaryStage);
             });
         }
         for (int i = 0; i < 6; i++) {
@@ -175,12 +185,13 @@ public class Game {
                 if (player1[a].gethP() <= 0){
                     root.getChildren().remove(switchTeam1[a]);
                 }
-                poke1.setImage(player1[a].getPokemonImage());
+                poke1.setImage(player1[a].getPokemonImage2());
                 p1m1.setText(getCurrentPok(poke1, player1).getMove0());
                 p1m2.setText(getCurrentPok(poke1, player1).getMove1());
                 p1m3.setText(getCurrentPok(poke1, player1).getMove2());
                 p1m4.setText(getCurrentPok(poke1, player1).getMove3());
                 stat1.setText(getCurrentPok(poke1, player1).toString());
+                hp1.setText("Health: "+(int)(getCurrentPok(poke1, player1).gethP()*100/getCurrentPok(poke1, player1).getMaxhP())+"%");
                 enable(player2Moves);
                 enable(switchTeam2);
                 disable(player1Moves);
@@ -204,6 +215,7 @@ public class Game {
                 p2m3.setText(getCurrentPok(poke2, player2).getMove2());
                 p2m4.setText(getCurrentPok(poke2, player2).getMove3());
                 stat2.setText(getCurrentPok(poke2, player2).toString());
+                hp2.setText("Health: "+(int)(getCurrentPok(poke2, player2).gethP()*100/getCurrentPok(poke2, player2).getMaxhP())+"%");
                 enable(player1Moves);
                 enable(switchTeam1);
                 disable(player2Moves);
@@ -291,9 +303,21 @@ public class Game {
         return stat;
     }
 
+    static TextArea makeHPBox(int x, int y){
+        TextArea hp = new TextArea();
+        hp.setOpacity(0.95);
+        hp.setWrapText(true);
+        hp.setDisable(true);
+        hp.setPrefColumnCount(10);
+        hp.setPrefRowCount(2);
+        hp.setStyle("-fx-background-color: rgba(0,0,0,0.7);");
+        setCoordinates(hp, x, y);
+        return hp;
+    }
+
     static Pokemon getCurrentPok(ImageView pokImage, Pokemon[] team) {
         for (Pokemon p : team) {
-            if (p.getPokemonImage() == pokImage.getImage()) {
+            if (p.getPokemonImage() == pokImage.getImage() || p.getPokemonImage2() == pokImage.getImage()) {
                 return p;
             }
         }

@@ -68,7 +68,7 @@ public class Pokemon {
                 ", \nHealthIV=" + healthIV +
                 ", \nSpeedIV=" + speedIV +
                 ", \nPokedexNum=" + pokedexNum +
-                ", \nStrengthStat=" + strengthStat +
+                ", \nStrengthStat=" + (int)strengthStat +
 //                ", \nStrengthIV=" + strengthIV +
                 ", \nhP=" + hP;
     }

@@ -186,8 +186,8 @@ public class AttackMove extends Move { // AttackMove is a type of a Move and thu
         if (ppCheck()) {
             double hP = opponent.gethP(); // Gets the hP of the opponent
             calculateDamage(attacker, opponent); // Calculates the damage the move will do
-            hP = hP - damage; // Subtracting the damage the move does in hP from the hP of the defending pokemon
-            opponent.sethP(hP); // Setting this new hP after the execution of the move to the hP of the defending pokemon
+            hP = hP - (damage/2); // Subtracting the damage the move does in hP from the hP of the defending pokemon
+            opponent.sethP((int)hP); // Setting this new hP after the execution of the move to the hP of the defending pokemon
         }
     }
     public String displayInfo() {
