@@ -12,6 +12,7 @@ Applications runs from the main class. Includes a complete pokedex of the first 
 
 Enjoy the Graphics and Music!!!
 
+![alt text](https://github.com/D-Harsh/Pokemon-FX/blob/master/src/Images/addtoreadme.JPG)
 
 
 
